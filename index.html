@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hyatt House Dallas/Lincoln Park | Hodges Ward Elliott</title>
+<meta name="description" content="155-room Hyatt House Dallas/Lincoln Park — an institutionally maintained, extended-stay hotel in the Dallas Park Cities. Offered unencumbered of management by Hodges Ward Elliott.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230d1620'/%3E%3Cpath d='M17 16h7v13h13V16h7v32h-7V35H24v13h-7z' fill='%23fff'/%3E%3Crect x='36' y='14' width='9' height='9' rx='1.5' fill='%236ea9db'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font-family:var(--font-jost);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── TOKENS ── */
+:root{
+  /* palette: f3f0e3 · 6ea9db · 98a6af · 1f3459 · 3a322d */
+  --cream:#f3f0e3;--cream-rgb:243,240,227;
+  --accent:#6ea9db;--accent-rgb:110,169,219;
+  --muted:#98a6af;
+  --navy:#1f3459;--navy-rgb:31,52,89;
+  --warm:#3a322d;--warm-rgb:58,50,45;
+  /* derived depth steps, all shades of --navy */
+  --ink:#16253f;--ink-rgb:22,37,63;
+  --navy-lt:#2a4571;
+  --accent-lt:#8dbde6;--accent-dk:#4a89c4;
+  --divider:rgba(110,169,219,.18);
+  --font-cormorant:"Cormorant Garamond",Georgia,serif;
+  --font-jost:"Jost",system-ui,sans-serif;
+  --font-poppins:"Poppins",system-ui,sans-serif;
+  --pad:clamp(24px,7vw,100px);
+  --ease-spring:cubic-bezier(.16,1,.3,1);
+}
+
+/* ── UTILITIES ── */
+.wrap{max-width:1280px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-family:var(--font-jost);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.section-h2{font-family:var(--font-cormorant);font-size:clamp(36px,4.5vw,58px);font-weight:300;line-height:1.15;color:var(--cream);margin-bottom:40px}
+.body-text{font-family:var(--font-jost);font-size:15.5px;color:var(--muted);line-height:1.8;text-align:justify}
+
+/* ── BUTTONS ── */
+.btn-cta,.btn-ghost,.btn-blue{display:inline-block;font-family:var(--font-jost);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:16px 40px;border:none;cursor:pointer;transition:background .2s,opacity .2s;text-align:center;min-width:240px}
+.btn-cta{background:var(--accent);color:#16253f;border-radius:1px}
+.btn-cta:hover{background:var(--accent-lt)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(var(--cream-rgb),.35);border-radius:1px}
+.btn-ghost:hover{border-color:var(--cream)}
+.btn-blue{background:transparent;color:var(--cream);border:1px solid rgba(var(--cream-rgb),.45);border-radius:1px}
+.btn-blue:hover{background:var(--cream);color:var(--warm);border-color:var(--cream)}
+
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;width:100%;height:68px;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:linear-gradient(180deg,rgba(var(--cream-rgb),.10),rgba(var(--cream-rgb),.035)),rgba(var(--ink-rgb),.55);
+  backdrop-filter:blur(20px) saturate(165%);-webkit-backdrop-filter:blur(20px) saturate(165%);
+  border-bottom:1px solid rgba(var(--cream-rgb),.14);
+  box-shadow:inset 0 1px 0 rgba(var(--cream-rgb),.17),0 8px 32px rgba(0,0,0,.28);
+  transition:background .45s ease,border-color .45s ease,backdrop-filter .45s ease,box-shadow .45s ease}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{transition:opacity .45s ease}
+.nav-right{display:flex;align-items:center;gap:clamp(16px,2.5vw,36px)}
+.nav-links{display:flex;align-items:center;gap:clamp(16px,2.5vw,36px)}
+.nav-links a{font-family:var(--font-jost);font-size:clamp(9px,1vw,11px);letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--cream)}
+.nav-links a.nav-sign{background:#f3f0e3;color:#15253F;padding:9px 22px;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border-radius:1px;transition:background .2s;margin-left:8px}
+.nav-links a.nav-sign:hover{background:#fffdf6;color:#15253F}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:16px;position:relative;z-index:2}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--cream);margin:5px 0;border-radius:2px;
+  transition:transform .35s var(--ease-spring),opacity .25s ease}
+
+/* ── scrolled: the bar recedes and the logo dims to 35% ── */
+/* scrolled: the bar surface fades away entirely — only the dimmed logo and the
+   hamburger remain, so the menu is still reachable */
+.navbar.is-scrolled{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:transparent;box-shadow:none}
+.navbar.is-scrolled .nav-logo img{opacity:.35}
+.navbar.is-scrolled:hover .nav-logo img,.navbar.nav-open .nav-logo img{opacity:1}
+/* opening the menu brings the chrome back so the panel reads against the page */
+.navbar.nav-open{background:linear-gradient(180deg,rgba(var(--cream-rgb),.10),rgba(var(--cream-rgb),.035)),rgba(var(--ink-rgb),.72);
+  backdrop-filter:blur(20px) saturate(165%);-webkit-backdrop-filter:blur(20px) saturate(165%);
+  border-bottom-color:rgba(var(--cream-rgb),.14);box-shadow:inset 0 1px 0 rgba(var(--cream-rgb),.17),0 8px 32px rgba(0,0,0,.28)}
+
+/* ── collapsed: the inline links become a hamburger dropdown ── */
+.navbar.is-collapsed .nav-toggle{display:block}
+.navbar.is-collapsed .nav-links{
+  position:absolute;top:calc(100% + 12px);right:var(--pad);
+  flex-direction:column;align-items:stretch;gap:2px;min-width:224px;padding:10px;
+  background:rgba(var(--navy-rgb),.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(var(--cream-rgb),.13);border-radius:8px;box-shadow:0 26px 60px rgba(0,0,0,.55);
+  opacity:0;visibility:hidden;transform:translateY(-10px) scale(.97);transform-origin:top right;
+  transition:opacity .3s ease,transform .4s var(--ease-spring),visibility .3s}
+.navbar.is-collapsed.nav-open .nav-links{opacity:1;visibility:visible;transform:none}
+.navbar.is-collapsed .nav-links a{font-size:11px;padding:13px 16px;border-radius:4px;text-align:left}
+.navbar.is-collapsed .nav-links a:hover{background:rgba(var(--cream-rgb),.08);color:var(--cream)}
+.navbar.is-collapsed .nav-links a.nav-sign{margin:8px 0 0;text-align:center;font-size:10px}
+/* hamburger becomes an X */
+.navbar.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.navbar.nav-open .nav-toggle span:nth-child(2){opacity:0}
+.navbar.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (prefers-reduced-motion:reduce){.navbar,.navbar *{transition:none}}
+
+/* ── SIDE TAB ── */
+.side-tab{position:fixed;left:0;top:50%;z-index:999;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;text-orientation:mixed;background:var(--accent);color:#16253f;font-family:var(--font-jost);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:22px 9px;border-radius:1px;cursor:pointer;transition:background .2s;text-decoration:none}
+.side-tab:hover{background:var(--accent-lt)}
+
+/* ── HERO ── */
+.hero{position:relative;width:100%;height:100svh;min-height:680px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72)}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 0%,rgba(var(--ink-rgb),.55) 28%,transparent 52%);pointer-events:none}
+.hero-center{position:absolute;top:clamp(100px,14vh,160px);right:var(--pad);z-index:2}
+.hero-box{background:rgba(var(--navy-rgb),.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(var(--cream-rgb),.12);border-radius:12px;padding:44px 56px;display:flex;align-items:center;justify-content:center}
+.hero-meta{position:absolute;bottom:44px;left:var(--pad);right:var(--pad);z-index:2;display:flex;align-items:flex-end;justify-content:space-between}
+.hero-meta-left{display:flex;flex-direction:column;gap:8px;font-family:var(--font-jost);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.hero-scroll{display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero-scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollPulse 2.2s ease-in-out infinite}
+.hero-scroll-text{font-family:var(--font-jost);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ── OVERVIEW ── */
+.overview{background:var(--ink);padding:clamp(80px,10vw,140px) 0}
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;column-gap:clamp(32px,4vw,56px);row-gap:0;align-items:stretch}
+.overview-brand{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:center;align-self:center;margin:24px 0}
+.overview-copy{grid-column:1;grid-row:2;display:flex;flex-direction:column}
+.overview-right{grid-column:2;grid-row:2;display:flex;flex-direction:column;gap:0}
+.overview-brand img{max-width:280px;width:auto;height:auto;max-height:100%;object-fit:contain;display:block}
+.overview .body-text em{color:var(--cream);font-style:italic}
+.overview .btn-row{grid-column:1/-1;grid-row:3;display:flex;gap:14px;justify-content:center;margin-top:52px;flex-wrap:wrap}
+.overview-photo{width:100%;margin-top:40px;border-radius:2px;overflow:hidden;max-height:280px}
+.overview-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.stats-card{display:flex;flex-direction:column;gap:10px;flex:1}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}
+.stats-card .stat-cell{padding:16px 24px}
+.stat-row.full{grid-template-columns:1fr}
+.stat-cell{background:var(--navy-lt);border-radius:6px;padding:24px 28px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:0;transition:transform .4s cubic-bezier(.65,0,.35,1),box-shadow .4s cubic-bezier(.65,0,.35,1)}
+.stat-cell:hover{transform:scale(1.25);z-index:5;box-shadow:0 18px 44px rgba(0,0,0,.42)}
+@media (hover:none){.stat-cell:hover{transform:none;z-index:0;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.stat-cell{transition:none}}
+.stat-val{font-family:var(--font-poppins);font-size:20px;font-weight:400;letter-spacing:.005em;color:var(--cream);margin-bottom:6px;text-align:center;line-height:1.35}
+.stat-lbl{font-family:var(--font-jost);font-size:11px;font-weight:300;text-transform:uppercase;letter-spacing:.26em;color:var(--muted);text-align:center}
+
+/* ── GALLERY ── */
+.gallery{background:var(--ink);padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,6vw,80px)}
+.gallery-collage{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:4px}
+.gallery-cell{position:relative;overflow:hidden;cursor:pointer}
+.gallery-cell.span2c{grid-column:span 2}
+.gallery-cell.span2r{grid-row:span 2}
+.gallery-cell img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery-cell:hover img{transform:scale(1.04)}
+.gallery-cell .g-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:20px}
+.gallery-cell:hover .g-overlay{opacity:1}
+.gallery-label{font-family:var(--font-jost);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+
+/* ── HIGHLIGHTS ── */
+.highlights-header{background:var(--ink);padding:clamp(80px,10vw,120px) 0 clamp(20px,3vw,30px)}
+.hl-section{background:var(--ink);padding:clamp(40px,5vw,64px) 0}
+.hl-section:nth-of-type(even){background:var(--navy)}
+/* closing pair inverts to the cream ground */
+.hl-section.hl-light,.hl-section.hl-light:nth-of-type(even){background:#f3f0e3}
+.hl-light .hl-title,.hl-light .hl-body,.hl-light .hl-body b,.hl-light .hl-body strong{color:#15253F}
+.hl-light .hl-photo{box-shadow:0 20px 50px rgba(21,37,63,.18)}
+.hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,56px);align-items:stretch}
+.hl-grid.hl-reverse>*:first-child{order:2}
+.hl-grid.hl-reverse>*:last-child{order:1}
+.hl-title{font-family:var(--font-cormorant);font-size:clamp(29px,4vw,49px);font-weight:300;line-height:1.15;color:var(--cream);margin-bottom:32px}
+.hl-body{font-family:var(--font-jost);font-size:17.5px;color:var(--muted);line-height:1.8;text-align:justify}
+.hl-body b,.hl-body strong{color:var(--cream);font-weight:500}
+.hl-photo{width:100%;border-radius:4px;overflow:hidden;min-height:300px}
+.hl-photo img{width:100%;height:100%;object-fit:cover}
+.hl-single{display:block}
+.hl-photo-wide{width:100%;margin-top:44px;border-radius:4px;overflow:hidden;background:var(--navy-lt);display:flex;align-items:center;justify-content:center}
+.hl-photo-wide img{width:100%;height:auto;display:block}
+.hl-photo-cap{font-family:var(--font-jost);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px;text-align:center}
+
+/* ── PARK CITIES INFOGRAPHIC (rebuilt from Dallas-Park-Cities.jpg) ── */
+.pc-infographic{display:grid;grid-template-columns:1fr 1fr;background:#f3f0e3;border-radius:4px;overflow:hidden;margin-top:44px}
+.pc-info-cell{padding:clamp(28px,3.4vw,46px) clamp(28px,3.6vw,52px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.pc-info-cell+.pc-info-cell{border-left:1px solid rgba(58,50,45,.16)}
+.pc-info-val{font-family:var(--font-cormorant);font-weight:700;font-size:clamp(44px,5.4vw,72px);line-height:1;color:#3a322d;letter-spacing:-.01em;margin-bottom:14px}
+.pc-info-lbl{font-family:var(--font-jost);font-weight:400;font-size:clamp(13px,1.15vw,15.5px);line-height:1.5;color:#5a5148;max-width:34ch;text-align:center}
+
+/* ── PARK CITIES LOGO CARDS (rollover) ── */
+.pc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.pc-card{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;cursor:pointer;background:var(--navy-lt);border:0;padding:0;width:100%;display:block;font:inherit;color:inherit;text-align:inherit}
+.pc-card img.pc-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-spring),filter .5s ease;filter:brightness(.52) saturate(.85)}
+.pc-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,25,44,.84) 0%,rgba(15,25,44,.4) 52%,rgba(15,25,44,.56) 100%);transition:opacity .5s ease;pointer-events:none}
+.pc-card:hover img.pc-photo{transform:scale(1.07);filter:brightness(.4) saturate(1)}
+.pc-card:hover::after{opacity:.72}
+.pc-card-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px;text-align:center}
+.pc-card-logo{width:auto;height:auto;max-width:66%;max-height:50%;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0,0,0,.6));transition:transform .55s var(--ease-spring)}
+.pc-card:hover .pc-card-logo{transform:translateY(-10px) scale(1.04)}
+.pc-card-word{font-family:var(--font-cormorant);font-weight:400;font-size:clamp(26px,2.9vw,40px);line-height:1;color:var(--cream);letter-spacing:.02em;text-shadow:0 2px 10px rgba(0,0,0,.6);transition:transform .55s var(--ease-spring)}
+.pc-card-word small{display:block;font-family:var(--font-jost);font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-top:8px;color:rgba(var(--cream-rgb),.72)}
+.pc-card:hover .pc-card-word{transform:translateY(-10px) scale(1.04)}
+.pc-card-note{position:absolute;left:0;right:0;bottom:20px;z-index:3;padding:0 22px;font-family:var(--font-jost);font-size:11.5px;line-height:1.55;letter-spacing:.04em;color:rgba(var(--cream-rgb),.9);text-align:center;opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .55s var(--ease-spring)}
+.pc-card:hover .pc-card-note{opacity:1;transform:translateY(0)}
+.pc-card-logo.is-wordmark{max-width:50%}
+.pc-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.pc-card:focus-visible .pc-card-note{opacity:1;transform:translateY(0)}
+
+/* ── HEALTHCARE CALLOUTS ── */
+.med-callouts{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);margin-top:44px}
+.med-card{background:var(--navy-lt);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease-spring),box-shadow .5s var(--ease-spring);border:0;padding:0;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.med-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.med-card:hover{transform:translateY(-6px);box-shadow:0 22px 52px rgba(0,0,0,.45)}
+.med-photo{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink)}
+.med-photo img.mp{width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.92);transition:transform .8s var(--ease-spring),filter .5s ease}
+.med-card:hover img.mp,.med-card:focus-visible img.mp{transform:scale(1.06);filter:brightness(.44) saturate(1)}
+.med-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,25,44,.7) 0%,rgba(15,25,44,.18) 55%,rgba(15,25,44,.3) 100%);pointer-events:none;transition:opacity .5s ease}
+.med-card:hover .med-photo::after{opacity:.8}
+.med-logo-plate{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:flex;align-items:center;justify-content:center;transition:transform .6s var(--ease-spring)}
+
+.med-card:hover .med-logo-plate,.med-card:focus-visible .med-logo-plate{transform:translate(-50%,-50%) translateY(-8px) scale(1.05)}
+/* knocked out to white over the photo, returning to brand colour on rollover */
+.med-logo-plate img{width:clamp(168px,19vw,248px);height:clamp(60px,6.4vw,86px);object-fit:contain;
+  filter:brightness(0) invert(1)
+         drop-shadow(0 3px 14px rgba(0,0,0,.65))
+         drop-shadow(0 0 3px rgba(255,255,255,0))
+         drop-shadow(0 0 9px rgba(255,255,255,0));
+  transition:filter .5s ease}
+.med-card:hover .med-logo-plate img,.med-card:focus-visible .med-logo-plate img{
+  filter:brightness(1) invert(0)
+         drop-shadow(0 3px 14px rgba(0,0,0,.45))
+         drop-shadow(0 0 3px rgba(255,255,255,.95))
+         drop-shadow(0 0 9px rgba(255,255,255,.8))}
+@media (prefers-reduced-motion:reduce){.med-logo-plate,.med-logo-plate img{transition:none}}
+.med-body{padding:26px 28px 28px}
+.med-name{font-family:var(--font-cormorant);font-size:clamp(21px,2.1vw,27px);font-weight:400;color:var(--cream);line-height:1.2;margin-bottom:6px}
+.med-sub{font-family:var(--font-jost);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.med-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.med-stat{background:rgba(var(--cream-rgb),.06);border-radius:4px;padding:14px 10px;text-align:center}
+.med-stat-val{font-family:var(--font-cormorant);font-size:clamp(19px,1.9vw,25px);color:var(--cream);line-height:1.1;margin-bottom:5px}
+.med-stat-lbl{font-family:var(--font-jost);font-size:8.5px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1.4}
+
+/* ── OFFICE CORRIDOR: AERIAL + LOGO CARDS ── */
+.office-aerial{margin-top:44px;border-radius:6px;overflow:hidden;background:var(--ink);box-shadow:0 24px 70px rgba(0,0,0,.42)}
+.office-aerial img{width:100%;height:auto;display:block}
+.office-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.oc-card{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;cursor:pointer;
+  background:var(--navy-lt);border:0;padding:0;width:100%;display:block;font:inherit;color:inherit;text-align:inherit}
+/* black and white until rollover */
+.oc-card img.oc-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(1) brightness(.6) contrast(1.04);
+  transition:transform .7s var(--ease-spring),filter .6s ease}
+.oc-card:hover img.oc-photo,.oc-card:focus-visible img.oc-photo{transform:scale(1.07);filter:grayscale(0) brightness(.6) contrast(1)}
+.oc-card::after{content:"";position:absolute;inset:0;pointer-events:none;transition:opacity .5s ease;
+  background:linear-gradient(to top,rgba(15,25,44,.8) 0%,rgba(15,25,44,.3) 52%,rgba(15,25,44,.46) 100%)}
+.oc-card:hover::after{opacity:.72}
+.oc-card-inner{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:22px}
+.oc-card-logo{width:auto;height:auto;max-width:58%;max-height:54%;object-fit:contain;
+  filter:brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0,0,0,.6));transition:transform .55s var(--ease-spring)}
+.oc-card:hover .oc-card-logo,.oc-card:focus-visible .oc-card-logo{transform:translateY(-10px) scale(1.04)}
+.oc-card-note{position:absolute;left:0;right:0;bottom:20px;z-index:3;padding:0 22px;font-family:var(--font-jost);
+  font-size:11.5px;line-height:1.55;letter-spacing:.04em;color:rgba(var(--cream-rgb),.9);text-align:center;
+  opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .55s var(--ease-spring)}
+.oc-card:hover .oc-card-note,.oc-card:focus-visible .oc-card-note{opacity:1;transform:translateY(0)}
+.oc-card-logo.is-fineline{max-width:70%;max-height:66%}
+.oc-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.oc-card:hover .card-hint,.oc-card:focus-visible .card-hint{opacity:1;transform:scale(1)}
+@media(max-width:1000px){.office-cards{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.oc-card img.oc-photo,.oc-card-logo,.oc-card-note{transition:none}}
+
+/* ── CONNECTIVITY: DALLAS ACCESS MAP ──
+   The map ships as a self-contained component driven by CSS variables, so it is
+   re-skinned by redefining those variables in the microsite palette rather than
+   by rewriting its rules. Everything below the imported block is our skin. */
+
+  #dallas-access-map { width: 100%; color: var(--foreground); }
+  #dallas-access-map .dam-highlights { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:14px; }
+  #dallas-access-map .dam-card { appearance:none; text-align:left; color:var(--card-foreground); cursor:pointer; transition:transform .18s ease, opacity .18s ease; }
+  #dallas-access-map .dam-card:hover, #dallas-access-map .dam-card:focus-visible, #dallas-access-map .dam-card[aria-pressed="true"] { transform:translateY(-3px); }
+  #dallas-access-map:has(.dam-card:hover) .dam-card:not(:hover), #dallas-access-map:has(.dam-card:focus-visible) .dam-card:not(:focus-visible) { opacity:.48; }
+  #dallas-access-map:has(.dam-card[data-focus="traffic"]:hover) .dam-route-us75, #dallas-access-map:has(.dam-card[data-focus="traffic"]:hover) .dam-route-loop12, #dallas-access-map:has(.dam-card[data-focus="traffic"]:focus-visible) .dam-route-us75, #dallas-access-map:has(.dam-card[data-focus="traffic"]:focus-visible) .dam-route-loop12 { stroke:var(--viz-series-1);stroke-width:4.4;opacity:1; }
+  #dallas-access-map:has(.dam-card[data-focus="downtown"]:hover) .dam-link-downtown, #dallas-access-map:has(.dam-card[data-focus="downtown"]:focus-visible) .dam-link-downtown, #dallas-access-map:has(.dam-card[data-focus="airports"]:hover) .dam-link-love, #dallas-access-map:has(.dam-card[data-focus="airports"]:hover) .dam-link-dfw, #dallas-access-map:has(.dam-card[data-focus="airports"]:focus-visible) .dam-link-love, #dallas-access-map:has(.dam-card[data-focus="airports"]:focus-visible) .dam-link-dfw { opacity:1;stroke-width:3.5; }
+  #dallas-access-map .dam-card.is-dim { opacity:.48; }
+  #dallas-access-map .dam-card span { display:block; }
+  #dallas-access-map .dam-kicker { color:var(--muted-foreground); margin-bottom:7px; }
+  #dallas-access-map .dam-value { font-weight:500; margin-bottom:4px; }
+  #dallas-access-map .dam-copy { color:var(--muted-foreground); }
+  #dallas-access-map .dam-map-wrap { position:relative; min-height:460px; }
+  #dallas-access-map .dam-map { display:block; width:100%; height:460px; overflow:visible; }
+  #dallas-access-map .dam-local { fill:none; stroke:var(--border); stroke-width:.8; opacity:.45; vector-effect:non-scaling-stroke; }
+  #dallas-access-map .dam-road-halo { fill:none; stroke:var(--background); stroke-width:6; opacity:.86; vector-effect:non-scaling-stroke; }
+  #dallas-access-map .dam-primary { fill:none; stroke:var(--muted-foreground); stroke-width:2.6; opacity:.72; vector-effect:non-scaling-stroke; transition:opacity .18s ease, stroke-width .18s ease; }
+  #dallas-access-map .dam-primary.is-active { stroke:var(--viz-series-1); stroke-width:4.4; opacity:1; }
+  #dallas-access-map .dam-route-link { fill:none; stroke:var(--viz-series-2); stroke-width:2; stroke-dasharray:5 5; opacity:.56; vector-effect:non-scaling-stroke; transition:opacity .18s ease, stroke-width .18s ease; }
+  #dallas-access-map .dam-route-link.is-active { opacity:1; stroke-width:3.5; }
+  #dallas-access-map .dam-point { transition:opacity .18s ease, transform .18s ease; transform-box:fill-box; transform-origin:center; }
+  #dallas-access-map .dam-point.is-active { transform:scale(1.32); }
+  #dallas-access-map .dam-site-ring { fill:color-mix(in srgb,var(--viz-series-1) 16%,transparent); stroke:var(--viz-series-1); stroke-width:2; vector-effect:non-scaling-stroke; }
+  #dallas-access-map .dam-site-dot { fill:var(--viz-series-1); }
+  #dallas-access-map .dam-place-dot { fill:var(--background); stroke:var(--foreground); stroke-width:2; vector-effect:non-scaling-stroke; }
+  #dallas-access-map .dam-label { fill:var(--foreground); font-size:12px; font-weight:500; paint-order:stroke; stroke:var(--background); stroke-width:4px; stroke-linejoin:round; }
+  #dallas-access-map .dam-label-secondary { fill:var(--muted-foreground); font-size:11px; font-weight:400; }
+  #dallas-access-map .dam-shield { fill:var(--background); stroke:var(--muted-foreground); stroke-width:1; vector-effect:non-scaling-stroke; }
+  #dallas-access-map .dam-shield-text { fill:var(--foreground); font-size:11px; font-weight:500; text-anchor:middle; dominant-baseline:middle; }
+  #dallas-access-map .dam-legend { position:absolute; left:10px; bottom:8px; display:flex; flex-wrap:wrap; gap:12px; padding:7px 9px; color:var(--muted-foreground); background:color-mix(in srgb,var(--background) 90%,transparent); }
+  #dallas-access-map .dam-legend span { display:inline-flex; align-items:center; gap:5px; }
+  #dallas-access-map .dam-key { display:inline-block; width:9px; height:9px; border-radius:50%; }
+  #dallas-access-map .dam-key-site { background:var(--viz-series-1); }
+  #dallas-access-map .dam-key-road { height:3px; border-radius:0; background:var(--muted-foreground); }
+  #dallas-access-map .dam-key-place { background:var(--background); border:2px solid var(--foreground); }
+  #dallas-access-map .dam-detail { margin:8px 0 0; color:var(--muted-foreground); }
+  @media (max-width:620px) {
+    #dallas-access-map .dam-highlights { grid-template-columns:1fr; }
+    #dallas-access-map .dam-map-wrap, #dallas-access-map .dam-map { min-height:410px; height:410px; }
+  }
+  @media (prefers-reduced-motion:reduce) { #dallas-access-map .dam-card, #dallas-access-map .dam-point, #dallas-access-map .dam-primary, #dallas-access-map .dam-route-link { transition:none; } }
+
+/* ---- microsite skin ---- */
+#dallas-access-map{
+  --background:var(--ink);
+  --foreground:var(--cream);
+  --muted-foreground:var(--muted);
+  --card-foreground:var(--cream);
+  --border:rgba(var(--cream-rgb),.16);
+  --viz-series-1:var(--accent);
+  --viz-series-2:var(--accent-lt);
+  margin-top:44px;font-family:var(--font-jost)
+}
+#dallas-access-map .dam-highlights{column-gap:12px;row-gap:10px;margin-bottom:16px}
+#dallas-access-map .dam-card{
+  background:var(--navy-lt);border:1px solid rgba(var(--cream-rgb),.07);border-radius:6px;
+  padding:26px 22px 26px;font:inherit;display:flex;flex-direction:column;
+  text-align:center;align-items:center;justify-content:center;
+  transition:transform .5s var(--ease-spring),opacity .35s ease,box-shadow .5s var(--ease-spring),border-color .4s ease}
+#dallas-access-map .dam-card:hover,#dallas-access-map .dam-card:focus-visible{
+  transform:translateY(-8px);box-shadow:0 22px 48px rgba(0,0,0,.45);border-color:rgba(var(--accent-rgb),.42)}
+#dallas-access-map .dam-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#dallas-access-map .dam-kicker{font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+#dallas-access-map .dam-value{font-family:var(--font-cormorant);font-size:clamp(23px,2.2vw,30px);font-weight:400;line-height:1.14;color:var(--cream);margin-bottom:10px;text-wrap:balance}
+#dallas-access-map .dam-copy{font-size:12px;line-height:1.62;color:var(--muted);text-wrap:pretty}
+/* Each card centres its own content, so when one value wraps to two lines the
+   three cards stop lining up. Subgrid gives kicker / value / copy a shared row
+   height across all three, keeping them aligned and centred at every width. */
+@supports (grid-template-rows:subgrid){
+  #dallas-access-map .dam-highlights{grid-template-rows:auto auto auto}
+  #dallas-access-map .dam-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-content:center;justify-items:center}
+  #dallas-access-map .dam-kicker,
+  #dallas-access-map .dam-value,
+  #dallas-access-map .dam-copy{margin:0;display:flex;align-items:center;justify-content:center}
+}
+#dallas-access-map .dam-map-wrap{min-height:0;background:linear-gradient(160deg,#1c2f52 0%,#132139 100%);
+  border:1px solid rgba(var(--cream-rgb),.08);border-radius:6px;padding:clamp(10px,1.6vw,20px);overflow:hidden}
+#dallas-access-map .dam-map{height:auto;aspect-ratio:736/460}
+#dallas-access-map .dam-label{font-family:var(--font-jost);font-size:12px;font-weight:600;letter-spacing:.06em;stroke-width:3.5px}
+#dallas-access-map .dam-label-secondary{font-family:var(--font-jost);font-size:10.5px;font-weight:400;letter-spacing:.08em;stroke-width:3px}
+#dallas-access-map .dam-shield{fill:var(--cream);stroke:none}
+#dallas-access-map .dam-shield-text{font-family:var(--font-jost);font-size:10.5px;font-weight:700;letter-spacing:.04em;fill:#1f3459}
+/* no stroke override here: the component's own :has() highlight sets stroke to
+   --viz-series-1, and a flat override would win the colour back. Tune the
+   resting road colour through --muted-foreground instead. */
+#dallas-access-map .dam-primary{stroke-width:2.6;opacity:.6}
+#dallas-access-map .dam-road-halo{stroke:#16253f}
+#dallas-access-map .dam-local{stroke:rgba(var(--cream-rgb),.10);opacity:1}
+#dallas-access-map .dam-place-dot{fill:var(--ink);stroke:var(--cream);stroke-width:2}
+#dallas-access-map .dam-site-halo{fill:rgba(var(--accent-rgb),.14)}
+#dallas-access-map .dam-site-plate{fill:#16253f;stroke:rgba(var(--accent-rgb),.55);stroke-width:1;vector-effect:non-scaling-stroke}
+#dallas-access-map .dam-legend{left:auto;right:12px;bottom:12px;gap:16px;padding:9px 14px;border-radius:4px;
+  background:rgba(22,37,63,.82);border:1px solid rgba(var(--cream-rgb),.1);
+  font-family:var(--font-jost);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+#dallas-access-map .dam-key-site{background:var(--accent)}
+#dallas-access-map .dam-key-road{background:rgba(var(--cream-rgb),.5)}
+#dallas-access-map .dam-key-place{background:var(--ink);border-color:var(--cream)}
+#dallas-access-map .dam-detail{margin-top:14px;font-family:var(--font-jost);font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(var(--muted-rgb,152,166,175),.72);text-align:right}
+@media(max-width:760px){
+  #dallas-access-map .dam-map-wrap{overflow-x:auto}
+  #dallas-access-map .dam-map{min-width:680px}
+  #dallas-access-map .dam-legend{position:static;margin-top:10px;justify-content:center}
+}
+
+/* ── DFW MSA (rebuilt from dfw-msa-screenshot.jpg) ── */
+.dfw-exhibit{margin-top:48px;border-radius:4px;overflow:hidden}
+.dfw-band{background:#3a322d;background-image:linear-gradient(rgba(var(--cream-rgb),.014) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--cream-rgb),.014) 1px,transparent 1px);background-size:3px 3px;padding:clamp(26px,3.2vw,42px) clamp(20px,3vw,44px) clamp(24px,3vw,38px)}
+.dfw-title{display:flex;align-items:center;gap:clamp(16px,3vw,40px);margin-bottom:clamp(22px,2.8vw,36px)}
+.dfw-title span{font-family:var(--font-jost);font-weight:400;font-size:clamp(20px,3.1vw,44px);letter-spacing:.02em;color:var(--cream);white-space:nowrap}
+.dfw-title i{flex:1;height:1px;background:rgba(var(--cream-rgb),.55)}
+.dfw-stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.dfw-stat{position:relative;display:flex;align-items:flex-start;justify-content:center;padding:clamp(10px,1.2vw,18px) clamp(8px,1.2vw,20px) clamp(20px,2.2vw,30px);border-radius:5px;cursor:default;
+  transition:transform .55s var(--ease-spring),background-color .4s ease}
+.dfw-stat img{transition:filter .5s ease,transform .55s var(--ease-spring)}
+.dfw-stat::after{content:"";position:absolute;left:50%;bottom:10px;width:0;height:2px;background:var(--accent);transform:translateX(-50%);transition:width .5s var(--ease-spring);border-radius:2px}
+.dfw-stat:hover{transform:translateY(-6px);background-color:rgba(var(--cream-rgb),.055)}
+.dfw-stat:hover img{transform:scale(1.04);filter:drop-shadow(0 10px 22px rgba(0,0,0,.5))}
+.dfw-stat:hover::after{width:42%}
+@media (hover:none){.dfw-stat:hover{transform:none;background-color:transparent}.dfw-stat:hover::after{width:0}}
+@media (prefers-reduced-motion:reduce){.dfw-stat,.dfw-stat img,.dfw-stat::after{transition:none}}
+.dfw-stat+.dfw-stat::before{content:"";position:absolute;left:0;top:2%;height:76%;width:1px;background:rgba(var(--cream-rgb),.45)}
+.dfw-stat img{width:100%;height:auto;display:block}
+.dfw-photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#3a322d}
+.dfw-photo{position:relative;aspect-ratio:4/3;overflow:hidden}
+.dfw-photo>img.city{width:100%;height:100%;object-fit:cover}
+/* the word SVGs bake in a mirrored reflection: the solid mark is the top
+   58.5% and the reflection the rest, so each is drawn as its own clipped
+   layer and only the reflection gets the turbulence displacement. */
+.dfw-word{position:absolute;left:6%;right:6%;bottom:8%;width:auto}
+.dfw-word img{width:100%;height:auto;display:block}
+.dfw-word .w-solid{clip-path:inset(0 0 41.5% 0)}
+.dfw-word .w-reflect{position:absolute;inset:0;clip-path:inset(58.5% -14px -22px -14px);opacity:1}
+.dfw-photo .ripple-a .w-reflect{filter:url(#ripple-a)}
+.dfw-photo .ripple-b .w-reflect{filter:url(#ripple-b)}
+/* soft moving sheen across the water itself */
+.dfw-water{position:absolute;left:0;right:0;bottom:0;height:46%;pointer-events:none;overflow:hidden}
+.dfw-water::before{content:"";position:absolute;left:-25%;right:-25%;top:-30%;bottom:-30%;
+  background:repeating-linear-gradient(179deg,rgba(var(--cream-rgb),0) 0 8px,rgba(var(--cream-rgb),.11) 8px 11px,rgba(var(--cream-rgb),0) 11px 21px);
+  mix-blend-mode:soft-light;animation:waterDrift 10s linear infinite}
+.dfw-photo:nth-child(2) .dfw-water::before{animation-duration:13s;animation-direction:reverse}
+@keyframes waterDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,21px,0)}}
+@media (prefers-reduced-motion:reduce){
+  .dfw-water{display:none}
+  .dfw-photo .ripple-a .w-reflect,.dfw-photo .ripple-b .w-reflect{filter:none}
+}
+@media(max-width:760px){.dfw-photos{grid-template-columns:1fr}.dfw-title span{white-space:normal;font-size:19px}}
+
+/* ── HYATT SCARCITY ── */
+.scarcity-layout{display:grid;grid-template-columns:1fr minmax(360px,470px);gap:clamp(20px,2.6vw,36px);margin-top:44px;align-items:stretch}
+.brand-cards{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+  gap:clamp(12px,1.6vw,20px);width:100%;height:100%;align-content:stretch;justify-content:stretch}
+/* frosted cream glass over the navy ground */
+.brand-card{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  min-height:0;padding:clamp(22px,2.8vw,38px);border-radius:14px;cursor:pointer;
+  background:linear-gradient(148deg,rgba(246,243,232,.97) 0%,rgba(243,240,227,.88) 55%,rgba(246,243,232,.94) 100%);
+  backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:0 12px 34px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(21,37,63,.06);
+  transition:transform .5s var(--ease-spring),box-shadow .5s var(--ease-spring),background .35s ease,border-color .35s ease}
+/* specular sweep */
+.brand-card::before{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);
+  transform:skewX(-18deg);opacity:0;transition:left .75s var(--ease-spring),opacity .4s ease}
+.brand-card:hover::before,.brand-card:focus-visible::before{left:115%;opacity:1}
+/* absolutely placed so the logo never drives the card height — the row is
+   sized by the table, and every mark scales inside an identical box */
+.brand-card img{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:70%;height:64%;object-fit:contain;transition:transform .5s var(--ease-spring)}
+.brand-card:hover img,.brand-card:focus-visible img{transform:translate(-50%,-50%) scale(1.04)}
+.brand-card:hover,.brand-card:focus-visible{transform:translateY(-8px);
+  background:linear-gradient(148deg,rgba(255,253,246,.97) 0%,rgba(243,240,227,.88) 55%,rgba(255,253,246,.94) 100%);
+  border-color:rgba(255,255,255,.8);
+  box-shadow:0 28px 60px rgba(0,0,0,.44),inset 0 1px 0 rgba(255,255,255,.95)}
+
+.brand-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.brand-card .card-hint{border-color:rgba(21,37,63,.4);color:#15253F}
+.brand-card:hover .card-hint,.brand-card:focus-visible .card-hint{opacity:1;transform:scale(1)}
+@media(max-width:520px){.brand-cards{grid-template-columns:1fr;grid-template-rows:none}
+  .brand-card{aspect-ratio:2/1}}
+.brand-table{background:var(--cream);border-radius:6px;overflow:hidden;align-self:stretch;box-shadow:0 24px 60px rgba(0,0,0,.4);min-width:0}
+.brand-table-h{background:#1f3459;padding:16px 22px}
+.brand-table-h span{font-family:var(--font-jost);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cream)}
+.brand-table table{width:100%;border-collapse:collapse;font-family:var(--font-jost)}
+.brand-table thead th{background:#e7e2d2;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);padding:11px 10px;text-align:center;border-bottom:1px solid #d8d2c0;line-height:1.3}
+.brand-table thead th:first-child{text-align:left;padding-left:20px}
+.brand-table tbody td{font-size:13.5px;color:#3a322d;padding:16px 10px;text-align:center;border-bottom:1px solid #ddd7c6;font-variant-numeric:tabular-nums}
+.brand-table tbody td:first-child{text-align:left;padding-left:20px;width:34%}
+.brand-table tbody tr{transition:background .2s}
+.brand-table tbody tr:hover{background:#e9e5d8}
+.brand-table tbody tr.is-hyatt{background:rgba(110,169,219,.12)}
+.brand-table tbody tr.is-hyatt:hover{background:rgba(110,169,219,.2)}
+.brand-table tbody tr.is-hyatt td{font-weight:600;color:#1f3459}
+.brand-table tbody td:first-child{text-align:center;padding-left:10px}
+.brand-table thead th:first-child{text-align:center;padding-left:10px}
+.brand-table .bt-logo{width:104px;height:42px;object-fit:contain;object-position:center;display:block;margin:0 auto}
+/* rows respond to the linked card */
+.brand-table tbody tr[data-brand]{cursor:pointer}
+.brand-table tbody tr{transition:background .3s ease,opacity .3s ease}
+.brand-table tbody td{transition:padding .35s var(--ease-spring),font-size .3s ease}
+.brand-table tbody tr.is-linked{background:rgba(var(--accent-rgb),.16)}
+.brand-table tbody tr.is-linked td{padding-top:24px;padding-bottom:24px;font-weight:600;color:#15253F}
+.brand-table tbody tr.is-linked .bt-logo{height:52px}
+.brand-table tbody.has-link tr:not(.is-linked){opacity:.42}
+.brand-table tfoot td{font-size:12px;font-weight:600;color:#3a322d;padding:13px 10px;text-align:center;background:#eae5d6;border-top:2px solid #d8d2c0}
+.brand-table tfoot td:first-child{text-align:left;padding-left:20px;letter-spacing:.1em;text-transform:uppercase;font-size:10px}
+.brand-note{font-family:var(--font-jost);font-size:10.5px;line-height:1.6;color:var(--warm);padding:14px 20px 18px;background:var(--cream)}
+@media(max-width:900px){.scarcity-layout{grid-template-columns:1fr}
+  .brand-cards{height:auto;grid-template-rows:none}
+  .brand-card{aspect-ratio:3/2}}
+
+/* ── DETAIL MODAL (Park Cities + healthcare cards) ── */
+.modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)}
+.modal.is-open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(11,18,32,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s ease}
+.modal.is-open .modal-backdrop{opacity:1}
+.modal-card{position:relative;z-index:1;width:min(720px,100%);max-height:88vh;overflow-y:auto;background:var(--navy);border:1px solid rgba(var(--cream-rgb),.12);border-radius:8px;box-shadow:0 40px 100px rgba(0,0,0,.6);opacity:0;transform:translateY(18px) scale(.98);transition:opacity .35s ease,transform .45s var(--ease-spring)}
+.modal.is-open .modal-card{opacity:1;transform:none}
+.modal-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink);border-radius:8px 8px 0 0}
+.modal-media img.m-photo{width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.92)}
+.modal-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,25,44,.62) 0%,rgba(15,25,44,.14) 55%,rgba(15,25,44,.34) 100%);pointer-events:none;z-index:1}
+.modal-media .m-logo-wrap{z-index:2}
+.modal-media .m-logo-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px}
+.modal-media img.m-logo{max-width:52%;max-height:52%;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,.65))}
+.modal-media .m-plate{background:var(--cream);border-radius:5px;padding:18px 28px;box-shadow:0 14px 38px rgba(0,0,0,.45)}
+.modal-media .m-plate img{width:clamp(160px,26vw,240px);height:clamp(52px,8vw,76px);object-fit:contain}
+.modal-media.is-blank{aspect-ratio:16/7;background:#f3f0e3}
+.modal-media.is-blank::after{display:none}
+.modal-media img.m-flat{width:clamp(180px,30vw,280px);height:clamp(70px,10vw,110px);object-fit:contain}
+.modal-body{padding:clamp(24px,3vw,36px)}
+.modal-eyebrow{font-family:var(--font-jost);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.modal-title{font-family:var(--font-cormorant);font-size:clamp(26px,3.2vw,38px);font-weight:300;line-height:1.15;color:var(--cream);margin-bottom:16px}
+.modal-text{font-family:var(--font-jost);font-size:16px;line-height:1.8;color:var(--muted)}
+.modal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.modal-close{position:absolute;top:14px;right:14px;z-index:3;width:38px;height:38px;border-radius:50%;border:1px solid rgba(var(--cream-rgb),.28);background:rgba(22,37,63,.72);backdrop-filter:blur(6px);color:var(--cream);font-size:19px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s}
+.modal-close:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.card-hint{position:absolute;top:14px;right:14px;z-index:4;width:26px;height:26px;border-radius:50%;border:1px solid rgba(var(--cream-rgb),.4);color:var(--cream);font-family:var(--font-jost);font-size:13px;font-weight:500;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.85);transition:opacity .4s ease,transform .45s var(--ease-spring);pointer-events:none}
+.pc-card:hover .card-hint,.pc-card:focus-visible .card-hint,.med-card:hover .card-hint,.med-card:focus-visible .card-hint{opacity:1;transform:scale(1)}
+body.modal-open{overflow:hidden}
+@media(max-width:640px){.modal-stats{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.modal-backdrop,.modal-card{transition:none}}
+
+/* ── SCROLL REVEAL ──
+   Applied to containers rather than to interactive elements, so it never
+   competes with the hover transforms on cards. */
+.reveal{opacity:0;transform:scale(.945);transition:opacity 1.05s ease,transform 1.25s cubic-bezier(.16,1,.3,1)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ── BRAND CARD BREATHING (driven by table-row hover) ── */
+@keyframes brandBreathe{
+  0%,100%{transform:translateY(-3px) scale(1)}
+  50%{transform:translateY(-7px) scale(1.038)}
+}
+.brand-card.is-breathing{animation:brandBreathe 3s ease-in-out infinite;
+  border-color:rgba(255,255,255,.85);
+  box-shadow:0 28px 60px rgba(0,0,0,.44),inset 0 1px 0 rgba(255,255,255,.95)}
+@media (prefers-reduced-motion:reduce){.brand-card.is-breathing{animation:none}}
+/* the World of Hyatt badge is a solid square and reads heavier than the
+   three wordmarks, so it sits 15% smaller in the same box */
+.brand-card[data-brand="hyatt"] img{width:59.5%;height:54.4%}
+
+/* ── CTA ── */
+.cta-section{background:var(--warm);padding:clamp(100px,12vw,180px) 0;text-align:center}
+.cta-section .section-h2{font-size:clamp(40px,5.5vw,72px);margin-bottom:24px}
+.cta-section .section-h2 em{font-style:italic;color:var(--cream);opacity:.75}
+.cta-body{font-family:var(--font-jost);font-size:15.5px;color:var(--muted);max-width:50ch;margin:0 auto 40px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy-lt);padding:clamp(56px,8vw,96px) 0 0}
+.footer-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(48px,8vw,120px)}
+.footer-logo{display:flex;align-items:center;justify-content:center}
+.footer-label{font-family:var(--font-jost);font-size:12.5px;text-transform:uppercase;letter-spacing:.28em;color:rgba(var(--cream-rgb),.55);margin-bottom:12px}
+.footer-divider{border:none;border-top:1px solid rgba(var(--cream-rgb),.2);margin-bottom:20px}
+.contacts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px 48px;margin-bottom:40px}
+.contact-name{font-family:var(--font-jost);font-size:16px;font-weight:600;color:var(--cream)}
+.contact-title{font-family:var(--font-jost);font-size:15px;color:rgba(var(--cream-rgb),.6)}
+.contact-email{font-family:var(--font-jost);font-size:15px;color:rgba(var(--cream-rgb),.6)}
+.contact-email:hover{color:var(--cream)}
+.footer-bottom{border-top:1px solid rgba(var(--cream-rgb),.12);padding:24px 0;margin-top:56px}
+.footer-copy{font-family:var(--font-jost);font-size:11.5px;color:rgba(var(--cream-rgb),.4)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .pc-cards{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .overview-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .overview-brand,.overview-copy,.overview-right,.overview .btn-row{grid-column:1;grid-row:auto}
+  .stat-row,.stats-card{flex:0 0 auto}
+  .overview-brand{margin:0 0 32px}
+  .overview .btn-row{margin-top:36px}
+  .overview-photo{margin-top:32px}
+  .hl-grid{grid-template-columns:1fr}
+  .med-callouts{grid-template-columns:1fr}
+  .pc-infographic{grid-template-columns:1fr}
+  .pc-info-cell+.pc-info-cell{border-left:none;border-top:1px solid rgba(58,50,45,.16)}
+}
+@media(max-width:760px){
+  .stat-row{grid-template-columns:1fr}
+  .med-stats{grid-template-columns:1fr 1fr}
+  /* complex exhibits scroll sideways instead of shrinking past legibility */
+  .scarcity-map{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .scarcity-map svg{min-width:560px}
+  .brand-table{overflow-x:auto}
+  .brand-table table{min-width:420px}
+}
+@media(max-width:640px){
+  .footer-grid{grid-template-columns:1fr}
+  .hero-center{top:90px;right:16px;left:16px}
+  .hero-box{padding:30px 26px;border-radius:10px}
+  .side-tab{display:none}
+  .gallery-collage{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .gallery-cell.span2c{grid-column:span 2}
+  .pc-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ NAVBAR ════ -->
+<nav class="navbar">
+  <div class="nav-logo"><img src="assets/hwe-logo-white.svg" alt="Hodges Ward Elliott" style="height:32px;width:auto"></div>
+  <div class="nav-right">
+    <div class="nav-links" id="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#confidentiality" class="nav-sign">Sign CA</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ════ SIDE TAB ════ -->
+<a href="#confidentiality" class="side-tab">Sign CA</a>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <img class="hero-img" src="assets/hero-exterior.jpg" alt="Hyatt House Dallas/Lincoln Park exterior">
+  <div class="hero-grad"></div>
+  <div class="hero-center">
+    <div class="hero-box">
+      <img src="assets/property-logo.svg" alt="Hyatt House Dallas/Lincoln Park" style="max-width:300px;width:76vw;height:auto;display:block;margin:0 auto">
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-left">
+      <span>8221 N Central Expy, Dallas, TX 75225</span>
+      <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase">Offered by Hodges Ward Elliott</span>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <div class="hero-scroll-text">Scroll</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ OVERVIEW / EXECUTIVE SUMMARY ════ -->
+<section class="overview" id="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+
+      <div class="overview-brand">
+        <img src="assets/property-logo.svg" alt="Hyatt House Dallas/Lincoln Park">
+      </div>
+
+      <div class="overview-copy">
+        <p class="body-text">Hodges Ward Elliott (&ldquo;HWE&rdquo;) is pleased to present the opportunity to acquire the 155-room <strong style="color:var(--cream)">Hyatt House Dallas/Lincoln Park</strong> (&ldquo;Property&rdquo; or &ldquo;Hotel&rdquo;), an institutionally maintained, extended-stay hotel boasting one of the most desirable locations within the Dallas market. The Hotel&rsquo;s Park Cities zip code places it within one of the country&rsquo;s wealthiest pockets, adjacent to NorthPark Center (one of the highest-grossing malls in the U.S.), minutes from Southern Methodist University (SMU), and at the center of a major concentration of office space anchored by Preston Center and the Central Expressway (US 75) corridor. Additionally, the Hyatt House is one of the closest hotels to the 888-bed Texas Health Presbyterian Hospital Dallas, one of Dallas&rsquo;s primary medical campuses and the flagship institution for the Texas Health system. Offered unencumbered of management, the fee-simple Hotel presents a rare opportunity to acquire a value-add extended-stay asset within the most desirable area of one of the nation&rsquo;s top economic growth markets.</p>
+        <div class="overview-photo">
+          <img src="assets/exterior.jpg" alt="Hyatt House Dallas/Lincoln Park exterior">
+        </div>
+      </div>
+
+      <!-- CA BUTTONS — replace href with the RightSignature template link and drop the CA .docx into /site -->
+      <div class="btn-row">
+        <a href="#confidentiality" class="btn-cta">Sign CA Online</a>
+        <a href="#confidentiality" class="btn-ghost">Download CA (DOCX)</a>
+      </div>
+
+      <!-- PROPERTY SNAPSHOT -->
+      <div class="overview-right">
+        <div class="stats-card">
+          <div class="stat-row full">
+            <div class="stat-cell">
+              <div class="stat-val">8221 N Central Expy<br>Dallas, Texas 75225</div>
+              <div class="stat-lbl">Address</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-cell">
+              <div class="stat-val">155</div>
+              <div class="stat-lbl">Keys</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-val">All-Suite</div>
+              <div class="stat-lbl">Room Product</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-cell">
+              <div class="stat-val">2000</div>
+              <div class="stat-lbl">Year Opened</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-val">2.08 Acres</div>
+              <div class="stat-lbl">Site Area</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-cell">
+              <div class="stat-val">1,000 SF</div>
+              <div class="stat-lbl">Meeting Space</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-val">149 Garage<br>16 Surface</div>
+              <div class="stat-lbl">Parking</div>
+            </div>
+          </div>
+          <div class="stat-row full">
+            <div class="stat-cell">
+              <div class="stat-val">Outdoor Pool, Fitness Center, H BAR, Complimentary Hot Breakfast, Guest Market, Guest Laundry</div>
+              <div class="stat-lbl">Amenities</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-cell">
+              <div class="stat-val">Fee Simple</div>
+              <div class="stat-lbl">Interest Conveyed</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-val">Unencumbered</div>
+              <div class="stat-lbl">Management</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════ GALLERY ════ -->
+<section class="gallery" id="gallery">
+  <div class="gallery-collage">
+    <div class="gallery-cell span2c span2r">
+      <img src="assets/suite-living.jpg" alt="Hyatt House suite living area">
+      <div class="g-overlay"><span class="gallery-label">Suite Living Area</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/suite-king.jpg" alt="King suite">
+      <div class="g-overlay"><span class="gallery-label">King Suite</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/suite-kitchen.jpg" alt="Full in-suite kitchen">
+      <div class="g-overlay"><span class="gallery-label">Full In-Suite Kitchen</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/suite-queen.jpg" alt="Two-queen suite">
+      <div class="g-overlay"><span class="gallery-label">Two-Queen Suite</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/bath.jpg" alt="Guest bath">
+      <div class="g-overlay"><span class="gallery-label">Guest Bath</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/dining.jpg" alt="H BAR and lounge">
+      <div class="g-overlay"><span class="gallery-label">H BAR &amp; Lounge</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/lobby.jpg" alt="Lobby">
+      <div class="g-overlay"><span class="gallery-label">Lobby</span></div>
+    </div>
+    <div class="gallery-cell span2c span2r">
+      <img src="assets/dining-2.jpg" alt="Great room and fireplace">
+      <div class="g-overlay"><span class="gallery-label">Great Room</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/fitness.jpg" alt="Fitness center">
+      <div class="g-overlay"><span class="gallery-label">Fitness Center</span></div>
+    </div>
+    <div class="gallery-cell">
+      <img src="assets/pool.jpg" alt="Outdoor pool and courtyard">
+      <div class="g-overlay"><span class="gallery-label">Outdoor Pool &amp; Courtyard</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ INVESTMENT HIGHLIGHTS ════ -->
+<div class="highlights-header" id="highlights">
+  <div class="wrap">
+    <h2 class="section-h2">Investment Highlights</h2>
+  </div>
+</div>
+
+<!-- ── 1. PARK CITIES ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">Located Within Dallas Park Cities &mdash; One of the Most Affluent Areas in the U.S.</h3>
+      <p class="hl-body">Strategically located in the heart of the Park Cities, one of the most affluent neighborhoods in the United States, the Property specifically sits within University Park and offers immediate proximity to neighboring Highland Park; together, the two communities have an average household income well exceeding $250,000 and are collectively ranked the #6 wealthiest suburb in America.. This concentration of wealth has sustained a retail base unmatched in the Dallas-Fort Worth MSA (DFW), placing the Hotel close to Highland Park Village (a National Historic Landmark known as the &ldquo;Rodeo Drive of Dallas&rdquo;), Snider Plaza (an upscale open-air center bordering the SMU campus), and NorthPark Center (the largest upscale shopping destination in DFW, drawing approximately 26 million visitors annually). The Property is also minutes from SMU, one of the most prestigious and selective universities in North Texas and home to over 12,500 students.</p>
+    </div>
+
+    <!-- Aerial (Page 7 of the Hyatt House OM) -->
+    <div class="hl-photo-wide">
+      <img src="assets/aerial-lincoln-park.jpg" alt="Aerial of the Hyatt House Dallas/Lincoln Park showing Highland Park, University Park, SMU, NorthPark Center, Preston Center, Texas Health Presbyterian Hospital, downtown Dallas and Love Field Airport">
+    </div>
+    <div class="hl-photo-cap">Hyatt House Dallas/Lincoln Park &mdash; Looking Southwest Toward Downtown Dallas</div>
+
+    <!-- Rebuilt from Dallas-Park-Cities.jpg -->
+    <div class="pc-infographic">
+      <div class="pc-info-cell">
+        <div class="pc-info-val">$250K+</div>
+        <div class="pc-info-lbl">Average household income across University Park and Highland Park</div>
+      </div>
+      <div class="pc-info-cell">
+        <div class="pc-info-val">#6</div>
+        <div class="pc-info-lbl">Collective ranking among the wealthiest suburbs in America</div>
+      </div>
+    </div>
+
+    <!-- Six Park Cities cards — logo over photo, rollover reveal -->
+    <div class="pc-cards" style="margin-top:12px">
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-university-park.jpg" data-logo="assets/logo-university-park.svg" data-title="University Park" data-eyebrow="Park Cities" data-blurb="The Property specifically sits within University Park, one of the two communities that make up the Park Cities. Together with neighboring Highland Park, the two have an average household income well exceeding $250,000.">
+        <img class="pc-photo" src="assets/mkt-university-park.jpg" alt="University Park">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <img class="pc-card-logo" src="assets/logo-university-park.svg" alt="University Park">
+        </div>
+        <div class="pc-card-note">The Property sits within University Park &mdash; the heart of the Park Cities</div>
+      </button>
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-highland-park.jpg" data-logo="assets/logo-highland-park.svg" data-title="Highland Park" data-eyebrow="Park Cities" data-blurb="Highland Park neighbors University Park directly. Collectively, the two communities are ranked the #6 wealthiest suburb in America — a concentration of wealth that has sustained a retail base unmatched in the Dallas-Fort Worth MSA.">
+        <img class="pc-photo" src="assets/mkt-highland-park.jpg" alt="Highland Park">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <img class="pc-card-logo" src="assets/logo-highland-park.svg" alt="Highland Park">
+        </div>
+        <div class="pc-card-note">Immediately neighboring &mdash; together ranked the #6 wealthiest suburb in America</div>
+      </button>
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-highland-park-village.jpg" data-logo="assets/logo-highland-park-village.svg" data-title="Highland Park Village" data-eyebrow="Retail" data-blurb="A National Historic Landmark known as the “Rodeo Drive of Dallas,” Highland Park Village anchors the luxury retail base that the Park Cities’ concentration of wealth has sustained.">
+        <img class="pc-photo" src="assets/mkt-highland-park-village.jpg" alt="Highland Park Village">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <img class="pc-card-logo" src="assets/logo-highland-park-village.svg" alt="Highland Park Village">
+        </div>
+        <div class="pc-card-note">A National Historic Landmark known as the &ldquo;Rodeo Drive of Dallas&rdquo;</div>
+      </button>
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-snider-plaza.jpg" data-title="Snider Plaza" data-eyebrow="Retail" data-blurb="Snider Plaza is an upscale open-air center bordering the SMU campus, minutes from the Property and part of the Park Cities’ unmatched retail base.">
+        <img class="pc-photo" src="assets/mkt-snider-plaza.jpg" alt="Snider Plaza">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <div class="pc-card-word">Snider Plaza<small>University Park</small></div>
+        </div>
+        <div class="pc-card-note">An upscale open-air center bordering the SMU campus</div>
+      </button>
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-northpark.jpg" data-logo="assets/logo-northpark.svg" data-title="NorthPark Center" data-eyebrow="Retail" data-blurb="NorthPark Center is the largest upscale shopping destination in DFW, drawing approximately 26 million visitors annually. The Hotel sits adjacent to it — one of the highest-grossing malls in the U.S.">
+        <img class="pc-photo" src="assets/mkt-northpark.jpg" alt="NorthPark Center">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <img class="pc-card-logo" src="assets/logo-northpark.svg" alt="NorthPark Center">
+        </div>
+        <div class="pc-card-note">The largest upscale shopping destination in DFW &mdash; approximately 26 million visitors annually</div>
+      </button>
+
+      <button type="button" class="pc-card" data-modal data-photo="assets/mkt-smu.jpg" data-logo="assets/logo-smu.svg" data-title="Southern Methodist University" data-eyebrow="Education" data-blurb="The Property is minutes from SMU, one of the most prestigious and selective universities in North Texas and home to over 12,500 students.">
+        <img class="pc-photo" src="assets/mkt-smu.jpg" alt="Southern Methodist University">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="pc-card-inner">
+          <img class="pc-card-logo is-wordmark" src="assets/logo-smu.svg" alt="Southern Methodist University">
+        </div>
+        <div class="pc-card-note">One of the most prestigious and selective universities in North Texas &mdash; over 12,500 students</div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. HEALTHCARE ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">Proximity to Cornerstone Healthcare Facilities</h3>
+      <p class="hl-body">The Hyatt House is located within a four-mile radius of two of the largest hospitals in DFW, the 888-bed Texas Health Presbyterian Hospital Dallas and the 899-bed Medical City Dallas Hospital. Just over two miles away, Texas Health Presbyterian Hospital Dallas is the flagship institution and primary teaching hospital for the Texas Health system. Ranked by U.S. News &amp; World Report, the hospital is one of the top five medical centers in DFW. Roughly four miles away, Medical City Dallas Hospital is renowned for its excellence across nearly 100 specialties. The hospital employs close to 3,000 people, including more than 1,500 affiliated providers.</p>
+    </div>
+
+    <div class="med-callouts">
+
+      <button type="button" class="med-card" data-modal
+              data-photo="assets/hosp-texas-health.jpg"
+              data-logo="assets/logo-texas-health.svg" data-plate="true"
+              data-eyebrow="Just Over Two Miles Away"
+              data-title="Texas Health Presbyterian Hospital Dallas"
+              data-blurb="Just over two miles away, Texas Health Presbyterian Hospital Dallas is the flagship institution and primary teaching hospital for the Texas Health system. Ranked by U.S. News &amp; World Report, the hospital is one of the top five medical centers in DFW."
+              data-stats="888::Beds|Top 5::Medical Center in DFW|Flagship::Texas Health System">
+        <div class="med-photo">
+          <img class="mp" src="assets/hosp-texas-health.jpg" alt="Texas Health Presbyterian Hospital Dallas campus">
+          <div class="med-logo-plate"><img src="assets/logo-texas-health.svg" alt="Texas Health"></div>
+        </div>
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="med-body">
+          <div class="med-name">Texas Health Presbyterian Hospital Dallas</div>
+          <div class="med-sub">Just Over Two Miles Away</div>
+          <div class="med-stats">
+            <div class="med-stat"><div class="med-stat-val">888</div><div class="med-stat-lbl">Beds</div></div>
+            <div class="med-stat"><div class="med-stat-val">Top 5</div><div class="med-stat-lbl">Medical Center in DFW</div></div>
+            <div class="med-stat"><div class="med-stat-val">Flagship</div><div class="med-stat-lbl">Texas Health System</div></div>
+          </div>
+        </div>
+      </button>
+
+      <button type="button" class="med-card" data-modal
+              data-photo="assets/hosp-medical-city.jpg"
+              data-logo="assets/logo-medical-city.svg" data-plate="true"
+              data-eyebrow="Roughly Four Miles Away"
+              data-title="Medical City Dallas Hospital"
+              data-blurb="Roughly four miles away, Medical City Dallas Hospital is renowned for its excellence across nearly 100 specialties. The hospital employs close to 3,000 people, including more than 1,500 affiliated providers."
+              data-stats="899::Beds|~100::Specialties|~3,000::Employees">
+        <div class="med-photo">
+          <img class="mp" src="assets/hosp-medical-city.jpg" alt="Medical City Dallas Hospital campus">
+          <div class="med-logo-plate"><img src="assets/logo-medical-city.svg" alt="Medical City Healthcare"></div>
+        </div>
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="med-body">
+          <div class="med-name">Medical City Dallas Hospital</div>
+          <div class="med-sub">Roughly Four Miles Away</div>
+          <div class="med-stats">
+            <div class="med-stat"><div class="med-stat-val">899</div><div class="med-stat-lbl">Beds</div></div>
+            <div class="med-stat"><div class="med-stat-val">~100</div><div class="med-stat-lbl">Specialties</div></div>
+            <div class="med-stat"><div class="med-stat-val">~3,000</div><div class="med-stat-lbl">Employees</div></div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. OFFICE ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">Surrounded by a Dense Concentration of Office Space</h3>
+      <p class="hl-body">The Hotel sits amid some of the city&rsquo;s core office nodes, headlined by Preston Center and the US 75 office corridor. The corridor holds nearly 20 million SF of office space clustered along the highway between I-635 and downtown Dallas, and the Property sits directly across the highway from Topgolf&rsquo;s corporate headquarters and The Gild, a recently renovated complex offering nearly 900,000 SF of premier office space. To the west, Preston Center is a 105-acre commercial district anchoring one of Dallas&rsquo;s most established business submarkets, with over 500,000 SF of retail and more than 2.7 million SF of Class A office.</p>
+    </div>
+
+    <div class="office-aerial">
+      <img src="assets/aerial-office-corridor.jpg" alt="Aerial looking north over the Hyatt House Dallas/Lincoln Park showing Preston Center, NorthPark Center, Topgolf headquarters, Northwest Highway and US 75">
+    </div>
+    <div class="hl-photo-cap">The Property at US 75 &amp; Northwest Highway &mdash; Preston Center, NorthPark Center and Topgolf HQ</div>
+
+    <div class="office-cards">
+
+      <button type="button" class="oc-card" data-modal
+              data-photo="assets/office-preston-center.jpg" data-logo="assets/logo-preston-center.svg"
+              data-eyebrow="105-Acre Commercial District" data-title="Preston Center"
+              data-blurb="To the west, Preston Center is a 105-acre commercial district anchoring one of Dallas&rsquo;s most established business submarkets, with over 500,000 SF of retail and more than 2.7 million SF of Class A office."
+              data-stats="105 Acres::District|500,000+ SF::Retail|2.7M+ SF::Class A Office">
+        <img class="oc-photo" src="assets/office-preston-center.jpg" alt="Preston Center, Dallas">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="oc-card-inner"><img class="oc-card-logo" src="assets/logo-preston-center.svg" alt="Preston Center"></div>
+        <div class="oc-card-note">105 acres &mdash; 500,000+ SF retail and more than 2.7M SF of Class A office</div>
+      </button>
+
+      <button type="button" class="oc-card" data-modal
+              data-photo="assets/office-topgolf.jpg" data-logo="assets/logo-topgolf-stacked.svg"
+              data-eyebrow="Directly Across US 75" data-title="Topgolf Corporate Headquarters"
+              data-blurb="The Property sits directly across the highway from Topgolf&rsquo;s corporate headquarters, part of the US 75 office corridor that holds nearly 20 million SF of office space between I-635 and downtown Dallas.">
+        <img class="oc-photo" src="assets/office-topgolf.jpg" alt="Topgolf corporate headquarters">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="oc-card-inner"><img class="oc-card-logo" src="assets/logo-topgolf-stacked.svg" alt="Topgolf Corporate Headquarters"></div>
+        <div class="oc-card-note">Directly across the highway from the Property</div>
+      </button>
+
+      <button type="button" class="oc-card" data-modal
+              data-photo="assets/office-the-gild.jpg" data-logo="assets/logo-the-gild-01.svg"
+              data-eyebrow="Recently Renovated" data-title="The Gild"
+              data-blurb="The Gild is a recently renovated complex offering nearly 900,000 SF of premier office space, directly across the highway from the Property."
+              data-stats="900,000 SF::Premier Office Space|Renovated::Campbell Centre|Across US 75::From the Property">
+        <img class="oc-photo" src="assets/office-the-gild.jpg" alt="The Gild at Campbell Centre">
+        <span class="card-hint" aria-hidden="true">+</span>
+        <div class="oc-card-inner"><img class="oc-card-logo is-fineline" src="assets/logo-the-gild-01.svg" alt="The Gild"></div>
+        <div class="oc-card-note">Nearly 900,000 SF of premier office space, recently renovated</div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. CONNECTIVITY ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">Situated at a High-Volume Intersection with Strong Regional Connectivity</h3>
+      <p class="hl-body">The Property sits at one of the highest-volume intersections in Dallas, directly off Northwest Highway (Loop 12) and US 75, where combined average daily traffic exceeds 250,000 vehicles, placing it in a highly visible location. Just a few miles from downtown Dallas, the Hyatt House also offers convenient access to I-635, I-30, I-35E, and I-45, connecting it to the rest of the metroplex, along with direct routes to both Dallas-Fort Worth International Airport, roughly 20 miles away, and Dallas Love Field, just over six miles to the west.</p>
+    </div>
+
+    <div id="dallas-access-map">
+  <section class="dam-highlights" aria-label="Location highlights">
+    <button type="button" class="card dam-card" data-focus="traffic" aria-pressed="false">
+      <span class="dam-kicker">Immediate visibility</span>
+      <span class="dam-value tabular-nums">250,000+</span>
+      <span class="dam-copy">combined vehicles per day at Northwest Highway + US 75</span>
+    </button>
+    <button type="button" class="card dam-card" data-focus="downtown" aria-pressed="false">
+      <span class="dam-kicker">Urban access</span>
+      <span class="dam-value">Minutes from downtown</span>
+      <span class="dam-copy">a central position with direct access to the Dallas core</span>
+    </button>
+    <button type="button" class="card dam-card" data-focus="airports" aria-pressed="false">
+      <span class="dam-kicker">Two-airport reach</span>
+      <span class="dam-value tabular-nums">6+ / 20 mi</span>
+      <span class="dam-copy">to Love Field and DFW International, respectively</span>
+    </button>
+  </section>
+
+  <div class="dam-map-wrap">
+    <svg class="dam-map" viewBox="0 0 736 460" role="img" aria-labelledby="dam-title dam-desc"><title id="dam-title">Hyatt House Dallas access map</title><desc id="dam-desc">A stylized map centered on Hyatt House near Northwest Highway and US 75, showing downtown Dallas, Dallas Love Field, DFW International Airport, and regional interstate connections.</desc><g><path class="dam-local" d="M603.2,112.7L602.7,112.7M282.6,222.9L283.3,223.2M230.7,303.7L232.9,305.3L233.2,305.3M186.9,370.2L186.9,371.3M339.3,100.7L337.8,100.6M436.8,343.4L436.8,342.4M188.9,28.0L188.5,29.7M421.9,111.0L421.9,112.4M389.6,100.0L390.7,100.0M298.4,243.5L300.8,238.7L301.6,237.0M242.2,306.5L244.7,306.5L246.5,306.5L246.8,306.5M384.5,99.7L382.7,99.7L381.6,99.5L379.9,99.4L379.4,99.4M399.7,100.0L399.7,99.8M339.4,100.9L341.2,101.0L342.1,101.0M310.2,100.6L314.6,100.6M224.9,298.3L225.1,298.4M172.6,25.6L173.8,25.6L176.5,25.5L176.8,25.5M189.1,21.8L189.1,22.7M429.9,33.7L430.1,33.1M155.4,23.0L154.7,22.5M570.4,71.3L570.4,71.9M204.3,25.6L203.1,25.6M204.4,25.9L206.3,25.9M377.8,99.5L378.4,99.5M183.1,404.5L182.3,404.5M570.1,148.4L570.0,146.2M511.9,107.9L510.7,107.3M421.4,166.0L421.5,165.2M363.9,101.2L363.2,101.2M313.2,181.2L312.7,179.3L312.2,177.5M323.3,216.6L323.4,217.0M327.4,240.7L327.1,239.4M191.9,180.5L191.9,179.9M269.8,103.4L270.4,103.4M206.5,282.5L208.5,283.2M187.8,314.4L188.0,313.8M131.0,87.8L130.9,88.0M188.8,51.7L188.7,53.1M477.7,435.9L477.7,435.3M538.8,19.5L538.9,19.5M546.7,22.0L547.8,22.0M605.0,20.2L605.9,20.3M272.8,311.6L272.5,311.7M188.3,306.5L188.3,306.3M486.0,373.5L485.0,373.4M153.8,410.6L153.6,410.6M318.0,39.2L319.5,37.0L320.0,34.4L320.0,32.5M413.4,100.1L415.0,100.0M270.7,398.8L271.4,398.8M623.9,120.3L624.9,120.3M265.7,103.8L267.2,103.8M238.3,400.8L235.9,399.4L235.0,399.2M246.7,400.5L244.7,401.1L240.6,401.7L239.7,401.6M570.6,112.6L570.4,112.6M612.9,164.7L612.9,162.9M191.8,187.9L191.8,182.8M422.0,108.8L422.0,106.9M421.9,133.5L421.9,134.4M503.7,104.7L504.7,104.7M569.9,153.8L569.9,154.0M555.8,266.9L556.4,266.3M188.3,148.9L188.3,149.0M570.3,95.6L570.3,96.2M570.4,84.8L570.4,85.1M243.7,304.9L242.7,304.9L242.2,304.9M524.5,375.0L519.9,374.5M634.2,163.2L634.1,163.2M594.9,215.3L598.1,209.8M572.6,250.3L572.1,250.8M188.3,148.1L188.3,148.9M188.7,140.2L188.7,136.6L188.7,136.0M647.4,108.9L647.6,108.3M440.7,356.3L439.2,354.4M188.5,65.7L188.5,66.8M218.3,99.0L219.0,99.3M276.0,102.8L273.7,102.9M460.0,104.7L455.1,104.7L453.6,105.0L451.1,105.5L447.3,105.7L446.1,105.7M585.0,113.4L582.9,113.4L582.7,113.4M509.5,313.8L509.8,312.9M592.1,19.5L600.0,19.5L604.0,20.1M422.0,134.2L422.0,133.5M100.0,408.1L100.3,408.1M588.3,113.7L589.3,113.7M188.7,268.6L188.7,266.7M643.7,120.8L643.6,121.3M430.8,31.5L430.9,30.9M191.2,214.8L191.2,214.2M190.7,239.2L190.7,238.5M570.4,127.1L570.4,123.5L570.4,123.5M570.1,122.7L570.1,122.8M99.9,35.4L98.7,34.4M470.7,103.9L468.7,103.9L466.5,104.1L464.8,104.4L464.6,104.4M559.9,112.6L559.8,112.6M543.0,112.7L544.7,112.7M191.0,229.7L191.0,228.4M566.0,112.6L565.3,112.6M190.2,248.6L190.2,249.9M190.2,260.6L190.2,260.1M190.1,255.8L190.1,256.9L190.1,257.8M422.0,138.8L422.0,137.9M637.3,150.9L637.4,147.8M570.6,54.5L570.6,54.6M346.5,271.3L346.1,271.0M319.6,201.2L319.6,200.9M321.7,207.9L321.6,207.5M421.5,184.4L421.5,184.0M322.4,211.7L322.2,210.4M405.3,324.9L405.5,324.9M186.7,380.4L186.7,381.4M605.9,20.3L606.2,20.5M548.4,231.3L548.6,231.3M542.6,20.8L543.6,21.7M188.6,146.1L188.6,145.8M293.8,227.0L292.1,226.2L292.0,226.2M190.3,255.9L190.3,255.8M570.1,158.4L570.1,157.5M190.8,220.8L190.8,222.4L190.8,225.1M531.6,232.4L532.8,231.8M508.9,314.8L509.2,314.2M570.1,160.0L570.1,159.7M570.4,113.9L570.4,112.9M570.3,120.5L570.3,120.2M569.9,150.8L569.9,151.6M570.3,101.3L570.3,101.4M570.1,118.4L570.1,120.2M570.1,122.2L570.1,122.7M570.0,175.6L570.0,176.5M113.2,52.1L110.4,52.0L108.9,51.5M633.9,174.6L633.9,175.3M319.7,35.0L319.2,37.0M612.8,380.1L610.3,380.2M549.3,231.2L548.6,231.2M594.2,378.8L595.4,378.8M404.4,323.3L404.4,323.4M188.3,72.2L188.3,74.7M516.5,306.2L516.2,306.5M570.1,181.9L570.1,181.0M495.7,329.1L496.3,328.7M208.1,25.9L208.6,25.9M324.9,224.5L325.0,225.1M421.9,160.1L421.9,159.5M549.8,272.4L549.1,273.0M554.5,112.6L553.1,112.6M582.1,113.4L580.5,113.3M557.5,112.7L558.5,112.7M542.0,19.9L541.8,19.8M637.4,145.5L637.3,146.7M326.6,231.1L326.5,230.6M188.8,44.1L188.8,45.4M593.7,378.5L593.3,378.5M481.0,103.9L480.4,103.9M103.7,123.4L103.4,122.7M421.9,158.1L421.9,157.2M579.5,378.6L580.0,378.6M612.0,172.3L612.0,173.9M611.9,186.2L611.5,187.0M603.4,200.6L602.9,201.5M535.1,378.5L537.2,378.8M499.5,374.1L498.9,374.0M577.5,244.2L577.8,243.8M188.3,71.4L188.3,72.2M188.6,69.1L188.6,68.5M571.0,44.1L571.0,42.6M188.8,109.2L188.8,108.9M603.2,201.7L603.2,201.4M612.1,186.0L612.1,185.4M279.7,310.9L279.7,310.9M265.0,310.3L264.6,310.1M274.9,311.0L273.9,311.1L273.9,311.1M271.4,312.6L271.6,312.5M634.2,160.0L634.2,159.5M617.2,114.5L617.4,114.8M622.3,119.4L621.8,119.0M634.1,129.1L634.2,130.1M200.6,103.8L201.1,103.2M276.6,398.8L277.2,398.8M636.1,200.1L637.7,201.8M489.6,373.8L491.4,374.0M627.7,121.2L628.2,121.6M243.7,102.8L244.9,102.9M567.6,255.5L568.3,254.7M188.2,282.8L188.2,283.4M560.3,262.5L560.4,262.3M396.0,100.0L396.5,100.0M391.2,99.8L390.4,99.7M634.4,148.6L634.4,147.7M570.0,206.2L570.0,206.0M421.5,174.6L421.4,174.0M421.1,167.9L421.2,168.5M330.4,249.5L330.3,248.9M420.9,59.3L420.9,59.9M424.6,101.9L425.0,102.3M188.8,94.0L188.8,93.4M188.5,82.4L188.5,84.3M315.6,190.1L315.4,189.5M570.3,93.8L570.3,94.3M587.2,228.0L587.6,227.2M383.6,310.4L383.1,310.0M587.6,227.2L588.4,225.9M587.1,227.8L586.8,228.1M422.3,52.0L422.3,52.0M283.3,223.2L288.5,225.1L289.5,225.5M520.3,303.4L521.6,303.0L523.2,301.9L524.9,300.3L526.1,298.7M542.4,279.9L542.8,279.6M634.5,197.4L634.4,197.3M270.6,219.1L272.2,219.6M101.1,119.6L101.5,120.5M527.8,295.8L527.3,296.5M437.3,351.6L437.3,351.8M428.3,105.7L427.8,105.4"></path><path class="dam-primary dam-route-i35e" d="M414.3,398.9L414.1,400.0M364.9,308.8L361.1,307.8M306.1,184.5L306.1,178.7M337.7,286.7L337.5,286.2M377.2,315.5L375.6,314.7M375.6,314.7L374.6,314.1M377.2,316.0L378.1,316.4M375.4,314.9L377.2,316.0M342.5,301.2L342.9,302.1M342.9,302.1L343.7,303.3M350.2,307.6L350.9,307.8M350.4,307.3L348.4,306.6L346.6,305.6M351.2,307.5L350.4,307.3M350.9,307.8L356.2,308.1M366.0,309.2L364.9,308.8M364.8,309.1L365.9,309.5M365.9,309.5L369.7,311.6M386.7,321.4L387.4,321.7M388.4,322.0L392.6,322.8M386.9,321.1L385.1,320.1M387.6,321.4L386.9,321.1M392.3,322.4L388.9,321.8M393.7,322.5L392.3,322.4M393.7,323.0L394.3,323.0M392.6,322.8L393.7,323.0M419.9,370.2L416.6,368.6L414.7,367.2M397.4,420.5L397.4,418.4M417.9,371.0L418.7,371.9L419.2,373.5L419.2,374.0M412.0,362.3L412.1,364.9M411.8,361.3L411.8,361.5M412.8,361.3L412.7,360.1M412.9,362.3L412.8,361.3M411.5,359.1L411.5,359.8M411.4,358.6L411.5,359.1M412.6,358.6L412.5,358.2M411.8,348.3L411.5,345.8M411.8,348.8L411.8,348.3M411.5,348.3L411.6,348.8M411.6,348.8L411.7,350.6M318.3,242.5L317.6,241.7M321.9,246.4L321.2,245.7M321.1,245.8L321.7,246.7M321.7,246.7L328.0,253.7L329.2,255.8L330.4,259.0M310.8,233.5L311.3,234.4M313.8,237.9L318.1,242.6M311.1,233.5L309.9,231.1L308.7,228.1M311.6,234.4L311.1,233.5M299.7,122.2L299.7,123.1M300.1,123.1L300.0,122.2M300.0,122.2L299.8,121.5M395.9,427.0L396.9,422.7M396.6,420.5L396.6,421.3M396.2,422.7L395.1,427.1M395.1,427.1L394.6,430.2L393.3,436.9M341.2,297.1L340.1,294.0M341.0,297.3L341.2,298.0M341.5,297.8L341.2,297.1M341.2,298.0L342.5,301.2M337.5,286.2L336.6,283.2M337.3,286.2L337.4,286.7M337.4,286.7L338.6,290.3M334.1,272.9L334.1,273.4M334.1,273.4L334.4,275.9M334.2,272.9L333.9,269.8M334.4,273.4L334.2,272.9M333.5,269.1L333.6,269.8M333.7,269.1L333.4,266.6L332.4,263.9M333.6,269.8L333.6,270.1M333.9,269.8L333.7,269.1M331.9,263.4L332.3,264.1M332.1,263.2L331.6,261.8M332.3,264.1L333.4,268.0L333.5,269.1M332.4,263.9L332.1,263.2M330.7,259.1L330.5,258.7M330.5,259.4L331.9,263.4M330.5,258.7L329.4,255.6L328.2,253.6L321.9,246.4M330.4,259.0L330.5,259.4M307.9,227.7L308.2,228.1M308.2,228.1L309.8,231.3L310.8,233.5M308.4,227.7L307.2,224.8L306.5,221.5M308.7,228.1L308.4,227.7M306.2,217.5L306.1,217.0M306.1,217.0L306.1,215.3M305.6,217.3L305.4,218.8M305.7,216.9L305.6,217.3M305.9,215.3L305.7,216.9M305.9,214.7L305.9,215.3M306.1,214.7L306.1,210.0M306.1,215.3L306.1,214.7M306.0,206.3L306.0,196.8M305.9,206.8L305.9,214.7M306.1,206.8L306.0,206.3M305.7,206.3L305.9,206.8M305.7,196.2L305.7,196.8M306.0,196.2L306.0,188.6M306.0,196.8L306.0,196.2M305.7,196.8L305.7,202.8M305.9,185.1L305.7,196.2M306.1,185.1L306.1,184.5M305.9,184.7L305.9,185.1M305.9,178.1L305.9,178.7M306.1,178.7L306.1,178.1M305.9,178.7L305.9,180.0M306.4,159.8L306.4,159.1M305.9,159.5L305.9,160.7M305.9,158.8L305.9,159.5M306.1,154.9L306.0,154.3M306.0,154.3L305.0,150.9L304.5,149.3M305.7,156.2L305.9,158.8M305.5,154.6L305.6,155.1M303.2,144.9L302.4,141.7M302.8,145.1L303.3,146.5M303.6,146.4L303.2,144.9M303.3,146.5L304.1,149.4M414.8,384.3L414.7,384.6M418.6,376.0L414.8,384.3M415.3,384.9L418.7,378.9L420.3,376.4M404.5,328.4L406.3,329.8L406.9,330.6L407.8,332.2M400.1,325.3L404.5,328.4M400.1,324.9L398.0,323.7L394.9,322.8L393.7,322.5M404.6,328.1L400.2,325.0M279.5,79.5L278.8,78.2M278.2,78.3L279.0,79.6M294.3,108.3L295.3,110.1M295.3,110.1L295.7,110.8M295.7,110.8L297.0,113.4M296.0,110.7L295.5,110.1M295.5,110.1L294.3,107.9M266.6,59.9L267.3,60.8M396.6,421.3L396.2,422.7M396.9,422.7L397.2,421.3M397.2,421.3L397.4,420.5M414.9,391.8L414.9,391.3M414.5,400.1L414.8,399.1M414.4,400.5L414.5,400.1M414.1,400.0L413.8,400.5M403.4,409.3L398.0,412.9L397.0,414.8L396.7,415.7M414.4,385.4L414.2,386.2M414.2,386.2L414.1,388.4L414.5,393.2M420.3,376.4L420.9,375.1M418.7,378.6L415.2,384.6L414.4,386.4M418.8,370.0L420.2,371.0L421.1,372.8L420.9,374.4L420.2,376.3L418.7,378.6M414.4,386.4L414.2,387.8L414.7,391.2L414.7,392.7M421.3,373.8L421.1,371.5L420.1,370.3L419.9,370.2M412.3,356.6L412.1,354.0M344.5,304.3L345.6,305.3L346.6,306.0L346.9,306.2M343.7,302.2L342.3,299.9L341.5,297.8M305.9,174.7L305.9,176.9M305.9,224.2L307.3,226.7L307.9,227.7M306.1,218.2L306.2,217.5M305.9,173.4L305.9,174.7M305.9,180.9L305.9,184.7M411.7,353.4L411.5,357.5L411.4,358.3M412.8,367.1L415.6,369.4L417.9,371.0M411.5,359.8L411.7,360.8M410.9,344.5L411.5,348.3M410.0,341.1L410.4,342.4M410.1,340.2L408.8,334.5M408.3,332.8L408.2,332.3M412.5,358.2L412.3,356.6M412.7,360.1L412.6,358.6M413.3,364.9L412.9,362.3M412.1,351.9L411.8,348.8M411.5,345.8L410.6,342.0M217.3,24.4L222.0,27.4M224.6,28.7L217.8,24.3L215.4,22.5M305.9,166.9L305.9,169.8M306.8,172.3L307.2,170.1L307.3,168.3L307.2,167.6M243.4,41.6L244.1,42.0M244.1,42.0L248.1,44.7M244.3,41.7L243.6,41.3M414.7,392.7L414.5,398.5L414.3,400.0M395.5,427.1L394.4,433.8L391.2,446.7L389.9,451.8M414.3,400.0L414.1,400.5M396.6,422.6L395.5,427.1M397.0,420.5L396.9,421.3M396.9,421.3L396.6,422.6M408.9,406.1L400.9,411.1L398.2,413.1L397.2,414.8L397.0,417.5L397.0,420.5M408.2,332.3L406.9,330.0L406.2,329.3M408.8,334.5L408.5,333.8M408.3,334.4L409.9,340.4M407.8,332.2L408.3,334.1M235.0,35.6L230.2,32.2M239.7,39.1L243.4,41.6M239.9,38.9L238.9,38.4M242.6,40.7L241.3,39.8M238.9,38.4L236.4,36.5M256.1,50.1L262.6,55.0L264.6,57.4L265.2,58.1M226.0,30.2L229.5,32.5M300.9,131.0L303.0,145.1M272.3,67.1L273.7,68.8M276.1,73.1L277.1,75.7M266.9,59.7L263.5,55.3M273.7,68.2L273.1,67.3M287.8,96.6L286.5,94.1M303.0,145.1L303.4,146.5M305.9,160.7L305.9,166.9M297.9,114.3L296.0,110.7M299.7,123.1L300.6,129.1M278.8,78.2L278.1,76.3M301.8,135.5L300.1,123.1M299.4,118.7L297.9,114.3M302.4,141.7L302.3,140.8M306.1,178.1L306.1,175.9M263.0,54.9L259.7,52.1L256.4,49.9M301.2,134.2L301.9,140.4M306.4,158.8L306.2,156.3M298.0,115.9L299.2,119.9L299.6,121.6M301.9,140.4L302.4,143.4L302.8,145.1M306.6,164.2L306.4,162.3M277.1,74.2L274.7,69.7L273.7,68.2M304.1,148.1L305.1,151.6M279.0,79.6L280.8,83.0M305.5,193.9L305.4,199.5L305.5,205.0L305.5,211.6L305.1,216.9M306.6,219.6L306.5,214.2L306.5,207.8L306.5,200.9L306.5,195.8L306.5,193.9M306.5,193.2L306.5,185.1L306.5,179.9L306.5,179.4M299.8,123.1L300.2,125.3M299.7,122.2L299.8,123.1M299.4,119.6L299.7,122.2M298.9,117.8L299.4,119.6M300.2,125.3L300.9,131.0M293.2,106.3L293.9,107.6M278.4,78.2L279.1,79.6M295.4,110.1L295.9,110.8M295.9,110.8L298.9,117.8M287.7,96.8L292.5,104.8L293.2,106.3M243.5,41.4L244.3,41.9M234.9,35.9L236.2,36.7M238.9,38.4L239.8,39.1M236.2,36.7L238.9,38.4M244.3,41.9L248.1,44.5M249.5,45.4L250.5,46.1M266.7,59.7L267.4,60.6M239.8,39.1L243.5,41.4M248.3,44.4L244.3,41.7M249.4,45.5L250.4,46.3M238.8,38.5L239.7,39.1M250.6,46.0L249.5,45.2M236.2,36.9L238.8,38.5M234.9,36.0L236.2,36.9M210.9,19.8L214.6,22.7M287.6,96.8L290.3,100.9M293.3,106.1L290.5,100.7M311.3,234.4L312.6,236.5L312.7,236.6M312.7,236.6L313.5,237.5M312.9,236.2L311.6,234.4M313.5,237.0L312.9,236.2M321.2,245.7L318.6,242.9M318.5,243.0L321.1,245.8M318.1,242.6L318.5,243.0M318.6,242.9L318.3,242.5M415.8,368.4L418.8,370.0M411.7,350.6L411.7,351.9M411.4,358.3L411.4,358.6M306.4,159.1L306.4,158.8M305.6,155.1L305.7,156.2M306.2,175.2L306.6,173.3M305.5,178.7L305.5,179.9M306.5,179.4L306.5,179.0M305.9,180.0L305.9,180.9M305.9,176.9L305.9,178.1M305.9,172.1L305.9,173.4M306.6,173.3L306.8,172.3M303.8,147.2L303.9,147.8M412.1,353.5L412.1,352.3M412.1,352.3L412.1,351.9M411.7,351.9L411.7,353.4M305.1,221.0L305.4,221.8M306.2,219.1L306.1,218.2M305.1,216.9L304.9,220.1M305.5,179.9L305.5,186.5L305.5,193.2L305.5,193.9M306.5,193.9L306.5,193.2M343.7,303.3L344.5,304.3M344.3,303.1L343.7,302.2M222.0,27.4L226.0,30.2M313.5,237.5L313.8,237.9M303.9,147.2L303.6,146.4M304.5,149.3L303.9,147.2M306.2,156.3L306.1,154.9M306.4,162.3L306.4,159.8M271.1,65.0L270.5,64.3M275.2,71.3L276.1,73.1M233.2,35.0L234.9,36.0M236.4,36.5L235.2,35.7M265.2,58.1L266.6,59.9M208.7,17.9L210.9,19.8M213.0,20.9L211.8,19.9M211.8,19.9L209.5,17.9M215.1,23.1L217.3,24.4M209.0,17.6L212.3,20.6L214.4,22.2M284.4,90.6L287.7,96.8M303.9,147.8L304.1,148.1M303.4,146.5L303.8,147.2M293.9,107.3L293.3,106.1M294.3,107.9L293.9,107.3M294.3,108.0L294.4,108.3M293.9,107.6L294.3,108.0M293.9,107.7L294.3,108.3M293.1,106.3L293.9,107.7M294.6,108.6L295.4,110.1M294.4,108.3L294.6,108.6M251.8,47.0L256.2,50.1M250.5,46.1L251.3,46.7M227.9,30.9L224.6,28.7M256.4,49.9L250.6,46.0M251.3,46.7L251.8,47.0M273.1,67.3L271.1,65.0M267.3,60.8L272.3,67.1M412.1,364.9L412.3,365.8M412.3,365.8L412.8,367.1M413.4,366.4L412.8,364.8L412.7,364.3M421.1,374.5L421.3,373.8M418.7,375.7L418.6,376.0M419.2,374.0L418.7,375.7M414.7,386.4L415.3,384.9M270.9,65.0L274.8,70.3L278.4,78.2M414.9,398.6L415.0,392.8M267.5,60.5L266.9,59.7M415.0,392.8L414.9,391.8M414.9,391.3L414.4,387.7L414.5,387.1M420.9,375.1L421.1,374.5M412.7,364.3L412.6,362.9M411.7,360.8L411.8,361.3M400.2,325.0L400.1,324.9M413.9,401.7L414.4,400.5M404.4,409.3L406.9,407.7M399.6,325.0L400.1,325.3M387.4,321.7L388.4,322.0M388.9,321.8L387.6,321.4M299.6,121.6L299.7,122.2M299.8,121.5L299.4,118.7M290.5,100.7L287.8,96.6M290.3,100.9L293.1,106.3M250.4,46.3L256.1,50.1M229.5,32.5L232.5,34.5M248.5,44.9L249.4,45.5M248.1,44.7L248.5,44.9M274.4,70.0L275.2,71.3M331.6,261.8L330.7,259.1M339.9,293.9L341.0,297.3M338.6,290.3L339.9,293.9M391.5,446.8L392.7,441.9M230.2,32.2L227.9,30.9M393.3,436.9L392.3,441.0M346.9,306.2L349.1,307.2L350.2,307.6M317.6,241.7L314.7,238.5M414.7,367.2L413.6,365.9L413.3,364.9M306.1,210.0L306.1,206.8M346.6,305.6L345.5,304.7L344.9,304.0L344.3,303.1M307.2,167.6L306.8,165.2L306.6,164.2M410.5,341.5L410.2,340.7M410.4,342.4L410.9,344.5M406.2,329.3L404.6,328.1M394.3,323.0L397.7,324.0L399.6,325.0M385.1,320.1L377.2,315.5M374.6,314.1L367.3,309.8L366.0,309.2M357.1,307.8L351.2,307.5M361.1,307.8L357.1,307.8M361.0,308.2L363.3,308.5L364.8,309.1M356.2,308.1L361.0,308.2M306.5,221.5L306.2,219.1M286.5,94.1L281.1,82.7L279.5,79.5M304.1,149.4L304.9,152.1M306.1,175.9L306.2,175.2M278.1,76.3L277.1,74.2M371.7,312.8L375.4,314.9M369.7,311.6L371.7,312.8M397.4,418.4L397.5,415.3L398.5,413.4L403.7,409.6L404.4,409.3M413.3,401.6L411.0,404.3M412.1,354.0L412.1,353.5M413.8,400.5L413.3,401.6M392.7,441.9L392.9,440.8M392.9,440.8L394.9,432.2L395.4,429.7L395.9,427.0M392.3,441.0L392.1,442.0M406.9,407.7L407.8,407.1M407.8,407.1L409.0,406.4M406.9,407.1L403.4,409.3M407.5,406.7L406.9,407.1M411.0,405.1L413.4,402.4L413.9,401.7M411.0,404.3L408.8,405.9M414.8,399.1L414.9,398.6M306.0,188.6L306.1,185.1M333.6,270.1L334.1,272.9M314.7,238.5L313.5,237.0M336.3,283.1L337.3,286.2M334.4,275.9L334.8,278.4L335.5,280.6L336.3,283.1M305.7,202.8L305.7,206.3M214.6,22.7L215.1,23.1M305.1,152.8L305.5,154.6M280.8,83.0L283.0,88.0L284.7,91.8M284.7,91.8L286.7,95.3L287.6,96.8M338.8,290.0L337.7,286.7M340.1,294.0L338.8,290.0M334.6,275.9L334.4,273.4M336.6,283.2L335.2,279.3L334.7,277.0L334.6,275.9M305.4,218.8L305.1,221.0M378.1,316.4L386.7,321.4M277.1,75.7L278.2,78.3M273.7,68.8L274.4,70.0M396.7,417.6L396.6,420.5M297.0,113.4L298.0,115.9M411.8,361.5L412.0,362.3M263.5,55.3L263.0,54.9M270.5,64.3L267.8,60.6M267.8,60.6L267.5,60.5M215.4,22.5L213.0,20.9M408.3,334.1L408.3,334.4M304.9,152.1L305.1,152.8M414.5,395.9L414.3,398.9M408.8,405.9L407.5,406.7M414.5,387.1L414.7,386.4M408.5,333.6L408.3,332.8M235.2,35.7L235.0,35.6M302.3,140.8L301.8,135.5M414.5,393.2L414.5,395.9M396.7,415.7L396.7,416.7M409.0,406.4L411.0,405.1M411.0,405.1L411.0,405.1M414.1,400.5L411.4,404.5L411.0,404.8M411.0,404.8L408.9,406.1M413.4,366.4L415.8,368.4M300.6,129.1L301.2,134.2M232.5,34.5L233.2,35.0M410.2,340.7L410.1,340.2M396.7,416.7L396.7,417.6M414.7,384.6L414.4,385.4M305.9,169.8L305.9,172.1M305.4,221.8L305.7,223.4M305.7,223.4L305.9,224.2M249.5,45.2L248.3,44.4M248.1,44.5L249.5,45.4M408.5,333.8L408.5,333.6M241.3,39.8L239.9,38.9M243.6,41.3L242.6,40.7M409.9,340.4L410.0,341.1M410.6,342.0L410.5,341.5"></path><path class="dam-primary dam-route-i635" d="M524.0,176.5L531.3,182.2M474.2,143.3L472.6,143.2L469.6,143.3M531.3,182.2L532.2,183.2M163.7,119.2L169.8,127.5M146.0,109.4L143.3,108.3M633.3,278.7L632.6,274.2M486.9,147.8L484.3,146.2L482.5,145.3L480.1,144.5M545.7,197.7L542.5,195.7L539.7,193.2L536.4,188.5L534.5,185.0L533.1,182.8M304.8,167.9L307.6,167.7L309.9,167.1M307.7,166.7L304.9,167.1M301.2,167.3L298.9,167.3M562.4,208.8L557.5,205.3L552.1,201.5M564.7,210.6L563.3,209.4M562.0,209.6L564.0,210.9M564.0,210.9L566.6,213.1L568.9,215.4M469.2,144.0L473.7,144.0M637.6,309.5L637.8,310.6M637.9,311.4L638.9,320.4L639.3,324.0M146.8,110.4L147.3,110.5M152.8,112.6L153.7,112.9M153.0,111.8L149.9,110.8M153.8,112.1L153.0,111.8M163.3,117.7L160.7,115.6M164.0,118.4L163.3,117.7M153.7,112.9L158.0,114.8L162.1,117.5L162.9,118.4M162.9,118.4L163.7,119.2M630.3,262.6L629.3,260.6M615.3,245.5L612.6,243.3M628.7,261.0L629.2,262.0M629.6,263.1L630.6,267.3L630.7,268.0M612.6,243.3L611.9,242.7M612.3,243.8L615.3,246.4M611.3,243.0L612.3,243.8M595.3,231.2L596.3,231.8M596.3,231.8L600.5,235.0M594.5,229.3L591.8,227.4M597.6,231.9L596.4,230.8M589.2,226.4L590.8,227.7M591.1,227.0L589.4,225.6M591.8,227.4L591.1,227.0M594.7,230.6L595.3,231.2M587.8,225.3L589.2,226.4M588.3,224.9L584.6,222.7L582.8,222.0M589.4,225.6L588.3,224.9M576.6,220.4L574.7,219.5L574.4,219.4M580.9,221.5L579.5,221.1M581.7,222.4L583.0,222.7M569.3,214.5L566.7,212.2L564.7,210.6M570.4,215.8L569.3,214.5M568.9,215.4L570.5,217.0M570.5,217.0L574.1,219.9L578.2,221.5M266.3,165.4L262.4,164.4M252.8,161.7L251.8,161.4M250.8,162.0L251.8,162.3M250.4,161.9L250.8,162.0M259.3,164.4L262.1,165.2M250.8,161.3L250.2,161.1M250.2,161.1L237.0,157.5L234.8,156.9M266.4,166.4L267.5,166.7M147.8,109.9L146.0,109.4M145.1,109.8L146.8,110.4M139.3,107.9L145.1,109.8M378.4,142.1L376.4,143.0M395.1,140.7L390.4,140.8M393.7,141.2L400.8,141.4M378.8,142.6L379.1,142.4M277.0,167.6L273.8,167.3L270.2,166.6M278.4,167.6L277.0,167.6M278.7,168.3L285.1,168.3M277.5,168.5L278.7,168.3M259.1,163.5L253.9,162.2M253.9,162.2L252.8,161.7M253.2,162.8L259.3,164.4M251.8,162.3L253.2,162.8M312.1,166.7L312.5,166.6M313.6,165.8L312.4,166.0M314.9,166.1L317.0,165.5M312.4,166.0L309.9,166.4M308.9,166.6L307.7,166.7M309.9,166.4L308.9,166.6M375.9,143.7L376.5,143.4M376.4,143.0L375.5,143.4M354.1,154.1L347.9,156.2L343.4,157.6M376.5,143.4L378.3,142.7M367.9,147.7L375.9,143.7M337.9,159.4L333.7,160.4L331.4,160.9M400.8,141.4L401.4,141.4M423.9,142.4L425.5,142.7L426.5,142.7L427.2,142.9L428.1,142.9L430.0,142.7L430.1,142.7M401.2,140.7L400.5,140.7M442.7,143.0L443.8,143.2M442.5,142.4L441.1,142.3M443.8,142.6L443.4,142.6M443.8,143.2L448.1,143.7M448.1,143.7L449.5,143.9M452.4,144.0L454.5,144.0L456.4,144.0M447.8,143.2L443.8,142.6M450.3,143.3L448.2,143.2L447.8,143.2M473.7,144.0L475.3,144.2L476.8,144.3L478.8,144.8M468.0,143.3L461.7,143.3L456.3,143.3M488.2,148.7L486.9,147.8M487.7,149.3L494.5,154.0L495.2,154.6M486.5,148.6L487.7,149.3M549.0,199.6L548.2,199.0M548.2,199.9L549.0,200.5M549.0,200.5L552.2,202.5L553.3,203.3M644.8,371.9L644.6,370.7M644.3,370.9L644.6,371.9M644.1,370.2L644.3,370.9M644.6,370.7L644.3,370.0M644.3,370.0L643.7,367.2M644.6,371.9L644.7,372.8M644.7,372.8L645.7,377.2L650.5,389.3M644.9,372.8L644.8,371.9M643.3,365.6L642.7,362.9L642.5,361.4M643.3,367.2L644.1,370.2M642.8,365.2L643.0,365.6M643.7,367.2L643.3,365.6M642.1,360.7L642.2,361.4M642.2,361.4L642.7,364.8L642.8,365.2M642.3,360.7L642.3,358.9M642.5,361.4L642.3,360.7M290.4,167.4L287.2,167.4M295.4,167.3L290.4,167.4M285.1,167.6L278.4,167.6M285.1,168.3L286.3,168.2M287.2,167.4L285.1,167.6M210.8,151.3L225.5,155.3M636.0,292.6L635.1,287.8L634.2,284.0L633.9,281.9M632.5,277.7L633.6,283.5M631.7,269.1L631.2,266.1L630.3,262.6M634.5,287.5L635.2,291.3L635.3,292.2M497.3,156.5L502.7,160.6L504.8,162.2M640.4,331.7L641.2,338.3L641.5,340.5M267.5,166.7L275.3,168.3M637.3,306.9L637.6,309.5M290.4,168.2L295.1,168.0M270.2,166.6L266.3,165.4M262.9,165.4L266.4,166.4M298.0,167.3L295.4,167.3M295.9,168.0L302.4,167.9M455.3,143.3L451.9,143.3L451.4,143.3M262.4,164.4L259.1,163.5M640.6,330.9L640.1,327.5M456.4,144.0L463.1,143.9L466.4,144.0L469.2,144.0M427.7,142.1L422.5,141.7L416.1,140.8L414.5,140.8M474.0,143.7L475.7,143.9L477.3,144.2L478.4,144.3L478.6,144.5M486.9,148.1L483.2,145.9L481.8,145.3L480.4,144.8L478.8,144.3M580.5,222.1L581.3,222.3M488.4,149.1L488.0,148.9M579.5,221.1L578.6,221.0M578.2,221.5L580.5,222.1M469.2,143.7L472.9,143.7L474.0,143.7M448.1,143.6L449.7,143.7L450.6,143.7M474.1,143.6L469.3,143.6M469.3,143.6L457.5,143.6L455.2,143.4L453.6,143.4L453.4,143.4M450.6,143.7L453.4,143.7M442.7,142.7L441.2,142.4L440.8,142.4M450.5,143.6L448.9,143.4L447.9,143.3M251.8,161.4L250.8,161.3M232.2,157.0L240.4,159.2M226.6,154.7L209.1,150.0M240.4,159.2L250.4,161.9M483.7,146.5L486.4,148.1M331.8,161.3L339.6,159.2L346.9,156.8L353.4,154.7L360.6,151.2M441.1,142.6L442.7,142.7M313.7,166.0L309.1,166.9L305.6,167.3L302.4,167.4M325.4,163.2L326.6,162.8M302.4,167.6L306.2,167.3L309.8,166.9L313.8,166.1M326.6,162.6L325.4,162.9M331.4,160.9L327.4,162.0M443.8,142.9L442.7,142.7M442.7,142.7L443.8,142.9M447.9,143.3L443.8,142.9M443.8,142.9L448.1,143.6M326.6,162.8L331.8,161.3M360.6,151.1L352.5,154.9L345.8,156.9L338.9,159.2L331.8,161.1M558.4,206.9L561.4,209.1L562.0,209.6M554.7,204.3L558.4,206.9M639.3,324.0L639.9,327.7M400.7,141.1L401.3,141.1M401.3,141.0L400.7,141.0M331.8,161.1L326.6,162.6M393.9,141.1L400.7,141.1M400.7,141.0L393.9,140.8M302.4,167.4L298.9,167.4L298.0,167.3M295.9,168.0L301.6,167.7L302.4,167.6M313.8,166.4L314.9,166.1M312.5,166.6L313.7,166.4M313.8,166.1L318.3,165.1M318.3,164.9L313.7,166.0M326.7,163.0L328.5,162.6M323.5,163.5L322.2,163.9M323.4,163.8L325.4,163.2M325.4,162.9L323.5,163.5M325.4,163.3L326.7,163.0M322.2,163.6L317.5,164.8M325.3,162.8L322.2,163.6M315.4,165.4L313.6,165.8M295.1,168.0L295.9,168.0M298.9,167.3L298.0,167.3M401.4,141.4L405.3,141.4M403.2,140.7L401.2,140.7M385.8,141.4L389.9,141.2M397.2,140.7L396.5,140.7M400.5,140.7L397.2,140.7M390.4,140.8L389.7,140.8M389.7,140.8L384.1,141.0M379.8,142.3L383.8,141.5L385.2,141.4M379.1,142.4L379.3,142.4M379.7,141.8L378.4,142.1M378.3,142.7L378.6,142.6M375.5,143.4L374.8,143.7M364.4,149.4L365.3,149.0M359.5,151.9L364.4,149.4M359.3,151.5L356.8,152.8M343.4,157.6L338.2,159.2M331.6,161.6L338.9,159.5M354.5,154.4L355.6,154.0M341.8,158.7L345.9,157.3L354.5,154.4M338.9,159.5L341.0,159.0M440.7,142.9L442.3,143.0L442.7,143.0M436.3,142.9L438.4,142.9M439.0,142.1L436.4,142.1M440.8,142.4L439.1,142.4L428.3,142.4M428.4,142.6L439.5,142.6L441.1,142.6M414.5,140.8L413.7,140.8M411.6,141.2L417.0,141.2L418.6,141.4L420.2,141.7L422.3,142.1M409.6,141.2L411.6,141.2M405.3,141.4L409.6,141.2M449.5,143.9L450.8,143.9M309.9,167.1L312.1,166.7M317.5,164.8L315.4,165.4M317.8,165.4L322.4,164.2L325.4,163.3M379.8,142.1L384.1,141.4L391.0,141.1L393.9,141.1M393.9,140.8L386.5,141.1L381.3,141.5L379.7,141.8M360.6,151.2L371.3,145.8M379.7,141.8L375.6,143.4L366.9,147.8M328.5,162.6L331.6,161.6M322.2,163.9L318.3,164.9M318.3,165.1L323.4,163.8M469.6,143.3L468.0,143.3M405.8,140.7L403.2,140.7M488.0,148.9L486.9,148.1M478.8,144.3L476.9,143.9L475.3,143.7L474.1,143.6M490.2,150.0L488.2,148.7M480.1,144.5L478.3,143.9L477.7,143.9M497.4,155.1L495.1,153.4M482.7,146.2L484.1,147.0M480.4,145.2L482.7,146.2M478.8,144.8L480.4,145.2M477.7,143.9L476.1,143.6L474.6,143.3L474.2,143.3M286.3,168.2L288.1,168.2M302.4,167.3L301.2,167.3M275.3,168.3L277.5,168.5M288.1,168.2L290.0,168.2M639.9,327.7L640.0,328.5M641.7,345.3L641.7,346.8M642.1,347.1L642.0,343.6M641.7,346.8L641.9,354.4L642.0,359.5L642.1,360.7M642.0,343.6L641.7,340.4M633.9,281.9L633.3,278.7M631.3,271.1L632.0,274.6M633.6,283.5L634.5,287.5M636.1,296.8L636.3,298.0M636.3,298.0L637.1,304.4M637.2,302.4L636.5,297.1M637.2,305.7L637.3,306.9M637.8,310.6L637.9,311.4M603.2,236.9L609.7,241.9L609.8,242.0M609.8,242.0L611.3,243.0M618.4,248.6L615.3,245.5M615.3,246.4L617.2,248.2M627.0,257.5L623.2,253.4L618.4,248.6M629.3,260.6L627.0,257.5M626.3,257.7L628.5,260.6L628.7,261.0M630.7,268.0L630.9,269.5M632.0,271.0L631.7,269.1M533.1,182.8L532.1,181.6M326.6,162.3L325.3,162.8M495.2,154.6L497.3,156.5M641.7,340.4L640.9,332.9L640.6,330.9M574.4,219.4L571.7,217.3L570.4,215.8M504.1,160.6L497.4,155.1M522.1,174.2L516.2,170.1M532.1,181.6L529.5,179.3L525.8,176.8L522.1,174.2M583.0,222.7L586.6,224.5L587.8,225.3M516.2,170.1L507.8,163.6L504.1,160.6M535.1,188.2L537.5,191.9L541.4,195.7L543.5,197.3M543.5,197.3L546.8,199.2L548.2,199.9M639.8,323.9L638.3,311.4L638.2,310.7M640.1,327.5L639.8,323.9M640.0,328.5L640.4,331.7M637.3,303.5L637.2,302.4M384.1,141.0L379.7,141.8M187.6,144.9L207.7,150.5L210.8,151.3M180.5,140.8L186.7,144.6L187.6,144.9M169.8,127.5L174.1,133.5M174.1,133.5L179.2,139.9L180.5,140.8M481.2,145.3L483.7,146.5M411.8,140.8L407.2,140.7M389.9,141.2L392.8,141.2M147.3,110.5L152.8,112.6M143.3,108.3L139.7,106.7M209.1,150.0L189.9,144.8M170.9,127.6L167.6,122.8L165.0,119.4L164.0,118.4M175.9,134.8L170.9,127.6M290.0,168.2L290.4,168.2M371.3,145.8L377.8,142.7L379.8,142.1M225.5,155.3L232.2,157.0M646.0,377.0L644.9,372.8M650.8,389.1L646.0,377.0M234.8,156.9L226.6,154.7M642.3,358.9L642.1,347.1M327.4,162.0L326.6,162.3M160.7,115.6L153.8,112.1M643.0,365.6L643.3,367.2M373.3,144.5L366.6,147.8M552.1,201.5L549.0,199.6M610.7,241.7L602.2,235.3L598.3,232.4L597.6,231.9M453.4,143.7L455.3,143.7L456.9,143.7L460.0,143.7L465.3,143.7L466.7,143.7L468.3,143.7L469.2,143.7M532.2,183.2L534.0,186.0M617.2,248.2L624.7,256.0L626.3,257.7M638.2,310.7L638.1,309.5M366.9,147.8L360.6,151.1M149.9,110.8L147.8,109.9M637.2,305.2L637.2,305.7M637.1,304.4L637.2,305.2M600.5,235.0L603.2,236.9M632.2,275.9L632.5,277.7M611.9,242.7L610.7,241.7M563.3,209.4L562.4,208.8M304.9,167.1L303.6,167.1L302.4,167.3M495.1,153.4L492.0,151.2M302.4,167.9L304.8,167.9M578.6,221.0L576.6,220.4M187.4,144.0L184.4,142.6L181.6,140.8L178.5,138.0L176.4,135.4L175.9,134.8M478.6,144.5L479.4,144.8L481.2,145.3M638.1,309.5L637.3,303.5M596.4,230.8L594.5,229.3M438.4,142.9L440.7,142.9M441.1,142.3L439.5,142.1L439.0,142.1M484.1,147.0L486.5,148.6M432.8,142.9L436.3,142.9M430.1,142.7L432.8,142.9M436.4,142.1L433.7,142.1L432.6,142.1M432.6,142.1L429.9,142.1M429.9,142.1L427.7,142.1M407.2,140.7L405.8,140.7M422.3,142.1L423.9,142.4M426.8,142.6L427.6,142.6L428.4,142.6M428.3,142.4L427.4,142.4L426.5,142.3L424.9,142.1L423.3,141.8L420.1,141.2L418.4,141.1L416.4,141.0L413.2,141.0L410.9,141.0L401.3,141.0M401.3,141.1L410.9,141.2L413.2,141.2L416.4,141.1L418.4,141.2L420.1,141.4L423.3,142.1L424.9,142.3L426.3,142.4L426.8,142.6M548.2,199.0L545.7,197.7M385.2,141.4L385.8,141.4M636.5,297.1L636.1,293.3L636.0,292.6M630.9,269.5L631.2,270.4M313.7,166.4L313.8,166.4M450.8,143.9L452.4,144.0M451.4,143.3L450.3,143.3M379.3,142.4L379.8,142.3M378.6,142.6L378.8,142.6M362.6,149.9L361.5,150.3M341.0,159.0L341.8,158.7M262.1,165.2L262.9,165.4M456.3,143.3L455.3,143.3M338.2,159.2L337.9,159.4M392.8,141.2L393.7,141.2M396.5,140.7L395.1,140.7M413.7,140.8L411.8,140.8M355.0,153.7L354.1,154.1M443.4,142.6L442.7,142.4M442.7,142.4L442.5,142.4M365.3,149.0L367.9,147.7M317.0,165.5L317.8,165.4M553.3,203.3L553.8,203.6M553.8,203.6L554.7,204.3M534.0,186.0L535.1,188.2M631.2,270.4L631.3,271.1M632.0,274.6L632.2,275.9M632.6,274.2L632.2,271.8M632.2,271.8L632.0,271.0M355.6,154.0L356.5,153.5M356.5,153.5L359.5,151.9M356.8,152.8L355.0,153.7M361.5,150.3L359.3,151.5M366.6,147.8L362.6,149.9M374.8,143.7L373.3,144.5M590.8,227.7L591.9,228.6M629.2,262.0L629.2,262.2M189.9,144.8L187.4,144.0M641.5,340.5L641.5,341.0M641.5,341.0L641.7,345.3M453.4,143.4L452.5,143.6M452.5,143.6L450.5,143.6M509.0,165.7L512.3,168.0L513.9,169.2M504.8,162.2L509.0,165.7M492.0,151.2L490.2,150.0M582.8,222.0L580.9,221.5M635.5,292.9L636.1,296.8M635.3,292.2L635.5,292.9M591.9,228.6L594.7,230.6M581.3,222.3L581.7,222.4M629.2,262.2L629.6,263.1"></path><path class="dam-primary dam-route-i45" d="M435.1,333.5L435.2,333.9M459.4,386.5L460.2,388.1L460.5,388.9L460.7,389.6L461.0,390.2M473.1,436.2L472.8,434.7L466.0,408.4M462.4,395.7L463.2,398.8L466.5,411.6M472.8,436.2L473.4,437.8L476.3,444.6M478.9,449.3L473.4,436.5L473.1,436.2M461.5,390.8L460.8,389.3L460.2,387.8L459.5,386.2M464.3,401.6L462.7,395.1M448.9,357.0L452.1,361.4L452.5,362.1M437.1,348.0L437.6,348.5L438.4,349.0L444.3,352.1L445.0,352.5L445.6,352.9L446.2,353.5L446.8,354.0L447.3,354.7L447.7,355.1M435.3,335.5L435.5,338.5M435.8,342.3L435.9,345.3L436.0,345.9M452.7,362.9L452.9,363.7L453.0,364.5L452.9,365.5L453.0,365.8M454.1,370.2L453.5,368.3L453.4,367.5L453.2,366.7L453.2,365.9L453.1,364.9L453.1,363.9L453.0,363.2M453.6,369.6L456.2,378.1M436.0,345.9L436.3,346.6L436.6,347.4L437.0,347.8M435.5,339.2L435.8,342.3M435.1,332.9L435.1,333.5M453.0,363.2L452.9,362.4L452.5,361.7L452.4,361.4M453.0,365.8L453.0,366.7L453.1,367.4L453.2,368.3L453.5,368.8M458.0,382.9L457.6,381.8M457.6,382.6L457.9,383.0M456.9,380.1L457.4,382.0M457.6,381.8L457.0,380.1M457.0,380.1L455.6,375.3L454.1,370.2M465.6,406.7L464.3,401.6M466.0,408.4L465.6,406.7M471.4,430.9L472.6,435.7L472.8,436.2M466.5,411.6L471.4,430.9M461.8,393.4L461.9,393.7M461.9,393.7L462.2,394.6M462.3,394.0L461.5,390.8M458.1,383.6L459.2,386.2M459.2,386.2L459.4,386.5M459.5,386.1L458.1,383.3L458.0,382.9M459.5,386.2L459.5,386.1M456.2,378.1L456.5,379.2M462.7,395.1L462.3,394.0M447.7,355.1L448.9,357.0M437.0,347.8L437.1,348.0M462.2,394.6L462.4,395.6M457.4,382.0L457.6,382.6M457.9,383.0L458.1,383.6M462.4,395.6L462.4,395.7M461.0,390.2L461.2,391.0L461.8,393.4M456.5,379.2L456.9,380.1M453.5,368.8L453.6,369.6M452.5,362.1L452.7,362.9M435.5,338.5L435.5,339.2M435.2,333.9L435.3,335.5"></path><path class="dam-primary dam-route-loop12" d="M450.5,229.4L453.8,229.6M302.8,230.6L302.1,232.7L301.4,234.0M569.9,441.1L569.9,441.9M527.4,242.2L527.5,247.1L528.0,248.9L529.1,251.1M570.5,367.4L570.5,365.3M458.0,229.6L458.1,229.6M529.2,250.9L527.6,247.3L527.5,245.1L527.5,241.9M290.0,256.2L289.6,256.6M290.4,256.5L292.2,253.7L294.1,250.3M288.4,259.1L290.4,256.5M293.7,250.3L293.5,250.8M294.1,250.3L297.9,243.3M297.9,243.3L298.2,242.6M297.6,243.2L293.7,250.3M322.3,239.1L324.6,240.6L325.9,240.6L326.7,240.4M338.9,243.6L340.0,244.4L340.5,244.5M328.0,240.3L330.3,240.0M327.8,239.7L324.0,239.2L322.9,238.8M318.8,236.8L317.6,236.3M307.1,232.2L305.6,231.6L304.5,231.2M313.4,234.7L312.9,234.6M312.9,234.7L313.4,235.0M315.2,235.6L317.5,236.5L318.1,236.8M303.2,231.2L302.7,232.1M277.0,303.3L277.2,297.8L277.5,296.2M277.0,304.9L277.0,304.0M276.8,303.3L276.8,304.0M276.8,305.2L276.9,315.2M278.0,333.5L278.4,335.3M278.4,333.4L278.2,332.8M278.4,335.3L279.3,340.5M278.7,335.1L278.4,333.4M279.7,340.4L278.7,335.1M279.3,340.5L280.3,345.9M281.9,351.8L280.7,345.9M281.7,352.6L282.3,356.0M282.3,356.0L282.4,356.9M282.6,356.1L282.0,352.3M282.8,356.9L282.6,356.1M282.4,356.9L283.5,362.4M570.3,330.6L570.6,329.6L570.6,328.4L570.6,327.8M282.3,438.8L286.5,445.6L286.8,446.2M281.4,437.2L282.3,438.8M279.5,417.8L279.3,418.5M279.3,418.5L279.1,425.7M279.7,418.5L279.7,417.8M285.6,374.0L284.9,368.0L284.6,366.5M282.3,281.0L282.0,281.9M282.9,280.9L283.3,279.7M282.6,279.7L282.3,281.0M283.3,279.7L283.9,277.8M436.0,229.3L427.9,229.3M463.7,229.3L462.8,229.3M462.2,229.7L462.8,229.7M436.0,229.4L438.2,229.4M412.0,229.4L412.1,229.4M412.6,229.3L412.1,229.3M412.0,229.3L410.0,229.3M287.1,445.8L285.0,442.4L283.6,439.8L281.7,434.0L281.2,432.7M285.7,262.9L285.2,266.3L285.1,270.4M524.9,236.0L523.4,236.9L520.4,238.8L519.3,239.4M570.6,377.2L570.5,375.6M301.3,236.6L303.3,231.2M300.8,236.8L299.5,239.7L297.6,243.2M310.5,233.8L311.8,234.3M302.5,234.4L303.3,232.4M409.1,229.4L409.6,229.4M409.5,229.3L409.1,229.3M409.6,229.4L411.0,229.4M394.5,228.0L393.3,229.0L392.8,229.6M525.7,237.3L526.2,238.2M569.0,311.4L568.2,310.0L567.9,309.7M568.5,333.2L570.1,330.9L570.3,330.6M570.8,325.6L570.8,321.7M276.8,318.5L276.8,320.6M277.7,330.3L277.0,325.9L277.0,319.6M279.1,426.4L279.2,427.3M279.5,425.8L279.7,418.5M279.9,428.3L279.5,425.8M279.5,429.3L281.1,436.2L281.4,437.2M570.5,375.3L570.5,374.7M328.6,239.8L327.8,239.7M326.7,240.4L328.0,240.3M412.1,229.3L412.0,229.3M412.1,229.4L412.6,229.4M554.7,290.7L556.0,292.0M570.5,361.4L570.5,358.5M567.8,344.3L567.6,342.7L567.6,340.7M304.8,220.8L304.9,224.5M519.4,239.7L522.1,238.1L523.6,237.0L524.0,236.9M497.6,244.5L500.8,245.2M481.1,236.3L480.1,235.4M461.7,229.3L460.1,229.3M456.2,229.3L455.2,229.3M456.7,229.3L456.2,229.3M313.4,235.0L314.0,235.1M385.8,232.5L387.5,232.7L388.8,232.5M402.0,229.3L401.0,229.0L400.4,228.7M400.4,228.7L399.2,227.8M487.6,241.9L488.0,242.2M504.1,245.8L501.6,245.2M471.2,229.7L471.9,229.7M489.1,242.3L488.5,242.0M483.7,238.9L485.6,240.6M479.4,235.0L479.6,235.1M471.6,229.4L471.3,229.4M469.9,229.6L470.7,229.6M463.8,229.7L466.2,229.6M468.1,229.3L465.8,229.3M570.8,321.7L570.8,321.1M567.7,337.2L567.6,336.1M567.6,336.1L567.7,335.3L567.9,334.2M570.4,380.1L570.3,380.7M570.4,378.6L570.4,380.1M365.7,233.5L364.1,234.1M379.8,231.6L381.6,231.9M383.5,231.9L382.5,231.8M381.6,231.9L381.8,231.9M378.7,231.5L373.9,231.8M348.2,242.2L347.1,243.2M332.9,240.0L333.9,240.1M355.7,236.8L354.2,237.3L353.3,237.8M335.7,240.6L334.7,240.1L333.7,239.8M356.6,236.6L355.8,236.8M350.1,240.4L349.7,240.7M348.8,241.9L349.7,241.0M336.3,240.8L335.7,240.6M364.7,234.1L367.0,233.4M354.7,237.3L355.8,236.9M334.6,240.3L335.5,240.6L335.6,240.6M361.2,235.0L360.5,235.3M349.8,240.8L352.2,238.7L354.4,237.5L354.7,237.3M541.6,269.2L542.0,270.1M543.7,272.9L542.6,270.7M546.3,276.1L546.7,276.5M545.7,275.3L546.3,276.1M546.9,276.4L546.3,275.8M540.1,265.6L539.7,264.8M559.0,295.1L556.9,292.7M546.7,276.5L547.8,277.4M538.9,264.1L539.4,265.0M457.3,229.6L457.5,229.6M462.2,229.3L462.1,229.3M461.9,229.3L461.7,229.3M443.3,229.3L442.7,229.3M455.2,229.6L456.9,229.6M455.1,229.3L450.9,229.3M441.4,229.4L442.5,229.4M453.8,229.6L454.5,229.6M442.7,229.4L449.7,229.4M570.0,394.7L570.0,396.3M570.0,399.2L570.0,399.8M570.3,400.0L570.3,399.8M570.3,400.5L570.3,400.0M315.7,235.6L315.1,235.4M315.1,235.4L313.8,234.9L313.4,234.7M312.9,234.6L312.6,234.4M308.1,232.5L307.9,232.5M314.0,235.1L315.2,235.6M311.8,234.1L310.5,233.5M312.6,234.4L311.8,234.1M306.0,231.9L306.6,232.2M304.1,231.2L305.7,231.8M424.1,229.3L423.3,229.3M436.6,229.3L436.0,229.3M421.2,229.3L418.7,229.3L417.6,229.3M424.5,229.3L424.1,229.3M413.6,229.3L412.7,229.3M422.4,229.3L421.3,229.3M415.9,229.3L413.8,229.3M442.7,229.3L442.5,229.3M412.9,229.4L414.7,229.4M415.2,229.4L415.8,229.4M435.4,229.4L436.0,229.4M419.9,229.4L421.2,229.4M424.9,229.4L425.6,229.4M431.2,229.4L431.9,229.4M431.9,229.4L434.7,229.4M427.2,229.4L431.2,229.4M421.3,229.4L421.7,229.4M416.5,229.4L419.1,229.4L419.9,229.4M570.0,409.9L570.0,410.6M570.3,415.0L570.3,414.6M570.3,411.2L570.3,410.6M570.3,414.6L570.3,412.7M570.0,420.2L570.0,421.1M570.0,415.9L570.0,418.6L570.0,420.2M570.0,415.4L570.0,415.9M570.3,421.7L570.3,421.3M570.0,410.6L570.0,413.1L570.0,414.6L570.0,415.4M570.3,407.0L570.3,406.2M570.3,415.9L570.3,415.0M570.0,399.8L570.0,400.0M399.2,228.1L400.3,228.9L401.2,229.3M398.2,227.7L399.1,228.0M507.3,245.4L506.3,245.7M305.7,231.8L306.0,231.9M309.9,233.5L310.5,233.8M307.9,232.5L307.2,232.2M307.0,232.4L307.1,232.4M378.7,231.8L379.8,231.6M485.8,240.6L482.7,237.6L481.1,236.3M470.7,229.3L468.1,229.3M510.9,243.9L519.4,239.7M303.6,231.5L303.6,231.5M541.3,268.5L541.6,269.2M541.9,269.2L541.5,268.5M539.4,265.0L541.3,268.5M541.5,268.5L540.1,265.6M301.1,235.6L300.5,236.9M304.8,225.2L303.3,230.3M304.9,220.1L304.8,220.8M280.7,401.0L281.3,388.7L281.4,387.4M281.2,386.8L281.1,389.3M278.2,332.8L277.7,330.3M277.0,319.2L277.1,310.9L277.0,304.9M276.8,304.9L276.8,305.2M283.8,276.7L282.6,279.7M284.2,275.5L283.8,276.7M285.2,273.6L285.6,271.5L285.6,270.2M283.9,277.8L285.2,273.6M281.2,432.7L280.9,432.1M280.9,432.1L279.9,428.3M279.3,428.7L279.5,429.3M279.2,427.3L279.3,428.7M279.1,425.7L279.1,426.4M280.1,411.6L280.3,408.0M279.7,417.8L280.1,411.6M279.7,411.8L279.5,417.8M280.1,405.4L279.9,407.1M283.0,382.1L282.5,383.2M280.3,400.8L280.1,405.4M280.3,408.0L280.4,405.4M567.6,309.4L568.3,310.7M570.3,372.6L570.3,374.7M570.6,379.5L570.6,378.6M570.3,374.7L570.3,375.3M570.3,375.3L570.4,376.6L570.4,378.6M570.3,358.5L570.3,361.4M567.6,344.3L568.3,346.5M567.9,333.6L567.6,334.7L567.4,335.3M570.0,330.6L569.5,331.3L568.4,332.9L568.3,333.2M570.5,327.9L570.4,329.3L570.1,330.1L570.0,330.6M322.9,238.8L320.6,237.5M285.6,270.2L285.7,266.7M286.5,262.6L287.2,260.9L288.4,259.1M288.1,258.8L286.0,262.0L285.7,262.9M527.5,241.9L527.5,241.4M527.4,241.4L527.4,241.9M526.8,238.8L525.9,237.6M526.5,238.8L527.3,241.3L527.4,241.4M381.8,231.9L382.2,231.9M382.2,231.9L385.1,232.4M385.6,232.2L383.5,231.9M559.3,295.5L559.0,295.1M559.0,295.4L559.2,295.8M559.2,295.8L559.3,295.8M560.7,297.7L559.5,295.7M533.8,258.1L532.6,256.9M539.6,264.7L538.5,263.2L536.5,261.8L535.8,260.7L534.3,258.7L534.2,258.5M421.3,229.3L421.2,229.3M421.2,229.4L421.3,229.4M426.8,229.4L427.2,229.4M427.9,229.3L425.6,229.3M425.6,229.4L426.8,229.4M425.6,229.3L424.5,229.3M381.8,231.6L381.5,231.6M497.4,244.2L495.0,243.8M497.7,244.4L497.4,244.2M497.4,244.5L497.6,244.5M488.2,242.3L489.3,242.6L490.4,242.9M355.8,236.9L356.0,236.9M355.8,236.8L355.7,236.8M338.3,243.0L338.5,243.2M335.6,240.6L335.8,240.7M337.7,242.0L336.3,240.8M338.6,243.0L338.5,243.0M399.1,228.0L399.2,228.1M399.2,227.8L399.1,227.8M570.3,357.2L570.3,358.5M570.0,350.9L570.3,352.3L570.3,353.7M505.5,246.1L507.1,245.7L507.6,245.4M509.4,244.6L510.5,244.2M338.5,243.2L338.9,243.6M567.4,335.3L567.4,336.1L567.4,336.3M534.5,259.3L535.8,260.9L536.5,261.9L538.3,263.4L538.9,264.1M570.4,314.8L570.1,313.8L570.1,313.6M568.9,311.7L569.5,312.8M568.5,347.1L569.8,350.3M570.5,354.0L570.3,351.5M570.3,386.8L570.4,385.4M570.3,381.1L570.1,384.8L570.1,386.2M570.5,318.7L570.5,320.5M570.8,321.1L570.8,319.6L570.8,319.5M570.3,422.6L570.3,421.7M439.0,229.3L437.4,229.3M303.9,230.9L302.9,230.5M307.2,232.2L307.1,232.2M307.6,232.7L309.7,233.5M306.6,232.2L307.0,232.4M570.5,374.7L570.5,374.5M282.0,352.3L281.9,351.8M281.5,351.9L281.7,352.6M277.4,329.8L278.0,333.5M356.9,236.5L356.6,236.6M570.5,321.1L570.5,321.4M493.9,243.6L495.0,243.9M495.0,243.9L496.9,244.4M494.0,243.5L492.9,243.3M495.0,243.8L494.0,243.5M270.5,271.1L277.5,271.0M277.5,271.0L282.8,270.8L284.4,269.6L285.1,268.2L285.2,265.4L286.0,263.1M286.0,262.9L285.0,267.6L284.5,269.2L283.4,270.4L281.2,271.0L277.5,271.0M286.8,261.2L288.3,259.0M300.5,236.9L299.7,239.4L299.2,240.4M297.8,243.2L299.4,240.6M297.8,243.2L293.8,250.3M299.4,240.6L300.6,238.8L301.3,237.3M288.1,259.1L286.8,260.9L286.0,262.9M290.1,256.3L288.2,259.0M303.0,231.1L301.1,235.6M290.3,256.3L293.7,250.6L293.9,250.3M303.3,230.3L303.0,231.1M299.2,240.4L297.8,243.2M301.3,237.3L301.4,236.8M293.8,250.3L291.1,254.9L290.1,256.3M293.9,250.3L297.8,243.2M288.3,259.0L290.3,256.3M389.9,232.1L389.0,232.4M387.6,232.5L386.9,232.4M390.6,231.8L391.7,231.1L392.1,230.6M388.8,232.5L389.6,232.4M339.8,243.9L338.8,243.2L338.6,243.0M342.5,244.8L343.7,244.6M345.9,244.1L346.8,243.6M346.8,243.5L344.4,244.4L343.8,244.5M349.7,240.7L349.6,240.8M343.4,244.5L342.5,244.6M340.5,244.5L341.1,244.6M338.5,243.0L337.7,242.0M356.0,236.9L357.4,236.5M358.2,236.0L356.9,236.5M353.3,237.8L351.8,238.8L350.8,239.7M350.8,239.7L350.1,240.4M363.1,234.4L361.7,234.9M369.0,232.7L369.7,232.5M370.3,232.2L371.6,232.1L371.7,232.1M371.7,232.1L373.2,231.9M363.1,234.6L364.7,234.1M371.7,231.8L370.7,232.1M341.6,244.5L341.1,244.5M342.0,244.8L342.5,244.8M344.7,244.5L345.9,244.1M343.7,244.6L344.7,244.5M331.3,239.8L328.6,239.8M331.5,240.0L332.9,240.0M358.9,235.7L358.2,236.0M358.3,236.2L359.0,235.9M570.3,394.7L570.3,392.8M570.3,401.1L570.3,400.5M570.5,363.9L570.5,361.4M277.5,271.0L270.6,271.0M349.7,241.0L349.8,240.8M349.6,240.8L348.2,242.2M472.4,229.6L471.6,229.4M475.8,231.6L479.1,234.7M332.5,239.8L331.3,239.8M280.3,345.9L281.5,351.9M280.7,345.9L279.7,340.4M276.8,304.0L276.8,304.9M277.0,304.0L277.0,303.3M281.1,389.3L280.8,394.0M284.9,370.5L285.2,374.0M283.6,362.9L284.6,368.7L284.9,370.5M282.0,281.9L278.7,291.1L277.4,295.8L276.9,299.0L276.8,303.0M280.8,394.0L280.3,400.8M277.5,296.2L279.3,290.4L279.7,289.2M289.6,256.6L288.1,258.8M293.5,250.8L291.4,254.3L290.0,256.2M298.2,242.6L301.1,237.2L301.3,236.6M281.7,386.5L282.0,385.2M277.0,319.6L277.0,319.2M279.9,407.1L279.7,411.8M462.8,229.3L462.2,229.3M462.8,229.7L463.8,229.7M455.2,229.3L455.1,229.3M488.2,242.0L486.8,241.3M480.1,235.6L481.8,237.2M471.9,229.7L472.4,229.9M470.7,229.6L471.2,229.7M475.5,231.2L473.9,230.2L472.4,229.6M479.4,234.7L476.9,232.5M476.2,231.8L475.5,231.2M479.6,235.1L480.1,235.6M480.1,235.4L479.4,234.7M479.1,234.7L479.4,235.0M412.7,229.3L412.6,229.3M413.8,229.3L413.6,229.3M542.0,270.1L542.3,270.4M542.3,270.4L543.4,272.6M543.4,272.6L543.6,273.0M543.6,273.0L544.2,273.9M544.2,273.9L544.5,274.0M544.5,274.0L545.1,274.8M545.1,274.8L545.5,275.1M545.5,275.1L545.7,275.3M467.1,229.6L469.4,229.6M469.4,229.6L469.8,229.6M469.8,229.6L469.9,229.6M500.8,245.2L501.6,245.4M501.6,245.4L503.3,245.8M503.3,245.8L504.1,246.0M504.1,246.0L505.2,246.1L505.5,246.1M318.1,236.8L318.8,236.9M318.8,236.9L319.7,237.3M319.7,237.3L320.1,237.5M320.1,237.5L322.3,239.1M465.8,229.3L463.7,229.3M556.9,292.7L556.5,292.3M556.5,292.3L554.8,290.5M553.4,288.9L553.2,288.5M553.2,288.5L552.6,286.7L552.1,284.3M552.1,284.3L552.0,283.4M552.0,283.4L551.4,281.2L550.2,279.7M550.2,279.7L549.9,279.3M549.9,279.3L549.3,278.7M549.3,278.7L548.9,278.3M548.3,277.7L547.3,276.7M547.3,276.7L547.1,276.4M547.1,276.4L546.9,276.4M570.1,313.6L569.9,313.2M569.9,313.2L569.8,312.8M569.8,312.8L569.4,312.0M569.4,312.0L569.0,311.4M460.1,229.3L459.2,229.3M459.2,229.3L458.1,229.3M458.0,229.3L456.7,229.3M284.0,363.3L282.8,356.9M284.6,366.5L284.0,363.3M285.0,377.8L283.6,380.7L283.0,382.1M280.4,405.4L280.7,401.0M276.8,320.6L276.8,325.9L277.4,329.8M279.7,289.2L281.7,284.3M302.2,233.4L300.8,236.8M302.7,232.1L302.2,233.4M285.7,266.7L286.0,264.2L286.5,262.6M333.7,239.8L332.5,239.8M471.3,229.4L470.7,229.3M310.5,233.5L308.6,232.8M439.0,229.4L440.3,229.4M346.8,243.6L347.7,242.9L348.8,241.9M559.5,295.7L559.3,295.5M559.3,295.8L560.2,297.3M311.8,234.3L312.9,234.7M532.4,257.1L533.2,257.8M491.1,242.9L489.5,242.5M491.8,243.0L491.5,243.0M347.1,243.2L346.8,243.5M510.5,244.2L510.6,244.1M510.6,244.1L510.9,243.9M501.6,245.2L500.0,244.8M411.0,229.4L412.0,229.4M303.3,232.4L303.5,231.9M303.5,231.6L303.6,231.5M360.5,235.3L360.1,235.3M360.1,235.3L359.3,235.6M359.3,235.6L358.9,235.7M570.3,396.3L570.3,396.2M570.3,399.8L570.3,399.5M570.0,400.0L570.0,402.4L570.0,403.8L570.0,406.2L570.0,408.9L570.0,409.9M458.5,229.6L459.2,229.6M459.2,229.6L460.4,229.7M460.8,229.7L461.7,229.7M461.7,229.7L462.2,229.7M456.9,229.6L457.3,229.6M438.2,229.4L439.0,229.4M450.4,229.3L448.3,229.3M450.9,229.3L450.4,229.3M448.3,229.3L447.1,229.3M447.1,229.3L444.0,229.3M444.0,229.3L443.3,229.3M449.7,229.4L450.4,229.4M570.8,319.5L570.8,318.7M570.8,318.7L570.8,317.6M570.8,317.6L570.8,317.0M570.8,317.0L570.6,315.8M570.6,315.8L570.5,314.9L570.4,314.8M309.7,233.5L309.9,233.5M492.9,243.3L492.6,243.2M492.6,243.2L491.8,243.0M434.7,229.4L435.4,229.4M437.4,229.3L436.6,229.3M442.5,229.3L441.3,229.3M462.1,229.3L461.9,229.3M570.4,381.1L570.5,380.1L570.6,379.5M457.5,229.6L458.0,229.6M454.5,229.6L455.1,229.6M570.4,385.4L570.4,384.8M570.4,384.8L570.4,383.9M570.4,383.9L570.4,383.2M570.4,383.2L570.4,382.1M570.4,382.1L570.4,381.7M364.1,234.1L363.1,234.4M307.1,232.4L307.6,232.7M367.0,233.4L367.5,233.2M367.5,233.2L368.4,233.0M368.4,233.0L369.0,232.7M378.1,231.8L378.7,231.8M379.1,231.5L378.7,231.5M381.5,231.6L379.7,231.5L379.1,231.5M302.9,230.5L302.8,230.6M370.7,232.1L370.2,232.1M370.2,232.1L369.4,232.4M369.4,232.4L368.9,232.5M368.0,232.8L367.4,233.0M368.9,232.5L368.0,232.8M570.4,381.7L570.4,381.1M570.3,380.7L570.3,381.1M385.8,232.2L385.6,232.2M385.9,232.2L385.8,232.2M369.7,232.5L370.3,232.2M357.4,236.5L358.3,236.2M288.2,259.0L288.1,259.1M488.5,242.0L488.2,242.0M486.8,241.3L486.1,240.7M486.1,240.7L485.8,240.6M458.1,229.3L458.0,229.3M458.1,229.6L458.5,229.6M567.9,334.2L568.2,333.6M568.2,333.6L568.5,333.2M570.5,374.5L570.5,373.1M570.5,373.1L570.5,372.6M570.5,372.6L570.5,371.9M570.5,371.9L570.5,371.5M570.5,371.5L570.5,370.6M570.5,370.0L570.5,369.4M570.5,369.4L570.5,367.8M570.5,367.8L570.5,367.4M570.5,364.8L570.5,363.9M570.5,365.3L570.5,364.8M570.1,350.9L569.0,347.8M569.0,347.8L568.8,347.1M568.8,347.1L568.1,345.2M568.1,345.2L567.8,344.3M567.6,340.1L567.6,338.5M567.6,340.7L567.6,340.2M567.6,340.2L567.6,340.1M567.6,338.0L567.7,337.2M567.6,338.5L567.6,338.0M570.3,421.3L570.3,421.1M570.3,421.1L570.3,420.0M570.3,420.0L570.3,419.5M570.3,419.5L570.3,418.9M570.3,418.9L570.3,418.6M570.3,418.6L570.3,417.9M570.3,417.9L570.3,417.6M570.3,417.6L570.3,416.7M570.3,416.7L570.3,415.9M487.4,241.9L487.6,241.9M481.8,237.2L483.1,238.4M486.4,241.3L487.0,241.6M485.6,240.6L485.9,240.8M485.9,240.8L486.0,241.0M486.0,241.0L486.4,241.3M483.1,238.4L483.7,238.9M492.6,243.5L493.9,243.6M490.4,242.9L491.1,243.0M491.1,243.0L492.2,243.3M492.2,243.3L492.6,243.5M488.0,242.2L488.2,242.3M525.1,236.2L524.9,236.0M496.9,244.4L497.4,244.5M561.7,299.5L561.1,298.3M561.1,298.3L560.7,297.7M570.5,320.5L570.5,321.1M570.5,322.3L570.5,325.6M410.0,229.3L409.5,229.3M570.5,358.5L570.5,357.3M570.5,357.3L570.5,357.2M570.5,356.3L570.5,354.4M570.5,354.4L570.5,354.0M570.3,351.5L570.1,350.9M570.3,356.7L570.3,357.2M570.3,354.0L570.3,356.7M570.3,353.7L570.3,354.0M304.5,231.2L303.9,230.9M548.2,277.8L548.5,278.3M547.8,277.4L548.2,277.8M548.5,278.3L548.8,278.4M320.2,237.3L319.2,236.9M316.4,235.9L316.1,235.7M317.6,236.3L316.9,236.0M319.2,236.9L318.8,236.8M320.6,237.5L320.2,237.3M316.9,236.0L316.4,235.9M316.1,235.7L315.9,235.7M506.3,245.7L505.3,245.8L504.8,245.8M504.8,245.8L504.1,245.8M491.5,243.0L491.2,242.9M491.2,242.9L491.1,242.9M489.5,242.5L489.1,242.3M499.4,244.6L497.7,244.4M500.0,244.8L499.4,244.6M568.3,333.2L567.9,333.6M570.0,314.1L570.3,314.9M569.8,313.2L570.0,314.1M569.5,312.8L569.8,313.2M567.4,336.3L567.4,339.6M567.4,339.6L567.4,340.1M567.4,340.1L567.4,340.2M567.4,340.2L567.4,341.0M567.4,341.0L567.3,342.7M567.3,342.7L567.6,344.3M568.3,346.5L568.5,347.1M417.6,229.3L415.9,229.3M569.8,350.3L570.0,350.9M545.9,275.3L544.8,274.3M544.8,274.3L544.6,274.0M544.6,274.0L544.1,273.4M544.1,273.4L543.7,272.9M542.4,270.2L541.9,269.2M542.6,270.7L542.4,270.2M563.4,302.1L562.2,300.2M563.5,302.4L563.4,302.1M564.0,303.1L563.5,302.4M564.1,303.4L564.0,303.1M564.6,304.3L564.1,303.4M564.9,304.6L564.6,304.3M565.6,305.7L564.9,304.6M565.8,306.0L565.6,305.7M567.1,308.2L565.8,306.0M567.3,308.5L567.1,308.2M567.7,309.2L567.3,308.5M567.9,309.7L567.7,309.2M570.5,321.4L570.5,322.3M533.2,257.8L533.7,258.2M527.5,241.4L526.8,238.8M525.9,237.6L525.4,236.6M525.4,236.6L525.1,236.2M525.4,236.6L525.4,236.6M533.7,258.2L534.3,259.0M534.3,259.0L534.5,259.3M533.8,258.2L533.8,258.1M570.3,314.9L570.5,316.3L570.5,316.4M570.5,316.4L570.5,317.0M570.5,317.0L570.5,318.3M570.5,318.3L570.5,318.7M532.6,256.9L531.3,255.3M531.3,255.3L531.0,254.4M530.7,254.0L529.2,250.9M526.2,238.2L526.5,238.8M539.7,264.8L539.6,264.7M534.2,258.5L533.8,258.2M476.9,232.5L476.4,232.1M476.4,232.1L476.2,231.8M330.3,240.0L331.5,240.0M450.4,229.4L450.5,229.4M341.1,244.5L340.0,244.1M340.0,244.1L339.8,243.9M382.5,231.8L381.8,231.6M359.0,235.9L359.6,235.7M359.6,235.7L360.3,235.6M360.3,235.6L360.9,235.3M360.9,235.3L361.2,235.1M361.2,235.1L362.7,234.7M362.7,234.7L363.1,234.6M441.3,229.4L441.4,229.4M570.3,361.4L570.3,361.8M570.3,361.8L570.3,362.7M570.3,362.7L570.3,364.2L570.3,364.2M570.3,364.2L570.3,364.8M570.3,364.8L570.3,366.8M570.3,366.8L570.3,367.4M570.3,367.4L570.3,368.4M570.3,368.4L570.3,369.4M570.3,370.0L570.3,371.0M570.3,371.0L570.3,371.5M570.3,371.5L570.3,372.2M570.3,372.2L570.3,372.6M373.5,231.8L372.2,231.8M373.9,231.8L373.5,231.8M372.2,231.8L371.7,231.8M548.8,278.4L549.4,279.0M549.4,279.0L549.8,279.4M549.8,279.4L551.1,281.2L551.6,282.7M551.6,282.7L551.7,283.5M551.7,283.5L552.6,287.5M552.6,287.5L552.8,288.1M556.4,292.4L558.1,294.2M556.0,292.0L556.4,292.4M558.5,294.6L559.0,295.4M558.1,294.2L558.5,294.6M561.9,300.2L562.9,301.8M562.9,301.8L563.1,302.1M563.1,302.1L563.5,302.7M563.5,302.7L563.8,303.1M563.8,303.1L565.0,305.2M565.0,305.2L565.2,305.6M565.2,305.6L566.6,307.8M566.6,307.8L566.8,308.2M566.8,308.2L567.3,309.0M567.3,309.0L567.6,309.4M568.5,311.0L568.9,311.7M568.3,310.7L568.5,311.0M527.4,241.9L527.4,242.2M530.5,254.0L532.2,256.9L532.4,257.1M570.5,370.6L570.5,370.0M337.7,242.5L338.3,243.0M333.9,240.1L334.6,240.3M342.5,244.6L341.6,244.5M343.8,244.5L343.4,244.5M570.6,378.6L570.6,377.6M570.6,377.6L570.6,377.2M570.5,375.6L570.5,375.3M570.3,387.3L570.3,386.8M570.3,387.7L570.3,387.3M570.3,388.1L570.3,387.7M570.3,389.0L570.3,388.1M570.3,389.4L570.3,389.0M570.3,391.5L570.3,390.0L570.3,389.4M570.3,391.8L570.3,391.5M570.3,392.5L570.3,391.8M570.3,392.8L570.3,392.5M570.3,399.5L570.3,398.6M570.3,398.6L570.3,398.1M570.3,398.1L570.3,397.0M570.3,397.0L570.3,396.6M570.3,395.4L570.3,394.8M570.3,394.8L570.3,394.7M570.1,386.7L570.1,387.5M570.1,387.5L570.1,387.7M570.1,387.7L570.1,388.4M570.1,388.4L570.1,389.0M570.1,389.0L570.1,390.3M570.1,390.3L570.1,390.9M570.1,390.9L570.1,392.1M570.1,392.1L570.1,392.5M570.1,392.5L570.0,394.4M570.0,394.4L570.0,394.7M570.0,398.1L570.0,399.2M570.0,397.6L570.0,398.1M570.3,410.6L570.3,409.4M570.3,409.4L570.3,408.9M570.3,408.9L570.3,408.3M570.3,408.3L570.3,408.0M570.3,408.0L570.3,407.4M570.3,407.4L570.3,407.0M570.3,406.2L570.3,405.6M570.3,405.6L570.3,405.1M570.3,405.1L570.3,404.8M570.3,404.8L570.3,404.2M570.3,404.2L570.3,403.5M570.3,403.5L570.3,402.7M570.3,402.7L570.3,402.4M570.3,402.4L570.3,401.7M570.3,401.7L570.3,401.1M570.0,421.1L570.0,421.3M570.0,421.3L570.0,422.1M570.0,422.1L570.0,422.4M570.0,422.7L570.0,423.0M570.0,423.2L570.0,423.3M570.0,423.3L570.0,425.5L570.0,425.8M570.0,425.8L570.0,426.4M570.0,426.4L570.0,428.4M570.0,428.4L570.0,429.0M570.0,429.0L570.0,431.2M570.0,431.2L570.0,431.6M570.0,431.6L570.0,434.0L570.0,434.1M570.0,434.1L570.0,434.6M570.0,434.6L569.9,436.3M569.9,436.3L569.9,436.6M569.9,436.6L569.9,438.1M569.9,439.2L569.9,439.8M569.9,439.8L569.9,440.7M569.9,440.7L569.9,441.1M569.9,441.9L569.9,442.4M570.1,442.4L570.1,441.4M570.1,441.4L570.1,441.1M570.1,441.1L570.1,440.2M570.1,440.2L570.1,439.8M570.1,439.8L570.1,438.1L570.1,437.2M570.1,437.2L570.1,436.6M570.1,436.6L570.1,435.1M570.1,435.1L570.1,434.6M570.1,434.6L570.1,432.1M570.1,432.1L570.1,431.6M570.1,431.6L570.1,429.6M570.1,429.6L570.1,429.0M570.1,429.0L570.1,427.1M570.1,427.1L570.1,426.5M570.1,426.5L570.1,425.2M570.1,425.2L570.1,424.8M570.1,424.8L570.1,424.2M570.1,424.2L570.1,423.8M570.1,423.8L570.3,422.9M570.3,422.9L570.3,422.6M570.3,412.2L570.3,411.2M570.3,412.7L570.3,412.2M460.4,229.7L460.8,229.7M283.5,362.4L283.6,362.9M403.0,229.4L403.9,229.4M404.4,229.3L403.9,229.3M385.1,232.4L385.8,232.5M386.9,232.4L385.9,232.2M388.3,232.4L387.6,232.5M389.0,232.4L388.3,232.4M389.6,232.4L390.6,231.8M392.4,230.0L391.2,231.2M392.8,229.6L392.4,230.0M392.6,230.0L394.0,228.6M392.1,230.6L392.6,230.0M390.5,231.6L389.9,232.1M391.2,231.2L390.5,231.6M394.0,228.6L394.5,228.1M394.5,228.1L396.4,227.5L397.5,227.5L398.2,227.7M395.5,227.5L394.5,228.0M399.1,227.8L398.2,227.5L397.1,227.2L396.1,227.4L395.5,227.5M403.9,229.3L402.4,229.3M409.1,229.3L404.4,229.3M403.9,229.4L408.2,229.4M441.3,229.3L439.0,229.3M440.3,229.4L441.3,229.4M455.1,229.6L455.2,229.6M308.6,232.8L308.1,232.5M304.9,224.5L304.8,225.2M402.4,229.3L402.0,229.3M442.5,229.4L442.7,229.4M408.2,229.4L409.1,229.4M366.2,233.4L365.7,233.5M367.4,233.0L366.2,233.4M373.5,231.9L377.7,231.8L378.1,231.8M373.2,231.9L373.5,231.9M341.1,244.6L342.0,244.8M361.7,234.9L361.2,235.0M421.9,229.4L424.9,229.4M421.7,229.4L421.9,229.4M570.5,325.6L570.5,327.9M570.6,327.8L570.8,325.6M570.0,396.3L570.0,397.6M570.3,396.6L570.3,396.3M570.3,396.2L570.3,395.4M472.4,229.9L474.1,230.5L475.3,231.2M475.3,231.2L475.8,231.6M415.8,229.4L415.9,229.4M414.7,229.4L415.2,229.4M412.6,229.4L412.7,229.4M412.7,229.4L412.9,229.4M570.1,386.2L570.1,386.7M276.8,303.0L276.8,303.3M276.9,315.2L276.8,317.6M276.8,317.6L276.8,318.5M282.0,385.2L284.7,379.4L285.4,377.5M285.4,377.5L285.5,376.9M285.1,377.2L285.0,377.8M285.2,376.6L285.1,377.2M282.5,383.2L281.4,386.1M281.4,386.1L281.2,386.8M281.4,387.4L281.5,387.0M281.5,387.0L281.7,386.5M285.5,376.9L285.6,375.0M285.6,375.0L285.6,374.0M285.2,374.8L285.2,376.6M285.2,374.0L285.2,374.8M570.3,369.4L570.3,370.0M507.6,245.4L508.7,244.9M508.7,244.9L509.4,244.6M466.2,229.6L467.1,229.6M552.8,288.1L553.9,289.8M553.9,289.8L554.7,290.7M554.8,290.5L554.1,289.8M554.1,289.8L553.4,288.9M561.5,299.5L561.9,300.2M560.6,297.8L561.5,299.5M562.2,300.2L561.7,299.5M402.0,229.4L403.0,229.4M401.2,229.3L402.0,229.4M546.3,275.8L545.9,275.3M423.3,229.3L422.4,229.3M487.0,241.6L487.4,241.9M415.9,229.4L416.5,229.4M570.5,357.2L570.5,356.3M529.1,251.1L530.5,254.0M531.0,254.4L530.7,254.0M335.8,240.7L336.7,241.3L337.7,242.5M315.9,235.7L315.7,235.6M303.5,231.9L303.5,231.6M569.9,438.1L569.9,439.2M570.0,423.0L570.0,423.2M570.0,422.4L570.0,422.6M570.0,422.6L570.0,422.7M286.0,263.1L286.7,261.3L286.8,261.2M282.6,281.6L282.9,280.9M281.7,284.3L282.6,281.6M285.1,270.8L284.9,273.4L284.2,275.5M285.1,270.4L285.1,270.8M548.9,278.3L548.5,278.0M548.5,278.0L548.3,277.7M560.2,297.3L560.6,297.8"></path><path class="dam-primary dam-route-us75" d="M435.2,330.0L435.1,328.7M538.0,37.3L538.1,36.0M514.5,90.6L514.0,91.3M515.5,89.4L514.5,90.6M514.8,90.8L516.0,89.3M464.6,164.9L464.9,162.0L465.3,160.4M464.6,165.8L464.6,164.9M464.4,164.8L464.4,165.8M464.4,165.8L464.4,170.1M529.9,67.9L530.0,67.6M529.2,69.2L529.9,67.9M529.0,69.1L528.6,69.8M506.9,104.5L507.3,103.9M506.6,104.5L506.4,105.0M506.2,105.5L504.9,107.7M506.3,105.7L506.6,105.1M493.5,119.7L492.4,120.9M494.0,119.7L494.5,119.2M492.6,121.1L494.0,119.7M492.4,120.9L492.2,121.1M462.8,228.1L462.7,236.3M462.9,237.6L463.1,233.1M537.4,42.3L537.5,41.6M537.7,37.2L537.4,40.3M537.1,41.6L537.1,42.2M538.3,32.4L538.2,33.4M538.6,31.9L539.2,27.4M464.4,180.6L464.5,176.1M464.4,181.3L464.4,180.6M464.2,187.9L464.0,190.0L463.3,196.4M464.2,180.6L464.2,181.3M462.9,207.5L462.9,208.5M463.1,208.5L463.2,207.5M463.2,207.5L463.2,200.3M462.9,200.6L462.9,200.9M463.4,196.5L464.3,190.3M463.3,197.4L463.4,196.5M463.3,196.4L463.2,197.4M445.0,352.2L444.3,351.8L439.0,349.1L438.4,348.7L438.2,348.5M435.7,335.4L435.7,334.5M469.8,145.9L470.4,144.5L471.5,142.7M495.2,118.6L496.6,117.3M477.8,135.0L478.6,134.2M494.5,118.9L493.5,119.7M477.3,135.1L476.1,136.3L475.9,136.6M466.5,155.4L464.8,161.3L464.5,162.9L464.4,164.5L464.4,164.8M438.2,348.5L437.6,348.0L437.1,347.4L436.9,346.6L436.6,345.9L436.5,345.0L436.5,344.9M435.7,334.5L435.5,333.8M436.2,338.6L435.8,336.7L435.7,335.4M451.8,360.4L449.2,356.9M436.5,344.9L436.3,339.8L436.2,339.1L436.2,338.6M485.2,128.1L486.6,126.6M486.6,126.3L486.3,126.6M435.1,328.7L434.9,323.9M434.7,322.3L434.7,323.9L434.7,325.5L434.8,327.2M434.8,331.2L434.8,331.9L434.9,332.6L435.1,332.9M475.1,137.3L473.6,139.2L472.6,140.4L471.4,142.1M464.5,173.0L464.5,172.4M475.9,136.6L475.1,137.3M464.3,170.5L464.3,173.0M464.3,174.7L464.2,180.6M464.5,170.5L464.6,168.2M475.8,136.9L476.6,136.1M475.1,137.7L475.8,136.9M496.6,117.3L503.1,110.8L505.1,107.9M509.0,100.9L513.4,92.7L514.0,91.6M523.1,80.1L522.2,81.5L521.4,82.9L520.4,84.2L519.3,85.3L516.0,89.0M516.0,89.3L520.5,84.5L522.6,81.7L523.4,80.2M535.3,54.0L536.1,51.2L536.6,48.2M504.3,108.6L503.5,109.9L502.5,111.1L501.4,112.3L494.5,118.9M538.3,34.1L538.5,33.5M538.5,33.5L538.6,32.4M478.6,134.2L479.9,133.1M538.1,36.0L538.2,35.7M537.1,42.2L536.7,44.9M537.1,44.5L537.2,43.9M479.9,133.1L482.9,130.1M528.5,70.6L529.2,69.2M537.8,36.0L537.7,37.2M529.5,68.1L529.0,69.1M476.6,136.1L477.8,135.0M487.5,125.4L487.2,125.6M537.4,40.3L537.1,41.6M514.0,91.6L514.8,90.8M506.9,104.1L506.6,104.5M538.2,33.4L537.8,36.0M516.0,89.0L515.5,89.4M484.5,128.2L483.8,129.0M483.1,129.7L477.3,135.1M482.9,130.1L484.5,128.7M539.6,18.9L539.3,15.8M505.1,107.9L505.5,107.2M539.3,24.0L538.9,26.5M539.3,20.9L539.3,22.8L539.3,24.0M514.0,91.3L513.2,92.5L512.3,94.0L506.9,104.1M463.1,215.4L463.1,208.5M462.9,208.5L462.8,214.4M440.5,299.6L438.6,303.5L437.0,307.3M437.4,307.2L438.4,304.9M434.9,323.9L434.9,321.2L434.7,317.6L434.8,314.5L435.3,312.2L437.1,307.8M437.0,307.3L435.3,311.4L434.9,312.3L434.8,313.0L434.7,313.8L434.6,314.8L434.4,315.7L434.4,316.6L434.4,317.3L434.6,318.9L434.6,319.5M434.6,319.5L434.7,321.4L434.7,322.1L434.7,322.3M434.8,327.2L434.8,328.7L434.8,329.6M462.8,219.2L462.8,223.2L462.8,226.8M462.7,245.2L462.9,242.0M462.7,236.3L462.7,243.0L462.4,244.6M459.5,257.4L460.6,253.7L462.1,248.7L462.7,245.2M462.4,244.6L461.9,248.0L461.7,249.5L460.6,252.8L460.1,254.4L459.4,257.2L459.1,257.8M457.2,262.8L459.5,257.4M459.1,257.8L458.4,259.4L457.9,260.6M450.4,278.1L451.6,273.6L453.5,270.5L454.9,267.7L455.4,266.4M457.4,261.5L455.7,265.4L455.1,266.9L454.2,268.9L452.2,271.8L451.9,272.4M446.4,286.3L447.8,283.2L449.7,280.0L450.4,278.1M448.8,280.9L447.9,282.7L447.2,284.0L446.5,285.4L446.1,286.3M438.4,304.9L441.3,298.3L442.7,295.5L445.1,290.1L446.1,287.3M446.1,286.3L445.0,289.5L444.8,290.3L443.6,292.4L442.2,296.1L441.8,296.8L440.8,298.7L440.5,299.6M470.5,143.4L469.7,145.1L469.4,145.9M471.5,142.7L472.4,141.2L473.4,139.9L474.4,138.6L475.1,137.7M467.1,154.3L469.2,147.5L469.8,145.9M469.4,145.9L467.0,154.0M466.7,154.4L466.5,155.4M464.6,168.2L464.6,165.8M464.4,170.1L464.3,170.5M464.5,176.1L464.5,173.0M464.3,173.0L464.3,174.7M464.2,181.3L464.2,187.0M464.3,190.3L464.4,181.3M463.2,197.4L463.1,199.0L462.9,199.8M463.2,200.3L463.3,197.4M463.1,218.0L463.1,215.4M462.8,214.4L462.8,219.2M462.8,226.8L462.8,227.1M463.1,223.4L463.1,218.0M536.6,48.2L537.1,44.5M536.7,44.9L536.1,49.5L535.9,51.1L535.4,52.6L535.0,53.9M466.7,155.6L467.1,154.3M507.3,103.9L509.0,100.9M447.8,355.0L446.8,353.7L446.2,353.1L445.6,352.6L445.0,352.2M490.1,123.0L487.5,125.4M489.8,123.5L492.6,121.1M506.4,105.0L506.3,105.3M506.6,105.1L506.9,104.5M538.8,27.2L538.3,31.8M539.4,25.0L539.7,22.4L539.7,22.0M462.9,200.9L462.9,207.5M463.1,233.1L463.1,223.4M462.9,242.0L462.9,237.6M465.3,160.4L466.7,155.6M464.5,172.4L464.5,170.5M539.1,16.2L539.2,19.0M434.8,329.6L434.8,329.6M537.5,41.6L538.0,37.3M467.0,154.0L466.7,154.4M452.4,361.4L451.9,360.7L451.8,360.4M539.2,19.0L539.2,19.6M539.7,20.5L539.7,20.3M539.6,19.6L539.6,18.9M530.1,67.2L533.9,57.4M533.7,57.2L529.6,67.6M535.0,53.9L533.7,57.1M534.0,57.1L535.3,54.0M457.9,260.6L457.4,261.5M462.9,199.8L462.9,200.6M506.3,105.3L506.2,105.5M446.1,287.3L446.4,286.3M462.8,227.1L462.8,228.1M538.2,35.7L538.3,34.1M504.9,107.7L504.3,108.6M492.2,121.1L490.1,123.0M486.3,126.6L484.9,127.8M528.6,69.8L528.1,70.7M530.0,67.6L530.1,67.2M464.2,187.0L464.2,187.9M437.1,307.8L437.4,307.2M494.5,119.2L495.2,118.6M538.9,26.5L538.9,26.8M538.9,26.8L538.8,27.2M539.2,27.4L539.2,26.8M539.2,26.8L539.4,25.0M539.7,22.0L539.7,20.5M538.6,32.4L538.6,31.9M537.2,43.9L537.4,42.3M533.9,57.4L534.0,57.1M523.4,80.2L523.7,79.8M523.7,79.8L528.5,70.6M505.5,107.2L506.3,105.7M488.0,125.3L489.8,123.5M486.6,126.6L488.0,125.3M484.5,128.7L485.2,128.1M471.4,142.1L470.5,143.4M523.2,79.8L523.1,80.1M528.1,70.7L523.2,79.8M533.7,57.1L533.7,57.2M538.3,31.8L538.3,32.4M483.8,129.0L483.1,129.7M484.9,127.8L484.5,128.2M487.2,125.6L486.6,126.3M539.7,20.3L539.6,19.6M539.3,20.8L539.3,20.9M539.2,19.6L539.3,20.8M529.6,67.6L529.5,68.1M451.9,272.4L451.5,273.2L451.3,273.9L451.0,274.6L450.2,278.0L449.9,278.7L449.7,279.6L449.3,280.2L448.8,280.9M455.4,266.4L457.2,262.8M435.1,328.7L435.1,328.7M435.5,333.5L435.2,330.0M435.5,333.8L435.5,333.5M449.2,356.9L447.8,355.0M434.8,330.9L434.8,331.2M434.8,329.6L434.8,330.9"></path><path class="dam-primary dam-route-i30" d="M268.5,375.4L265.8,375.7M137.5,384.5L141.2,384.5M134.9,384.0L123.7,384.0M383.1,372.6L382.1,372.8M380.4,373.4L383.1,372.9M383.1,372.9L387.9,372.2L391.1,371.9L391.7,371.8M399.2,369.6L399.1,369.7M402.3,368.7L399.2,369.6M405.0,368.8L406.4,368.4M414.2,367.7L411.4,367.0L410.0,367.0M421.5,370.2L419.7,370.5L418.1,370.2L415.4,368.6M415.3,368.8L418.0,370.5L420.3,370.9L422.8,370.0L423.5,369.4M423.6,369.0L423.5,369.1M282.3,374.3L274.3,374.8L271.2,375.1M287.9,374.1L282.3,374.3M282.3,374.7L287.8,374.5M290.8,374.5L295.7,374.5M382.1,372.8L379.7,373.4L379.2,373.5M259.3,377.0L258.6,377.2M258.6,377.2L247.6,379.7L244.5,380.1L241.3,380.4L236.4,380.4M259.4,377.5L264.6,376.4L267.2,376.2M258.7,377.6L259.4,377.5M229.2,380.7L230.2,380.7M349.2,373.1L340.1,372.6L336.3,372.6M350.1,373.1L349.2,373.1M349.2,373.4L349.9,373.4M336.3,372.6L335.1,372.5M322.6,372.1L317.4,372.1L314.2,372.6M337.3,372.9L345.4,373.2L349.2,373.4M335.1,372.9L336.3,372.9M302.1,374.0L301.1,374.0M295.7,374.1L290.8,374.1M299.8,374.4L300.0,374.4M271.2,375.1L268.5,375.4M268.3,376.0L268.5,375.9M271.4,375.6L279.0,374.8M186.4,385.8L187.4,385.8M203.2,385.1L209.5,384.6M166.0,384.5L167.5,384.5M165.2,384.5L166.0,384.5M187.4,385.5L186.2,385.4M184.2,385.2L173.4,384.2L166.8,384.2M166.8,384.2L166.0,384.2M156.0,384.0L151.1,384.2M234.1,380.4L233.4,380.4M234.4,380.7L241.9,380.7L245.2,380.4L248.3,379.9L258.7,377.6M229.2,380.2L224.9,380.5L222.1,381.1L217.2,382.7L214.1,383.7L210.4,384.2L206.6,384.5M423.5,369.1L421.5,370.2M301.1,374.4L307.7,374.3L310.9,373.8L317.3,372.5L320.7,372.4L321.8,372.5M325.3,372.5L335.1,372.9M296.8,374.5L299.8,374.4M410.0,367.4L412.3,367.4L414.1,368.1M395.8,370.6L393.8,371.0M415.4,368.6L414.2,367.7M111.3,383.9L105.6,383.9L103.1,383.7M135.0,384.3L135.8,384.5M290.8,374.3L287.9,374.3M120.9,384.0L110.7,384.0L99.7,383.9M81.2,384.0L91.4,384.0M349.9,373.4L353.1,373.7L355.4,374.1M374.9,376.2L372.9,377.0L370.6,377.6L369.2,377.8M382.1,372.9L379.3,373.7L376.7,375.1L373.4,377.0L370.7,377.8L368.0,377.9L364.6,377.0M383.1,372.8L382.1,372.9M99.4,384.3L101.3,384.3M98.2,384.3L99.4,384.3M98.1,383.7L94.1,383.7L90.0,383.7L83.8,383.6L81.4,383.6M144.5,384.5L145.4,384.5M145.4,384.5L159.2,384.5M145.4,384.0L144.5,384.0M140.9,384.0L134.9,384.0M144.5,384.0L141.7,384.0M230.2,380.2L229.2,380.2M233.4,380.4L230.2,380.2M233.5,380.7L234.4,380.7M230.2,380.7L233.5,380.7M374.3,376.9L376.0,375.9L379.4,373.8L380.4,373.4M268.5,375.7L264.2,376.3M282.3,374.4L277.9,374.7L271.4,375.4M186.2,385.6L173.1,384.5L166.0,384.3M259.3,377.3L258.6,377.5M234.3,380.5L233.4,380.5M233.4,380.5L230.2,380.5M287.9,374.3L282.3,374.4M187.4,385.6L186.2,385.6M230.2,380.5L229.2,380.5M229.2,380.5L225.4,380.7L222.4,381.1L218.4,382.6L214.4,383.9L211.3,384.3L196.9,385.4L193.6,385.6L190.3,385.8L187.4,385.6M271.4,375.4L268.5,375.7M258.6,377.5L247.6,379.8L244.6,380.2L241.4,380.5L234.3,380.5M336.3,372.8L335.1,372.6M301.1,374.1L300.1,374.1M349.9,373.2L349.2,373.2M335.1,372.6L320.4,372.2L316.8,372.4L312.4,373.2M349.2,373.2L336.3,372.8M300.1,374.1L290.8,374.3M144.5,384.3L145.4,384.3M141.8,384.3L144.5,384.3M364.6,377.2L367.3,377.9L369.7,378.1L372.1,377.8L374.3,376.9M355.8,374.0L353.0,373.4L352.4,373.2M166.0,384.3L165.2,384.3M165.2,384.3L149.5,384.3M510.3,337.4L509.2,337.4M534.8,333.4L534.3,333.2M521.8,332.9L520.8,333.1M512.3,337.2L510.3,337.4M509.2,337.4L501.0,337.6L498.5,337.6M516.2,335.0L513.9,336.6L512.3,337.2M520.8,333.1L518.7,333.5L517.2,334.2L516.2,335.0M534.3,333.2L531.0,332.6L528.8,332.5L525.6,332.6L521.8,332.9M407.3,367.5L406.8,367.7M397.7,370.6L405.0,368.8M408.8,367.7L410.0,367.4M159.2,384.5L165.2,384.5M150.0,384.2L147.6,384.0M165.2,384.2L156.0,384.0M145.4,384.3L148.5,384.3M452.1,354.4L453.1,354.4M506.4,337.2L503.1,337.2M547.1,334.1L548.0,334.1M336.3,372.9L337.3,372.9M328.3,372.2L322.6,372.1M321.8,372.5L325.3,372.5M335.1,372.5L328.3,372.2M301.1,374.0L300.1,374.0M288.9,374.1L287.9,374.1M290.8,374.1L288.9,374.1M300.1,374.0L295.7,374.1M352.4,373.2L350.1,373.1M364.7,376.9L355.8,374.0M355.4,374.1L364.6,377.2M379.2,373.5L374.9,376.2M383.2,372.5L383.1,372.6M369.2,377.8L366.8,377.5L365.8,377.3M267.2,376.2L268.3,376.0M279.0,374.8L282.3,374.7M268.5,375.9L271.4,375.6M198.4,385.5L203.2,385.1M206.6,384.5L202.2,384.8M187.4,385.8L191.0,385.9L194.2,385.8L198.4,385.5M148.5,384.3L149.5,384.3M423.5,369.4L423.9,369.1M477.4,338.5L478.2,338.5M476.8,338.5L477.4,338.5M480.7,338.3L487.1,337.9M479.9,338.3L480.7,338.3M478.9,338.3L479.9,338.3M478.2,338.5L478.9,338.3M488.2,337.9L491.8,337.7M487.1,337.9L488.2,337.9M492.3,337.7L495.8,337.6L498.5,337.6M491.8,337.7L492.3,337.7M477.4,338.5L476.8,338.6M478.2,338.5L477.4,338.5M478.9,338.5L478.2,338.5M480.0,338.3L478.9,338.5M480.7,338.3L480.0,338.3M487.1,338.0L480.7,338.3M488.2,337.9L487.1,338.0M491.8,337.7L488.2,337.9M492.3,337.7L491.8,337.7M498.5,337.6L496.1,337.7L492.3,337.7M397.7,370.2L395.8,370.6M389.1,371.9L383.1,372.8M391.7,371.8L392.8,371.6M394.4,371.3L397.7,370.6M402.6,368.6L402.3,368.7M406.8,367.7L403.7,368.3M410.0,367.0L407.3,367.5M403.7,368.3L402.6,368.6M406.4,368.4L408.8,367.7M312.4,373.2L307.2,374.1L303.4,374.1M303.4,374.1L301.1,374.1M389.6,371.6L386.5,372.1L383.2,372.5M414.1,368.1L415.3,368.8M364.6,377.0L356.6,374.4L353.1,373.5L349.9,373.2M314.2,372.6L308.9,373.7L303.2,374.0L302.1,374.0M209.5,384.6L213.3,384.3L216.7,383.5L221.1,381.8L224.3,381.0L227.5,380.7L229.2,380.7M167.5,384.5L172.7,384.6L181.2,385.4L186.4,385.8M133.6,384.5L135.0,384.3M123.7,384.3L133.6,384.5M105.8,384.3L113.3,384.3M101.3,384.3L105.8,384.3M141.2,384.5L144.5,384.5M236.4,380.4L234.1,380.4M121.9,384.0L116.9,383.9M202.2,384.8L195.0,385.4L191.6,385.5L188.5,385.5L187.4,385.5M89.1,384.3L98.2,384.3M393.8,371.0L389.6,371.6M135.8,384.5L137.5,384.5M265.8,375.7L259.3,377.0M545.1,333.9L538.3,334.1L535.9,333.6L534.8,333.4M99.7,383.7L99.3,383.7M98.4,383.7L98.1,383.7M86.4,384.3L87.1,384.3M392.8,371.6L394.4,371.3M87.1,384.3L89.1,384.3M113.3,384.3L119.1,384.5L123.7,384.3M186.2,385.4L184.2,385.2M147.6,384.0L145.7,384.0M145.7,384.0L145.4,384.0M144.4,384.2L129.3,384.2L120.9,384.0M114.2,384.2L132.1,384.3L139.0,384.3M99.5,384.0L112.1,384.2L114.2,384.2M98.2,384.0L99.5,384.0M98.3,383.9L83.9,383.9M99.7,383.9L98.3,383.9M82.7,383.9L79.7,383.9L77.4,383.9M83.9,383.9L82.7,383.9M99.3,383.7L98.7,383.7M98.7,383.7L98.4,383.7M141.7,384.0L140.9,384.0M151.1,384.2L150.0,384.2M103.1,383.7L101.4,383.7M101.4,383.7L99.7,383.7M82.2,384.3L86.4,384.3M365.8,377.3L364.7,376.9M295.7,374.5L296.8,374.5M290.8,374.1L290.8,374.1M287.9,374.5L290.8,374.5M166.0,384.2L165.2,384.2M287.8,374.5L287.9,374.5M300.0,374.4L301.1,374.4M399.1,369.7L397.7,370.2M91.4,384.0L98.2,384.0M148.2,384.2L145.5,384.2M145.5,384.2L144.4,384.2M111.9,383.9L111.3,383.9M116.9,383.9L111.9,383.9M123.7,384.0L121.9,384.0M262.4,376.6L259.3,377.3M264.2,376.3L262.4,376.6"></path><path class="dam-route-link dam-link-downtown" d="M461.3,233.4L430.0,359.2"></path><path class="dam-route-link dam-link-love" d="M461.3,233.4L362.8,256.3"></path><path class="dam-route-link dam-link-dfw" d="M461.3,233.4L131.2,179.3"></path><g class="dam-point dam-point-site" transform="translate(461.3,233.4)"><circle class="dam-site-halo" r="26"></circle><circle class="dam-site-ring" r="13"></circle><circle class="dam-site-dot" r="5"></circle><g class="dam-site-lockup" transform="translate(16,-66)"><rect class="dam-site-plate" x="0" y="0" width="132" height="46" rx="4"></rect><image href="assets/property-logo.svg" x="9" y="6" width="114" height="34" preserveAspectRatio="xMidYMid meet"></image></g></g><g class="dam-point dam-point-downtown" transform="translate(430.0,359.2)"><circle class="dam-place-dot" r="5"></circle><text class="dam-label" x="10" y="-8" text-anchor="start">Downtown Dallas</text><text class="dam-label dam-label-secondary" x="10" y="7" text-anchor="start">a few miles south</text></g><g class="dam-point dam-point-love" transform="translate(362.8,256.3)"><circle class="dam-place-dot" r="5"></circle><text class="dam-label" x="-10" y="-8" text-anchor="end">Dallas Love Field</text><text class="dam-label dam-label-secondary" x="-10" y="7" text-anchor="end">just over 6 miles west</text></g><g class="dam-point dam-point-dfw" transform="translate(131.2,179.3)"><circle class="dam-place-dot" r="5"></circle><text class="dam-label" x="10" y="-20" text-anchor="start">DFW International</text><text class="dam-label dam-label-secondary" x="10" y="-6" text-anchor="start">roughly 20 miles</text></g><g class="dam-shield-group" transform="translate(469.3,127.8)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">US 75</text></g><g class="dam-shield-group" transform="translate(524.6,234.6)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">Loop 12</text></g><g class="dam-shield-group" transform="translate(561.4,142.4)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">I-635</text></g><g class="dam-shield-group" transform="translate(303.5,339.8)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">I-35E</text></g><g class="dam-shield-group" transform="translate(536.9,376.3)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">I-30</text></g><g class="dam-shield-group" transform="translate(481.6,420.1)"><rect class="dam-shield" x="-21" y="-10" width="42" height="20" rx="5"></rect><text class="dam-shield-text">I-45</text></g></g></svg>
+    <div class="dam-legend text-small" aria-hidden="true">
+      <span><i class="dam-key dam-key-site"></i>Property</span>
+      <span><i class="dam-key dam-key-road"></i>Primary access</span>
+      <span><i class="dam-key dam-key-place"></i>Destination</span>
+    </div>
+  </div>
+  <p class="dam-detail text-small" aria-live="polite">Hover or focus a highlight above to trace it on the map.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. DFW MSA ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">At the Epicenter of the Fourth-Largest Metro Area in the U.S.</h3>
+      <p class="hl-body">The Hotel sits within the Dallas-Fort Worth MSA, the fourth-largest metropolitan area in the United States, with a population of approximately 8.5 million. The region has led the nation in workforce growth this decade, adding roughly 450,000 net new jobs. In addition, DFW led the country in population growth in 2023, adding approximately 191,000 residents, and has ranked among the nation&rsquo;s top metros for numeric gains every year since, adding approximately 189,000 residents in 2024 and 124,000 in 2025, a cumulative increase of more than 500,000 people in three years. As further testament to its prowess, DFW was ranked the No. 1 investment market in the United States for the fifth consecutive year in CBRE&rsquo;s 2026 North America Investor Intentions Survey, and the region is home to 49 Fortune 1000 headquarters.</p>
+    </div>
+
+    <!-- Rebuilt from dfw-msa-screenshot.jpg -->
+    <div class="dfw-exhibit">
+      <div class="dfw-band">
+        <div class="dfw-title"><i></i><span>DALLAS-FORT WORTH-MSA</span><i></i></div>
+        <div class="dfw-stats">
+          <div class="dfw-stat"><img src="assets/dfw-stat-01.svg" alt="Dallas-Fort Worth MSA had a total population eclipsing 8.5 million people"></div>
+          <div class="dfw-stat"><img src="assets/dfw-stat-02.svg" alt="DFW ranked #1 investment market in the United States"></div>
+          <div class="dfw-stat"><img src="assets/dfw-stat-03.svg" alt="49 Fortune 1000 headquarters"></div>
+          <div class="dfw-stat"><img src="assets/dfw-stat-04.svg" alt="450,000 net new jobs since 2020, #1 of any metro in the U.S."></div>
+        </div>
+      </div>
+      <div class="dfw-photos">
+        <div class="dfw-photo">
+          <img class="city" src="assets/dallas-skyline.jpg" alt="Dallas skyline at dusk">
+          <div class="dfw-water" aria-hidden="true"></div>
+          <div class="dfw-word ripple-a">
+            <img class="w-solid" src="assets/dallas-words.svg" alt="Dallas">
+            <img class="w-reflect" src="assets/dallas-words.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="dfw-photo">
+          <img class="city" src="assets/fort-worth.jpg" alt="Fort Worth skyline at dusk">
+          <div class="dfw-water" aria-hidden="true"></div>
+          <div class="dfw-word ripple-b">
+            <img class="w-solid" src="assets/fortworth-words.svg" alt="Fort Worth">
+            <img class="w-reflect" src="assets/fortworth-words.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. SCARCITY OF HYATT PRODUCT ── -->
+<section class="hl-section">
+  <div class="wrap">
+    <div class="hl-single">
+      <h3 class="hl-title">Scarcity of Hyatt Product</h3>
+      <p class="hl-body">Within a 10-mile radius of the Hotel, the Hyatt House is one of only five Hyatt-branded, select-service hotels, representing 677 keys. Compared to Marriott (33 select-service hotels; 4,261 keys), Hilton (25 select-service hotels; 3,057 keys), and IHG (15 select-service hotels; 1,611 keys), Hyatt accounts for 6.4% of total select-service hotels and 7.0% of total select-service keys in the area. This dynamic creates a less competitive environment for the Hyatt House compared to other branded products around the Property.</p>
+    </div>
+
+    <div class="scarcity-layout">
+      <div class="brand-cards">
+        <button type="button" class="brand-card" data-brand="marriott" data-modal
+                data-logo="assets/logo-marriott.svg" data-plate="true"
+                data-eyebrow="10-Mile Radius" data-title="Marriott"
+                data-blurb="Marriott accounts for the largest branded presence within a 10-mile radius of the Hotel: 33 select-service hotels and 4,261 keys, or 42.3% of hotels and 44.4% of keys in the area."
+                data-stats="33::Hotels|4,261::Keys|42.3%::Of Market">
+          <img src="assets/logo-marriott.svg" alt="Marriott Bonvoy">
+          <span class="card-hint" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="brand-card" data-brand="hilton" data-modal
+                data-logo="assets/logo-hilton.svg" data-plate="true"
+                data-eyebrow="10-Mile Radius" data-title="Hilton"
+                data-blurb="Hilton follows with 25 select-service hotels and 3,057 keys within the same 10-mile radius &mdash; 32.1% of hotels and 31.8% of keys."
+                data-stats="25::Hotels|3,057::Keys|32.1%::Of Market">
+          <img src="assets/logo-hilton.svg" alt="Hilton">
+          <span class="card-hint" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="brand-card" data-brand="ihg" data-modal
+                data-logo="assets/logo-ihg.svg" data-plate="true"
+                data-eyebrow="10-Mile Radius" data-title="IHG"
+                data-blurb="IHG holds 15 select-service hotels and 1,611 keys within a 10-mile radius, representing 19.2% of hotels and 16.8% of keys."
+                data-stats="15::Hotels|1,611::Keys|19.2%::Of Market">
+          <img src="assets/logo-ihg.svg" alt="IHG Hotels &amp; Resorts">
+          <span class="card-hint" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="brand-card" data-brand="hyatt" data-modal
+                data-logo="assets/logo-hyatt-stacked.svg" data-plate="true"
+                data-eyebrow="Scarcity of Product" data-title="Hyatt"
+                data-blurb="Within a 10-mile radius of the Hotel, the Hyatt House is one of only five Hyatt-branded, select-service hotels, representing 677 keys. Hyatt accounts for 6.4% of total select-service hotels and 7.0% of total select-service keys in the area. This dynamic creates a less competitive environment for the Hyatt House compared to other branded products around the Property."
+                data-stats="5::Hotels|677::Keys|6.4%::Of Market">
+          <img src="assets/logo-hyatt-stacked.svg" alt="World of Hyatt">
+          <span class="card-hint" aria-hidden="true">+</span>
+        </button>
+      </div>
+
+      <div class="brand-table">
+        <div class="brand-table-h"><span>Brand Concentration &mdash; 10-Mile Radius</span></div>
+        <table>
+          <thead>
+            <tr><th>Brand</th><th>Hotels</th><th>Keys</th><th>% of Market</th><th>% of Market (Keys)</th></tr>
+          </thead>
+          <tbody>
+            <tr data-brand="marriott"><td><img class="bt-logo" src="assets/logo-marriott.svg" alt="Marriott"></td><td>33</td><td>4,261</td><td>42.3%</td><td>44.4%</td></tr>
+            <tr data-brand="hilton"><td><img class="bt-logo" src="assets/logo-hilton.svg" alt="Hilton"></td><td>25</td><td>3,057</td><td>32.1%</td><td>31.8%</td></tr>
+            <tr data-brand="ihg"><td><img class="bt-logo" src="assets/logo-ihg.svg" alt="IHG"></td><td>15</td><td>1,611</td><td>19.2%</td><td>16.8%</td></tr>
+            <tr class="is-hyatt" data-brand="hyatt"><td><img class="bt-logo" src="assets/logo-hyatt-stacked.svg" alt="Hyatt"></td><td>5</td><td>677</td><td>6.4%</td><td>7.0%</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td>Total</td><td>78</td><td>9,606</td><td>100.0%</td><td>100.0%</td></tr>
+          </tfoot>
+        </table>
+        <div class="brand-note">Select-service hotels within a 10-mile radius of the Hyatt House Dallas/Lincoln Park.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. ALL-SUITE PRODUCT ── -->
+<section class="hl-section hl-light">
+  <div class="wrap">
+    <div class="hl-grid">
+      <div>
+        <h3 class="hl-title">High-Quality, All-Suite Property</h3>
+        <p class="hl-body">With oversized guestrooms and elevated, residential-quality finishes, the all-suite Hyatt House offers a decided advantage over competing area hotels. The Property has been institutionally maintained; however, a new owner will have the opportunity to execute on targeted PIP renovations to improve ADR and fully capitalize on the potential of the location/surrounding area.</p>
+      </div>
+      <div class="hl-photo">
+        <img src="assets/suite-studio.jpg" alt="Hyatt House all-suite guestroom with full kitchen and living area">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 8. CLEAN INVESTMENT OPPORTUNITY ── -->
+<section class="hl-section hl-light">
+  <div class="wrap">
+    <div class="hl-grid hl-reverse">
+      <div>
+        <h3 class="hl-title">Clean Investment Opportunity</h3>
+        <p class="hl-body">The non-union, fee-simple interest in the Hyatt House is being offered free and clear of existing management and debt, affording new ownership maximum optionality in the future operation and capitalization of the Hotel.</p>
+      </div>
+      <div class="hl-photo">
+        <img src="assets/suite-bed.jpg" alt="Hyatt House guestroom">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section class="cta-section" id="confidentiality">
+  <div class="wrap">
+    <h2 class="section-h2">Access the<br><em>Offering Memorandum</em></h2>
+    <p class="cta-body">To receive the full Offering Memorandum and access data room materials, please execute the Confidentiality Agreement below.</p>
+    <!-- CA BUTTONS — replace href with the RightSignature template link and drop the CA .docx into /site -->
+    <div class="cta-btns">
+      <a href="#" class="btn-cta">Sign CA Online</a>
+      <a href="#" class="btn-blue">Download CA (DOCX)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="assets/hwe-logo-white.svg" alt="Hodges Ward Elliott" style="height:56px;width:auto">
+      </div>
+      <div>
+        <div class="footer-label">Exclusive Representatives</div>
+        <hr class="footer-divider">
+        <div class="contacts-grid">
+          <div>
+            <div class="contact-name">Austin Brooks</div>
+            <div class="contact-title">Executive Managing Director</div>
+            <a class="contact-email" href="mailto:abrooks@hodgeswardelliott.com">abrooks@hodgeswardelliott.com</a>
+          </div>
+          <div>
+            <div class="contact-name">Michael Brandes</div>
+            <div class="contact-title">Vice President</div>
+            <a class="contact-email" href="mailto:mbrandes@hodgeswardelliott.com">mbrandes@hodgeswardelliott.com</a>
+          </div>
+          <div>
+            <div class="contact-name">Caiden Trivedi</div>
+            <div class="contact-title">Analyst</div>
+            <a class="contact-email" href="mailto:ctrivedi@hodgeswardelliott.com">ctrivedi@hodgeswardelliott.com</a>
+          </div>
+        </div>
+
+        <div class="footer-label">Acquisition Financing Advisor</div>
+        <hr class="footer-divider">
+        <div class="contacts-grid">
+          <div>
+            <div class="contact-name">Michael Britvan</div>
+            <div class="contact-title">Managing Director</div>
+            <a class="contact-email" href="mailto:mbritvan@hodgeswardelliott.com">mbritvan@hodgeswardelliott.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Hodges Ward Elliott. All rights reserved. This offering is subject to prior sale, price change, or withdrawal without notice.</div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var nav=document.querySelector('.navbar');
+  var toggle=nav.querySelector('.nav-toggle');
+  var links=nav.querySelector('.nav-links');
+  var THRESHOLD=80, NARROW=900;
+
+  function close(){nav.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');}
+  function open(){nav.classList.add('nav-open');toggle.setAttribute('aria-expanded','true');}
+
+  function sync(){
+    var scrolled=window.scrollY>THRESHOLD;
+    nav.classList.toggle('is-scrolled',scrolled);
+    // collapsed while scrolled, and always on narrow screens
+    var collapsed=scrolled||window.innerWidth<=NARROW;
+    nav.classList.toggle('is-collapsed',collapsed);
+    if(!collapsed) close();
+  }
+
+  toggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    nav.classList.contains('nav-open')?close():open();
+  });
+  links.addEventListener('click',function(e){ if(e.target.closest('a')) close(); });
+  document.addEventListener('click',function(e){
+    if(nav.classList.contains('nav-open')&&!nav.contains(e.target)) close();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('nav-open')){close();toggle.focus();}
+  });
+  window.addEventListener('scroll',sync,{passive:true});
+  window.addEventListener('resize',sync);
+  sync();
+})();
+</script>
+
+<script>
+(function(){
+  // Slow scale-in as blocks enter the viewport. Containers only — never the
+  // interactive cards themselves, whose hover transforms would fight it.
+  var SELECTORS = [
+    '.overview-brand','.overview-copy .body-text','.overview-photo','.stats-card','.overview .btn-row',
+    '.gallery-collage',
+    '.highlights-header .section-h2',
+    '.hl-title','.hl-body',
+    '.hl-photo','.hl-photo-wide','.hl-photo-cap',
+    '.pc-infographic','.pc-cards',
+    '.med-callouts',
+    '.office-aerial','.office-cards',
+    '#dallas-access-map .dam-highlights','#dallas-access-map .dam-map-wrap',
+    '.dfw-exhibit',
+    '.brand-cards','.brand-table',
+    '.cta-section .section-h2','.cta-body','.cta-btns',
+    '.footer-grid'
+  ].join(',');
+
+  var nodes = Array.prototype.slice.call(document.querySelectorAll(SELECTORS))
+    .filter(function(n){ return !n.closest('.modal'); });
+
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  nodes.forEach(function(n){ n.classList.add('reveal'); });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+
+  nodes.forEach(function(n){ io.observe(n); });
+})();
+</script>
+
+<!-- ════ WATER RIPPLE FILTERS ════ -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <filter id="ripple-a" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.010 0.048" numOctaves="2" seed="7" result="n">
+        <animate attributeName="baseFrequency" dur="9s" repeatCount="indefinite"
+                 values="0.010 0.048;0.017 0.082;0.008 0.038;0.010 0.048"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ripple-b" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.042" numOctaves="2" seed="23" result="n">
+        <animate attributeName="baseFrequency" dur="11.5s" repeatCount="indefinite"
+                 values="0.012 0.042;0.008 0.076;0.015 0.036;0.012 0.042"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ════ DETAIL MODAL ════ -->
+<div class="modal" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-body">
+      <div class="modal-eyebrow" id="modal-eyebrow"></div>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-text" id="modal-text"></p>
+      <div class="modal-stats" id="modal-stats"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var modal   = document.getElementById('detail-modal');
+  var media   = document.getElementById('modal-media');
+  var eyebrow = document.getElementById('modal-eyebrow');
+  var title   = document.getElementById('modal-title');
+  var text    = document.getElementById('modal-text');
+  var stats   = document.getElementById('modal-stats');
+  var closeBtn= modal.querySelector('.modal-close');
+  var opener  = null;
+
+  function open(card){
+    var d = card.dataset;
+    var plate = d.plate === 'true';
+    if (d.photo) {
+      media.className = 'modal-media';
+      media.innerHTML =
+        '<img class="m-photo" src="'+d.photo+'" alt="">' +
+        (d.logo ? '<div class="m-logo-wrap">' +
+          (plate ? '<div class="m-plate"><img src="'+d.logo+'" alt=""></div>'
+                 : '<img class="m-logo" src="'+d.logo+'" alt="">') +
+          '</div>' : '');
+    } else {
+      // logo-only: no photograph, so the mark sits on its own cream field
+      media.className = 'modal-media is-blank';
+      media.innerHTML = '<div class="m-logo-wrap"><img class="m-flat" src="'+d.logo+'" alt=""></div>';
+    }
+    eyebrow.textContent = d.eyebrow || '';
+    eyebrow.style.display = d.eyebrow ? '' : 'none';
+    title.textContent = d.title || '';
+    text.textContent  = d.blurb || '';
+    stats.innerHTML = d.stats
+      ? d.stats.split('|').map(function(pair){
+          var kv = pair.split('::');
+          return '<div class="stat-cell" style="padding:16px 12px"><div class="stat-val" style="font-size:19px">'+
+                 kv[0]+'</div><div class="stat-lbl">'+(kv[1]||'')+'</div></div>';
+        }).join('')
+      : '';
+    stats.style.display = d.stats ? '' : 'none';
+
+    opener = card;
+    modal.hidden = false;
+    requestAnimationFrame(function(){ modal.classList.add('is-open'); });
+    document.body.classList.add('modal-open');
+    closeBtn.focus();
+  }
+
+  function close(){
+    modal.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    setTimeout(function(){ modal.hidden = true; media.innerHTML=''; }, 320);
+    if (opener) { opener.focus(); opener = null; }
+  }
+
+  // brand cards highlight and expand their matching table row
+  (function(){
+    var body=document.querySelector('.brand-table tbody');
+    if(!body) return;
+    var allCards=document.querySelectorAll('.brand-card');
+    function link(brand, fromRow){
+      body.classList.toggle('has-link', !!brand);
+      body.querySelectorAll('tr').forEach(function(tr){
+        tr.classList.toggle('is-linked', !!brand && tr.dataset.brand===brand);
+      });
+      // only a row hover makes its card breathe; a card hover already lifts
+      allCards.forEach(function(c){
+        c.classList.toggle('is-breathing', !!fromRow && !!brand && c.dataset.brand===brand);
+      });
+    }
+    document.querySelectorAll('.brand-card').forEach(function(c){
+      c.addEventListener('mouseenter',function(){link(c.dataset.brand);});
+      c.addEventListener('mouseleave',function(){link(null);});
+      c.addEventListener('focus',function(){link(c.dataset.brand);});
+      c.addEventListener('blur',function(){link(null);});
+    });
+
+    // a table row opens the same popout as its card, and is keyboard-reachable
+    body.querySelectorAll('tr[data-brand]').forEach(function(tr){
+      var card=document.querySelector('.brand-card[data-brand="'+tr.dataset.brand+'"]');
+      if(!card) return;
+      tr.tabIndex=0;
+      tr.setAttribute('role','button');
+      tr.setAttribute('aria-label','View '+tr.dataset.brand+' detail');
+      tr.addEventListener('click',function(){card.click();});
+      tr.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click();}
+      });
+      tr.addEventListener('mouseenter',function(){link(tr.dataset.brand,true);});
+      tr.addEventListener('mouseleave',function(){link(null);});
+    });
+  })();
+
+  document.querySelectorAll('[data-modal]').forEach(function(card){
+    card.addEventListener('click', function(){ open(card); });
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
+    });
+  });
+
+  modal.addEventListener('click', function(e){ if (e.target.hasAttribute('data-close')) close(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+  });
+})();
+</script>
+</body>
+</html>
