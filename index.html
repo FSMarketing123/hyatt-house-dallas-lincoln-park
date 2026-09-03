@@ -601,9 +601,6 @@ body.modal-open{overflow:hidden}
   border-color:rgba(255,255,255,.85);
   box-shadow:0 28px 60px rgba(0,0,0,.44),inset 0 1px 0 rgba(255,255,255,.95)}
 @media (prefers-reduced-motion:reduce){.brand-card.is-breathing{animation:none}}
-/* the World of Hyatt badge is a solid square and reads heavier than the
-   three wordmarks, so it sits 15% smaller in the same box */
-.brand-card[data-brand="hyatt"] img{width:59.5%;height:54.4%}
 
 /* ── CTA ── */
 .cta-section{background:var(--warm);padding:clamp(100px,12vw,180px) 0;text-align:center}
@@ -1131,11 +1128,11 @@ body.modal-open{overflow:hidden}
     <div class="scarcity-layout">
       <div class="brand-cards">
         <button type="button" class="brand-card" data-brand="marriott" data-modal
-                data-logo="assets/logo-marriott.svg" data-plate="true"
+                data-logo="assets/logo-marriott-intl.svg" data-plate="true"
                 data-eyebrow="10-Mile Radius" data-title="Marriott"
                 data-blurb="Marriott accounts for the largest branded presence within a 10-mile radius of the Hotel: 33 select-service hotels and 4,261 keys, or 42.3% of hotels and 44.4% of keys in the area."
                 data-stats="33::Hotels|4,261::Keys|42.3%::Of Market">
-          <img src="assets/logo-marriott.svg" alt="Marriott Bonvoy">
+          <img src="assets/logo-marriott-intl.svg" alt="Marriott International">
           <span class="card-hint" aria-hidden="true">+</span>
         </button>
         <button type="button" class="brand-card" data-brand="hilton" data-modal
@@ -1155,11 +1152,11 @@ body.modal-open{overflow:hidden}
           <span class="card-hint" aria-hidden="true">+</span>
         </button>
         <button type="button" class="brand-card" data-brand="hyatt" data-modal
-                data-logo="assets/logo-hyatt-stacked.svg" data-plate="true"
+                data-logo="assets/logo-hyatt-wordmark.svg" data-plate="true"
                 data-eyebrow="Scarcity of Product" data-title="Hyatt"
                 data-blurb="Within a 10-mile radius of the Hotel, the Hyatt House is one of only five Hyatt-branded select-service hotels, representing 677 keys. Hyatt accounts for 6.4% of total select-service hotels and 7.0% of total select-service keys in the area. This dynamic creates a less competitive environment for the Hyatt House compared to other branded products around the Property."
                 data-stats="5::Hotels|677::Keys|6.4%::Of Market">
-          <img src="assets/logo-hyatt-stacked.svg" alt="World of Hyatt">
+          <img src="assets/logo-hyatt-wordmark.svg" alt="Hyatt">
           <span class="card-hint" aria-hidden="true">+</span>
         </button>
       </div>
@@ -1171,10 +1168,10 @@ body.modal-open{overflow:hidden}
             <tr><th>Brand</th><th>Hotels</th><th>Keys</th><th>% of Market</th><th>% of Market (Keys)</th></tr>
           </thead>
           <tbody>
-            <tr data-brand="marriott"><td><img class="bt-logo" src="assets/logo-marriott.svg" alt="Marriott"></td><td>33</td><td>4,261</td><td>42.3%</td><td>44.4%</td></tr>
+            <tr data-brand="marriott"><td><img class="bt-logo" src="assets/logo-marriott-intl.svg" alt="Marriott"></td><td>33</td><td>4,261</td><td>42.3%</td><td>44.4%</td></tr>
             <tr data-brand="hilton"><td><img class="bt-logo" src="assets/logo-hilton.svg" alt="Hilton"></td><td>25</td><td>3,057</td><td>32.1%</td><td>31.8%</td></tr>
             <tr data-brand="ihg"><td><img class="bt-logo" src="assets/logo-ihg.svg" alt="IHG"></td><td>15</td><td>1,611</td><td>19.2%</td><td>16.8%</td></tr>
-            <tr class="is-hyatt" data-brand="hyatt"><td><img class="bt-logo" src="assets/logo-hyatt-stacked.svg" alt="Hyatt"></td><td>5</td><td>677</td><td>6.4%</td><td>7.0%</td></tr>
+            <tr class="is-hyatt" data-brand="hyatt"><td><img class="bt-logo" src="assets/logo-hyatt-wordmark.svg" alt="Hyatt"></td><td>5</td><td>677</td><td>6.4%</td><td>7.0%</td></tr>
           </tbody>
           <tfoot>
             <tr><td>Total</td><td>78</td><td>9,606</td><td>100.0%</td><td>100.0%</td></tr>
