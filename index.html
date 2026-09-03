@@ -537,11 +537,30 @@ ul{list-style:none}
   .brand-cards{height:auto;grid-template-rows:none}
   .brand-card{aspect-ratio:3/2}}
 
+/* ── CLICK-TO-ENLARGE AERIALS ── */
+.aerial-zoom{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;
+  font:inherit;color:inherit;overflow:hidden;border-radius:6px;
+  transition:box-shadow .45s var(--ease-spring)}
+.aerial-zoom img{display:block;width:100%;height:auto;transition:transform .7s var(--ease-spring)}
+.aerial-zoom:hover img,.aerial-zoom:focus-visible img{transform:scale(1.014)}
+.aerial-zoom:hover{box-shadow:0 26px 62px rgba(0,0,0,.5)}
+.aerial-zoom:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.aerial-zoom .zoom-hint{position:absolute;right:14px;bottom:14px;z-index:2;display:flex;align-items:center;gap:7px;
+  padding:8px 13px;border-radius:100px;background:rgba(22,37,63,.74);backdrop-filter:blur(8px);
+  border:1px solid rgba(var(--cream-rgb),.22);color:var(--cream);
+  font-family:var(--font-jost);font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  opacity:0;transform:translateY(6px);transition:opacity .4s ease,transform .45s var(--ease-spring);pointer-events:none}
+.aerial-zoom:hover .zoom-hint,.aerial-zoom:focus-visible .zoom-hint{opacity:1;transform:translateY(0)}
+.aerial-zoom .zoom-hint svg{width:12px;height:12px}
+@media (hover:none){.aerial-zoom .zoom-hint{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.aerial-zoom img,.aerial-zoom .zoom-hint{transition:none}}
+
 /* ── DETAIL MODAL (Park Cities + healthcare cards) ── */
 .modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)}
 .modal.is-open{display:flex}
 .modal-backdrop{position:absolute;inset:0;background:rgba(11,18,32,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s ease}
 .modal.is-open .modal-backdrop{opacity:1}
+.modal-card.is-lightbox{width:min(1620px,96vw)}
 .modal-card{position:relative;z-index:1;width:min(720px,100%);max-height:88vh;overflow-y:auto;background:var(--navy);border:1px solid rgba(var(--cream-rgb),.12);border-radius:8px;box-shadow:0 40px 100px rgba(0,0,0,.6);opacity:0;transform:translateY(18px) scale(.98);transition:opacity .35s ease,transform .45s var(--ease-spring)}
 .modal.is-open .modal-card{opacity:1;transform:none}
 .modal-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink);border-radius:8px 8px 0 0}
@@ -569,6 +588,13 @@ ul{list-style:none}
   line-height:1;color:var(--cream);text-align:center}
 .m-body-word small{display:block;font-family:var(--font-jost);font-size:10px;font-weight:600;
   letter-spacing:.3em;text-transform:uppercase;margin-top:10px;color:rgba(var(--cream-rgb),.72)}
+/* lightbox: the photograph at the largest size the viewport allows */
+.modal-media.is-lightbox{aspect-ratio:auto;background:var(--ink)}
+.modal-media.is-lightbox::after{display:none}
+.modal-media.is-lightbox img.m-photo{width:100%;height:auto;max-height:82vh;object-fit:contain;filter:none}
+.modal-body.is-caption{padding:15px 22px;text-align:center}
+.modal-body.is-caption .modal-title{font-family:var(--font-jost);font-size:10px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0}
 .modal-media.is-blank{aspect-ratio:16/7;background:#f3f0e3}
 .modal-media.is-blank::after{display:none}
 .modal-media img.m-flat{width:clamp(180px,30vw,280px);height:clamp(70px,10vw,110px);object-fit:contain}
@@ -851,9 +877,13 @@ body.modal-open{overflow:hidden}
     </div>
 
     <!-- Aerial (Page 7 of the Hyatt House OM) -->
-    <div class="hl-photo-wide">
+    <button type="button" class="hl-photo-wide aerial-zoom" data-modal data-lightbox="true"
+            data-photo="assets/aerial-lincoln-park-lg.jpg"
+            data-title="Hyatt House Dallas/Lincoln Park &mdash; Looking Southwest Toward Downtown Dallas"
+            aria-label="Enlarge aerial: Aerial of the Hyatt House Dallas/Lincoln Park showing Highland Park, U…">
       <img src="assets/aerial-lincoln-park.jpg" alt="Aerial of the Hyatt House Dallas/Lincoln Park showing Highland Park, University Park, SMU, NorthPark Center, Preston Center, The Gild, One Provident Place, Ventana by Buckner, Texas Health Presbyterian Hospital, downtown Dallas and Love Field Airport">
-    </div>
+      <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3M11 8v6M8 11h6"/></svg>Enlarge</span>
+    </button>
     <div class="hl-photo-cap">Hyatt House Dallas/Lincoln Park &mdash; Looking Southwest Toward Downtown Dallas</div>
 
     <!-- Rebuilt from Dallas-Park-Cities.jpg -->
@@ -990,9 +1020,13 @@ body.modal-open{overflow:hidden}
       <p class="hl-body">The Hotel sits amid some of the city&rsquo;s core office nodes, headlined by Preston Center and the US 75 office corridor. The corridor holds nearly 20 million SF of office space clustered along the highway between I-635 and downtown Dallas, and the Property sits directly across the highway from Topgolf&rsquo;s corporate headquarters and The Gild, a recently renovated complex offering nearly 900,000 SF of premier office space. To the west, Preston Center is a 105-acre commercial district anchoring one of Dallas&rsquo;s most established business submarkets, with over 500,000 SF of retail and more than 2.7 million SF of Class A office.</p>
     </div>
 
-    <div class="office-aerial">
+    <button type="button" class="office-aerial aerial-zoom" data-modal data-lightbox="true"
+            data-photo="assets/aerial-office-corridor-lg.jpg"
+            data-title="The Property at US 75 &amp; Northwest Highway &mdash; The Gild, One Provident Place, Preston Center and Topgolf HQ"
+            aria-label="Enlarge aerial: Aerial looking north over the Hyatt House Dallas/Lincoln Park showing …">
       <img src="assets/aerial-office-corridor.jpg" alt="Aerial looking north over the Hyatt House Dallas/Lincoln Park showing Preston Center, The Gild, One Provident Place, NorthPark Center, Topgolf headquarters, Northwest Highway and US 75">
-    </div>
+      <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3M11 8v6M8 11h6"/></svg>Enlarge</span>
+    </button>
     <div class="hl-photo-cap">The Property at US 75 &amp; Northwest Highway &mdash; The Gild, One Provident Place, Preston Center and Topgolf HQ</div>
 
     <div class="office-cards">
@@ -1396,7 +1430,11 @@ body.modal-open{overflow:hidden}
   function open(card){
     var d = card.dataset;
     var plate = d.plate === 'true';
-    if (d.logoonly === 'true' || d.titleonly === 'true') {
+    if (d.lightbox === 'true') {
+      // full-size aerial: nothing over the photograph, caption beneath
+      media.className = 'modal-media is-lightbox';
+      media.innerHTML = '<img class="m-photo" src="'+d.photo+'" alt="">';
+    } else if (d.logoonly === 'true' || d.titleonly === 'true') {
       // clean photograph — no scrim, nothing laid over it
       media.className = 'modal-media is-clean';
       media.innerHTML = '<img class="m-photo" src="'+d.photo+'" alt="">';
@@ -1415,9 +1453,12 @@ body.modal-open{overflow:hidden}
     }
     var logoOnly  = d.logoonly === 'true';
     var titleOnly = d.titleonly === 'true';
+    var lightbox  = d.lightbox === 'true';
     var bodyEl = document.querySelector('.modal-body');
     bodyEl.classList.toggle('is-logo', logoOnly);
     bodyEl.classList.toggle('is-compact', titleOnly);
+    bodyEl.classList.toggle('is-caption', lightbox);
+    modal.querySelector('.modal-card').classList.toggle('is-lightbox', lightbox);
     var mark = document.getElementById('modal-mark');
     if (logoOnly) {
       mark.innerHTML = d.logo
@@ -1428,11 +1469,11 @@ body.modal-open{overflow:hidden}
     }
     mark.hidden = !logoOnly;
     eyebrow.textContent = d.eyebrow || '';
-    eyebrow.style.display = (!logoOnly && d.eyebrow) ? '' : 'none';
+    eyebrow.style.display = (!logoOnly && !lightbox && d.eyebrow) ? '' : 'none';
     title.textContent = d.title || '';
     title.style.display = logoOnly ? 'none' : '';
     text.textContent  = d.blurb || '';
-    text.style.display = (!logoOnly && !titleOnly && d.blurb) ? '' : 'none';
+    text.style.display = (!logoOnly && !titleOnly && !lightbox && d.blurb) ? '' : 'none';
     stats.innerHTML = d.stats
       ? d.stats.split('|').map(function(pair){
           var kv = pair.split('::');
@@ -1440,7 +1481,7 @@ body.modal-open{overflow:hidden}
                  kv[0]+'</div><div class="stat-lbl">'+(kv[1]||'')+'</div></div>';
         }).join('')
       : '';
-    stats.style.display = (d.stats && !titleOnly) ? '' : 'none';
+    stats.style.display = (d.stats && !titleOnly && !lightbox) ? '' : 'none';
 
     opener = card;
     modal.hidden = false;
