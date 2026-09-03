@@ -126,6 +126,28 @@ ul{list-style:none}
     0 .5rem 1.5rem rgba(0,0,0,.18);
   backdrop-filter:blur(12px) saturate(125%);
   -webkit-backdrop-filter:blur(12px) saturate(125%);
+  transition:transform .55s var(--ease-spring),box-shadow .55s var(--ease-spring),
+             border-color .4s ease,backdrop-filter .45s ease;
+}
+/* rollover: catches more light and lifts off the photo. Only properties that
+   interpolate are animated — the base gradient is left alone so nothing snaps. */
+.logo-glass:hover,.logo-glass:focus-within{
+  transform:translateY(-5px);
+  border-color:rgba(255,255,255,.8);
+  backdrop-filter:blur(15px) saturate(145%) brightness(1.06);
+  -webkit-backdrop-filter:blur(15px) saturate(145%) brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.85),
+    inset 0 -1px 0 rgba(255,255,255,.22),
+    0 1.1rem 2.6rem rgba(0,0,0,.28);
+}
+.logo-glass__image{transition:transform .55s var(--ease-spring)}
+.logo-glass:hover .logo-glass__image,
+.logo-glass:focus-within .logo-glass__image{transform:translate(4%,4%) scale(1.03)}
+@media (prefers-reduced-motion:reduce){
+  .logo-glass:hover,.logo-glass:focus-within{transform:none}
+  .logo-glass:hover .logo-glass__image,
+  .logo-glass:focus-within .logo-glass__image{transform:translate(4%,4%)}
 }
 .logo-glass::after{
   content:"";
@@ -972,9 +994,9 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="office-aerial">
-      <img src="assets/aerial-office-corridor.jpg" alt="Aerial looking north over the Hyatt House Dallas/Lincoln Park showing Preston Center, NorthPark Center, Topgolf headquarters, Northwest Highway and US 75">
+      <img src="assets/aerial-office-corridor.jpg" alt="Aerial looking north over the Hyatt House Dallas/Lincoln Park showing Preston Center, The Gild, One Provident Place, NorthPark Center, Topgolf headquarters, Northwest Highway and US 75">
     </div>
-    <div class="hl-photo-cap">The Property at US 75 &amp; Northwest Highway &mdash; Preston Center, NorthPark Center and Topgolf HQ</div>
+    <div class="hl-photo-cap">The Property at US 75 &amp; Northwest Highway &mdash; The Gild, One Provident Place, Preston Center and Topgolf HQ</div>
 
     <div class="office-cards">
 
@@ -1024,7 +1046,7 @@ body.modal-open{overflow:hidden}
     <button type="button" class="card dam-card" data-focus="traffic" aria-pressed="false">
       <span class="dam-kicker">Immediate visibility</span>
       <span class="dam-value tabular-nums">250,000+</span>
-      <span class="dam-copy">daily vehicles traffic at the Loop 12 &amp; US 75 intersection</span>
+      <span class="dam-copy">daily vehicle traffic at the Loop 12 &amp; US 75 intersection</span>
     </button>
     <button type="button" class="card dam-card" data-focus="downtown" aria-pressed="false">
       <span class="dam-kicker">Urban access</span>
