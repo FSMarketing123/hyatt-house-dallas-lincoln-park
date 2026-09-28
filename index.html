@@ -458,8 +458,16 @@ ul{list-style:none}
 #dallas-access-map .dam-detail{margin-top:14px;font-family:var(--font-jost);font-size:10px;font-weight:500;
   letter-spacing:.18em;text-transform:uppercase;color:rgba(var(--muted-rgb,152,166,175),.72);text-align:right}
 @media(max-width:760px){
-  #dallas-access-map .dam-map-wrap{overflow-x:auto}
-  #dallas-access-map .dam-map{min-width:680px}
+  /* show the whole map rather than a sideways-scrolling slice, and scale the
+     type up in viewBox units so it survives being fitted to a phone screen */
+  #dallas-access-map .dam-map-wrap{overflow-x:visible}
+  #dallas-access-map .dam-map{min-width:0;width:100%}
+  #dallas-access-map .dam-label{font-size:21px;letter-spacing:.02em;stroke-width:5px}
+  #dallas-access-map .dam-label-secondary{font-size:17px;stroke-width:4px}
+  #dallas-access-map .dam-point .dam-place-dot{r:8}
+  #dallas-access-map .dam-site-dot{r:8}
+  #dallas-access-map .dam-site-ring{r:17}
+  #dallas-access-map .dam-site-halo{r:32}
   #dallas-access-map .dam-legend{position:static;margin-top:10px;justify-content:center}
 }
 
@@ -690,7 +698,7 @@ body.modal-open{overflow:hidden}
   .overview-brand,.overview-copy,.overview-right,.overview .btn-row{grid-column:1;grid-row:auto}
   .stat-row,.stats-card{flex:0 0 auto}
   .overview-brand{margin:0 0 32px}
-  .overview .btn-row{margin-top:36px}
+  .overview .btn-row{margin-top:36px;margin-bottom:44px}
   .overview-photo{margin-top:32px;flex:0 0 auto;min-height:0;max-height:280px}
   .hl-grid{grid-template-columns:1fr}
   .med-callouts{grid-template-columns:1fr}
@@ -699,6 +707,14 @@ body.modal-open{overflow:hidden}
 }
 @media(max-width:760px){
   .stat-row{grid-template-columns:1fr}
+  /* map: drop the fixed 410px height so it follows its aspect ratio instead of
+     floating in empty space once fitted to the screen width */
+  #dallas-access-map .dam-map-wrap{min-height:0;height:auto;overflow-x:visible}
+  #dallas-access-map .dam-map{min-width:0;min-height:0;width:100%;height:auto;aspect-ratio:736/460}
+  /* DFW MSA stats: 2 x 2 so each card is twice the width */
+  .dfw-stats{grid-template-columns:1fr 1fr;row-gap:clamp(14px,4vw,24px)}
+  .dfw-stat+.dfw-stat::before{display:none}
+  .dfw-stat:nth-child(2n)::before{display:block;content:"";position:absolute;left:0;top:6%;height:72%;width:1px;background:rgba(var(--cream-rgb),.45)}
   .med-stats{grid-template-columns:1fr 1fr}
   /* complex exhibits scroll sideways instead of shrinking past legibility */
   .scarcity-map{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -709,7 +725,8 @@ body.modal-open{overflow:hidden}
 @media(max-width:640px){
   .footer-grid{grid-template-columns:1fr}
   .hero-center{top:90px;left:16px;right:16px}
-  .logo-glass{width:min(84vw,19rem)}
+  .logo-glass{width:min(84vw,19rem);margin-inline:auto}
+  .hero-center{display:flex;justify-content:center}
   .side-tab{display:none}
   .gallery-collage{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
   .gallery-cell.span2c{grid-column:span 2}
